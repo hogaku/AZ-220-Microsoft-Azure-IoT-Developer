@@ -41,108 +41,47 @@ This lab assumes that the following Azure resources are available:
 | Resource Group | rg-az220                     |
 | IoT Hub        | iot-az220-training-{your-id} |
 
-If these resources are not available, you will need to run the **lab04-setup.azcli** script as instructed below before moving on to Exercise 2. The script file is included in the GitHub repository that you cloned locally as part of the dev environment configuration (lab 3).
+To ensure these resources are available, complete the following tasks.
 
-> **Note**:  The **lab04-setup.azcli** script is written to run in a **bash** shell environment - the easiest way to execute this is in the Azure Cloud Shell.
+1. Select **Deploy to Azure**:
 
-1. Using a browser, open the [Azure Cloud Shell](https://shell.azure.com/) and login with the Azure subscription you are using for this course.
+    [![Deploy To Azure](media/deploytoazure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab04.json)
 
-1. If you are prompted about setting up storage for Cloud Shell, accept the defaults.
+1. If prompted, login to the **Azure Portal**.
 
-1. Verify that the Cloud Shell is using **Bash**.
+    The **Custom deployment** page will be displayed.
 
-    The dropdown in the top-left corner of the Azure Cloud Shell page is used to select the environment. Verify that the selected dropdown value is **Bash**.
+1. Under **Project details**, in the **Subscription** dropdown, ensure that the Azure subscription that you intend to use for this course is selected.
 
-1. On the Cloud Shell toolbar, click **Upload/Download files** (fourth button from the right).
+1. In the **Resource group** dropdown, select **rg-az220**.
 
-1. In the dropdown, click **Upload**.
+    > **NOTE**: If **rg-az220** is not listed:
+    >
+    > 1. Under the **Resource group** dropdown, click **Create new**.
+    > 1. Under **Name**, enter **rg-az220**.
+    > 1. Click **OK**.
 
-1. In the file selection dialog, navigate to the folder location of the GitHub lab files that you downloaded when you configured your development environment.
+1. Under **Instance details**, in the **Region** dropdown, select the region closest to you.
 
-    In Lab 3 of this course, "Setup the Development Environment", you cloned the GitHub repository containing lab resources by downloading a ZIP file and extracting the contents locally. The extracted folder structure includes the following folder path:
+    > **NOTE**: If the **rg-az220** group already exists, the **Region** field is set to the region used by the resource group and is read-only.
 
-    * Allfiles
-      * Labs
-          * 04-Connect an IoT Device to Azure
-            * Setup
+1. In the **Your ID** field, enter the unique ID you created in Exercise 1.
 
-    The lab04-setup.azcli script file is located in the Setup folder for lab 4.
+1. In the **Course ID** field, enter **az220**.
 
-1. Select the **lab04-setup.azcli** file, and then click **Open**.
+1. To validate the template, click **Review and create**.
 
-    A notification will appear when the file upload has completed.
+1. If validation passes, click **Create**.
 
-1. To verify that the correct file has uploaded, enter the following command:
+    The deployment will start.
 
-    ```bash
-    ls
-    ```
+1. Once the deployment has completed, in the left navigation area, to review any output values from the template,  click **Outputs**.
 
-    The `ls` command lists the content of the current directory. You should see the lab04-setup.azcli file listed.
+    Make a note of the outputs for use later:
 
-1. To create a directory for this lab that contains the setup script and then move into that directory, enter the following Bash commands:
+    * connectionString
 
-    ```bash
-    mkdir lab4
-    mv lab04-setup.azcli lab4
-    cd lab4
-    ```
-
-    These commands will create a directory for this lab, move the **lab04-setup.azcli** file into that directory, and then change directory to make the new directory the current working directory.
-
-1. To ensure the **lab04-setup.azcli** has the execute permission, enter the following command:
-
-    ```bash
-    chmod +x lab04-setup.azcli
-    ```
-
-1. On the Cloud Shell toolbar, to enable access to the lab04-setup.azcli file, click **Open Editor** (second button from the right - **{ }**).
-
-1. In the **Files** list, to expand the lab4 folder and open the script file, click **lab4**, and then click **lab04-setup.azcli**.
-
-    The editor will now show the contents of the **lab04-setup.azcli** file.
-
-1. In the editor, update the values of the `{your-id}` and `{your-location}` variables.
-
-    Referencing the sample below as an example, you need to set `{your-id}` to the Unique ID you created at the start of this course - i.e. **cah191211**, and set `{your-location}` to the location that you used for your resource group (see the explanation and examples below).
-
-    ```bash
-    #!/bin/bash
-
-    # Change these values!
-    YourID="{your-id}"
-    Location="{your-location}"
-    ```
-
-    > **Note**:  The `{your-location}` variable should be set to the short name for the region where you are deploying all of your resources. You can see a list of the available locations and their short-names (the **Name** column) by entering this command:
-
-    ```bash
-    az account list-locations -o Table
-
-    DisplayName           Latitude    Longitude    Name
-    --------------------  ----------  -----------  ------------------
-    East Asia             22.267      114.188      eastasia
-    Southeast Asia        1.283       103.833      southeastasia
-    Central US            41.5908     -93.6208     centralus
-    East US               37.3719     -79.8164     eastus
-    East US 2             36.6681     -78.3889     eastus2
-    ```
-
-1. In the top-right of the editor window, to save the changes made to the file and close the editor, click **...**, and then click **Close Editor**.
-
-    If prompted to save, click **Save** and the editor will close.
-
-    > **Note**:  You can use **CTRL+S** to save at any time and **CTRL+Q** to close the editor.
-
-1. To create the resources required for this lab, enter the following command:
-
-    ```bash
-    ./lab04-setup.azcli
-    ```
-
-    This will take a few minutes to run. You will see output as each step completes.
-
-Once the script has completed, you will be ready to continue with the lab.
+The resources have now been created.
 
 ### Exercise 2: Create an Azure IoT Hub Device ID using the Azure portal
 
@@ -162,7 +101,7 @@ In this exercise, you will open your IoT Hub in the Azure portal, add a new IoT 
 
 1. On the left-side menu of your IoT Hub blade, under **Explorers**, click **IoT devices**.
 
-1. At the top of the **IoT devices** pane, click **+ New**.
+1. At the top of the **IoT devices** pane, click **Add Device**.
 
 1. In the **Device ID** field, enter **sensor-th-0001**
 
@@ -176,11 +115,9 @@ In this exercise, you will open your IoT Hub in the Azure portal, add a new IoT 
 
     Notice that there are three types of authentication available. In this lab you will leverage the simplest of the three, Symmetric key. X.509 Certificates and their use for authentication will be covered in later labs.
 
-1. Notice that the **Primary key** and **Secondary key** fields are disabled.
-
 1. Under **Auto-generate keys**, ensure the checkbox is selected.
 
-    With **Auto-generate keys** selected, the **Primary key** and **Secondary key** fields are disabled and will be populated once the record is saved. Un-selecting **Auto-generate keys** will enable those fields, allowing for values to be entered directly.
+    With **Auto-generate keys** selected, the **Primary key** and **Secondary key** fields are hidden and will be populated once the record is saved. Un-selecting **Auto-generate keys** will display those fields, allowing for values to be entered directly.
 
 1. Under **Connect this device to an IoT hub**, ensure that **Enable** is selected.
 
@@ -284,7 +221,7 @@ In this exercise, you will create a simulated device application using Visual St
     * CaveDevice.csproj
     * Program.cs
 
-    > **Note**: If you see a message **Required assets to build and debug are missing from `CaveDevice`. Add them?**, you may click **Yes** to proceed.
+    > **Note**: If you see a message **Required assets to build and debug are missing from CaveDevice. Add them?**, you may click **Yes** to proceed.
 
 #### Task 2: Explore the application
 
