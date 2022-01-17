@@ -135,7 +135,7 @@ Although Azure commonly referred to as a 'cloud', it is actually a web portal th
 
     A new browser tab should open to display Azure billing documentation.
 
-1. Take a moment to scan the contents of the **Prevent unexpected charges with Azure billing and cost management** page. 
+1. Take a moment to scan the contents of the **I have unexpected charges. How do I understand them?** page. 
 
     If *you* are using a paid Azure subscription and you are responsible for billing (you are the Account Administrator), you can set up cost alerts to help manage your billing.
 
