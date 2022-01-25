@@ -213,18 +213,18 @@ The simulated device that you create in this exercise represents an IoT device t
 
 1. Open **Visual Studio Code**.
 
-1. On the **File** menu, click **Open Folder** and then navigate to the Starter folder for Lab 5.
+1. On the **File** menu, click **Open Folder** and then navigate to the Final folder for Lab 5.
 
-    The Lab 5 Starter folder is part of the lab resources files that you downloaded when setting up your development environment in lab 3. The folder path is:
+    The Lab 5 Final folder is part of the lab resources files that you downloaded when setting up your development environment in lab 3. The folder path is:
 
     * Allfiles
       * Labs
           * 05-Individual Enrollment of a Device in DPS
-            * Starter
+            * Final
 
 1. In the **Open Folder** dialog, click **ContainerDevice**, and then click **Select Folder**.
 
-    The ContainerDevice folder is a sub-folder of the Lab 5 Starter folder. It contains a Program.cs file and a ContainerDevice.csproj file.
+    The ContainerDevice folder is a sub-folder of the Lab 5 Final folder. It contains a Program.cs file and a ContainerDevice.csproj file.
 
     > **Note**: If Visual Studio Code prompts you to load required assets, you can click **Yes** to load them.
 
