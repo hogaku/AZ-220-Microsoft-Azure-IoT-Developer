@@ -102,7 +102,7 @@ In this task, you will use Azure IoT Hub to create a new IoT Edge device identit
 
 1. On the **rg-az220** resource group tile, to open your IoT hub, click **iot-az220-training-{your-id}**.
 
-1. On the **iot-az220-training-{your-id}** blade, on the left-side menu under **Automatic Device Management**, click **IoT Edge**.
+1. On the **iot-az220-training-{your-id}** blade, on the left-side menu under **Device management**, click **IoT Edge**.
 
     The IoT Edge pane allows you to manage the IoT Edge devices connected to the IoT Hub.
 
