@@ -505,7 +505,7 @@ In this task, you will create a new IoT device identity in Azure IoT Hub for the
 
 1. On your Azure dashboard, to open your IoT Hub, click **iot-az220-training-{your-id}**.
 
-1. On the **iot-az220-training-{your-id}** blade, on the left-side menu under **Explorers**, click **IoT devices**.
+1. On the **iot-az220-training-{your-id}** blade, on the left-side menu under **Device management**, click **Devices**.
 
     This pane of the IoT Hub blade allows you to manage the IoT Devices connected to the IoT Hub.
 
