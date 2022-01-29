@@ -413,7 +413,7 @@ In this exercise, you will build and run a custom IoT Edge Module solution using
 
 1. On your Resource group tile, click **iot-az220-training-{your-id}**.
 
-1. On the left hand navigation menu, under **Settings**, click **Shared access policies**.
+1. On the left hand navigation menu, under **Security Settings**, click **Shared access policies**.
 
 1. In the list of policies, click **iothubowner**.
 
