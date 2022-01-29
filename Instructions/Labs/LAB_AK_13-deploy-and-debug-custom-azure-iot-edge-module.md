@@ -419,7 +419,7 @@ In this exercise, you will build and run a custom IoT Edge Module solution using
 
     > **Important**: The Edge Simulator requires a privileged role for configuration. You would not use such a privileged role for normal use cases.
 
-1. In the **iothubowner** pane, copy the value for **Connection string--primary key**.
+1. In the **iothubowner** pane, copy the value for **Primary connection string**.
 
     Record this value, as you will need it below.
 
