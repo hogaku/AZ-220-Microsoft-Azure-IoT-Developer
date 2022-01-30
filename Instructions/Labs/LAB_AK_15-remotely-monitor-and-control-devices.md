@@ -569,12 +569,6 @@ In this exercise, you will enable some code in the back-end service app, to show
 
 1. Locate the `UNCOMMENT registry manager variable below here` comment.
 
-1. To insert the registry manager variable, enter the following code:
-
-    ```csharp
-    private static RegistryManager registryManager;
-    ```
-
 1. Locate the `UNCOMMENT device twin management below here` comment.
 
 1. To add the functionality that creates the registry manager instance and sets the twin properties, enter the following code:
