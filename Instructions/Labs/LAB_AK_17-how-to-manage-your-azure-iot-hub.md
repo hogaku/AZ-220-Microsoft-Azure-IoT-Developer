@@ -113,10 +113,10 @@ You will now configure and run the device simulator.
 
 1. Ensure that you have the **Program.cs** file opened in Visual Studio Code.
 
-1. Near the top of the **Program** class, locate the declaration of the `deviceConnectionString` variable:
+1. Near the top of the **Program** class, locate the declaration of the `connectionString` variable:
 
     ```csharp
-    private readonly static string deviceConnectionString = "<your device connection string>";
+    private readonly static string connectionString = "<your device connection string>";
     ```
 
 1. Replace `<your device connection string>` with the device connection string that you saved earlier.
