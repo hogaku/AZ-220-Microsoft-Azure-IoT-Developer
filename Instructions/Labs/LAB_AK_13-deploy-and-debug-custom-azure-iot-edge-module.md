@@ -648,7 +648,7 @@ In this exercise, you will build and publish the custom IoT Edge Module into the
 
     With the custom `objectcountingmodule` IoT Edge Module published to Azure Container Registry (ACR), the next step is to create a new IoT Edge Device within IoT Hub and configure it to run the new custom IoT Edge Module.
 
-1. On the **iot-az220-training-{your-id}** blade, on the left side navigation menu under **Automatic Device Management**, click **IoT Edge**.
+1. On the **iot-az220-training-{your-id}** blade, on the left side navigation menu under **Device management**, click **IoT Edge**.
 
 1. On the **IoT Edge** pane, at the top of the pane, click **Add an IoT Edge device**.
 
