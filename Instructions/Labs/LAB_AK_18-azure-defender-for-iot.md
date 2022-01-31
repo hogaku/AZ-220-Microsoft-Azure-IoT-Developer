@@ -546,7 +546,7 @@ After defining all of the resource relationships, Azure Defender for IoT leverag
 
 You now have your the security agent installed on your device and your solution configured. It is a good time to check out the different views for Azure Defender for IoT.
 
-1. On the left-side menu, under **Security**, click **Overview**.
+1. On the left-side menu, under **Defender for IoT**, click **Overview**.
 
     You will see the health overview for your devices, hubs, and other resources appear on two charts. You can see the Built-in real-time monitoring, recommendations and alerts that were enabled right when you turn on your Azure IoT Defender.
 
