@@ -657,7 +657,7 @@ A device must be registered with your IoT hub before it can connect.
 
 1. On the left-side menu, under **Explorers**, click **IoT devices**.
 
-1. At the top of the **IoT devices** pane, click  **+ New**
+1. At the top of the **IoT devices** pane, click  **+ Add Device**
 
 1. On the **Create a device** blade, under **Device ID**, enter **sensor-th-0070**
 
