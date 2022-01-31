@@ -583,7 +583,7 @@ In this task, you will create a custom alert.
 
 1. On your Azure portal, navigate to your IoT Hub blade.
 
-1. On the left-side menu, under **Security**, click **Settings**.
+1. On the left-side menu, under **Defender for IoT**, click **Settings**.
 
     The **Settings Page** lists the following areas:
 
