@@ -655,7 +655,7 @@ A device must be registered with your IoT hub before it can connect.
 
 1. On the Azure portal menu, click **Dashboard**, and then open your IoT Hub.
 
-1. On the left-side menu, under **Explorers**, click **IoT devices**.
+1. On the left-side menu, under **Device management**, click **Devices**.
 
 1. At the top of the **IoT devices** pane, click  **+ New**
 
