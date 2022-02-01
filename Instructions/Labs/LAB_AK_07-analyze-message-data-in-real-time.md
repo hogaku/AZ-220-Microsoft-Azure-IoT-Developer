@@ -394,7 +394,7 @@ In this exercise, you will create and test the logging route.
 
     If your Resources tile does not list your Storage account, click the **Refresh** button at the top of the resource group tile, and then follow the instruction above to open your storage account.
 
-1. On the left-side menu of your **vibrationstore{your-id}** blade, click **Storage Explorer (preview)**.
+1. On the left-side menu of your **vibrationstore{your-id}** blade, click **Storage Browser (preview)**.
 
     You can use the Storage Explorer to verify that your data is being added to the storage account.
 
