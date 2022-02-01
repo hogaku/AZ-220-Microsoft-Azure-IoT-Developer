@@ -911,7 +911,7 @@ Once the enrollment group has been removed from the Device Provisioning Service 
 
 1. On your Resources tile, click **iot-az220-training-{your-id}**.
 
-1. On the left-side menu of your IoT hub blade, under **Explorers**, click **IoT devices**.
+1. On the left-side menu of your IoT hub blade, under **Device management**, click **Devices**.
 
 1. Notice that the device IDs for **sensor-thl-2000** and the other group enrolled devices still exist within the Azure IoT Hub device registry.
 
