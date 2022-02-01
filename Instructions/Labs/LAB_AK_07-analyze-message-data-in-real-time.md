@@ -612,7 +612,7 @@ Now for the fun part. Does the telemetry your device app is pumping out work its
 
     > **Note**:  The Storage Explorer is currently in preview mode, so its exact mode of operation may change.
 
-1. In **Storage Explorer (preview)**, under **BLOB CONTAINERS**, click **vibrationcontainer**.
+1. In **Storage Browser (preview)**, under **BLOB CONTAINERS**, click **vibrationcontainer**.
 
 1. To view the data, select the json file and click **Download**, then click **Click here to download**.
 
