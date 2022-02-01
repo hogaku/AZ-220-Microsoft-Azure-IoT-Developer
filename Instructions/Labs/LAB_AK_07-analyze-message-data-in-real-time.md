@@ -606,7 +606,7 @@ Now for the fun part. Does the telemetry your device app is pumping out work its
 
     You should see activity in the charts.
 
-1. On the left-side menu, click **Storage Explorer (preview)**.
+1. On the left-side menu, click **Storage Browser (preview)**.
 
     You can use Storage Explorer for additional reassurance that all of your data is getting to the storage account.
 
