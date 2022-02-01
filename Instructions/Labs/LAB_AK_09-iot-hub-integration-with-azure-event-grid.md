@@ -330,7 +330,7 @@ Test your logic app by creating a new device to trigger an event notification em
 
 1. In your Azure portal, if needed, navigate to your IoT Hub blade.
 
-1. On the left side navigation menu, under **Explorers**, click **IoT Devices**.
+1. On the left side navigation menu, under **Device management**, click **Devices**.
 
 1. At the top of the IoT devices blade, click **+ New**.
 
