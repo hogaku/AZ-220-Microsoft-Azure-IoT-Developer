@@ -486,10 +486,9 @@ This will enable you to verify that your route includes the following settings:
 
 1. On the **IoT Hub - New input** pane, under **Input alias**, enter `vibrationInput`.
 
+1. Ensure that **Select IoT Hub from your subscriptions** is selected.
 
 1. Under **IoT Hub**, ensure that your **iot-az220-training-{your-id}** IoT hub is selected.
-
-1. Ensure that **Select IoT Hub from your subscriptions** is selected.
 
 1. Under **Subscription**, ensure that the subscription you used to create the IoT Hub earlier is selected.
 
