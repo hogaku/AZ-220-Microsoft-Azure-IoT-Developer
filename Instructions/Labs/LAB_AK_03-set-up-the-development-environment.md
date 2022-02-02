@@ -37,159 +37,26 @@ In support of these decisions, you will be setting up the following environment:
 
 ## In This Lab
 
-In this lab, you will set up the base developer tools for your development environment, install the Azure IoT extensions for Visual Studio Code and Azure CLI, and then download some files from GitHub that you will use during the labs. The lab includes the following exercises:
+In this lab, you will configure your development environment. The lab includes the following exercises:
 
-* Install Developer Tools and Products
-* Install Dev Tool Extensions
-* Set Up Course Lab Files and Alternative Tools
+* For students using the LOD virtual machine environment:
+
+    * Install Dev Tool Extensions in the Virtual Machine Environment
+
+* For students who need to configure their local PC as a development environment:
+
+    * Install Developer Tools and Products on the Local PC
+    * Install Dev Tool Extensions on the Local PC
+    * Set Up Course Lab Files and Alternative Tools on the Local PC
+    * Register Resource Providers on the Local PC
 
 ## Lab Instructions
 
-### Exercise 1: Install Developer Tools and Products
+> **IMPORTANT**: For students who are using the hosted virtual machine environment to complete the labs in this course, Exercise 1 is the only Exercise that you need to complete. All of the other Exercises in this lab are for students who are setting up a dev environment on their local PC. If you will be setting up a dev environment on your local PC, skip to ahead to Exercise 2 and then complete all of the remaining Exercises.
 
-> **IMPORTANT**: The tools and products associated with this Exercise are pre-installed on the virtual machine created for this course. Before continuing, check with your course Instructor to understand if you will be completing labs using the hosted lab VM environment or setting up the dev environment locally on your PC.
+### Exercise 1: Install Tool Extensions in the Virtual Machine Environment
 
-#### Task 1: Install .NET Core
-
-.NET Core is a cross-platform version of .NET for building websites, services, and console apps.
-
-1. To open the .NET Core download page, use the following link: [.NET Download](https://dotnet.microsoft.com/download)
-
-1. On the .NET download page, under .NET Core, click **Download .NET Core SDK**.
-
-    The .NET Core SDK is used to build .NET Core apps. You will be using it to build/edit code files during the labs in this course.
-
-1. On the popup menu, click **Run**, and then follow the on-screen instructions to complete the installation.
-
-    The installation should take less than a minute to complete. The following components will be installed:
-
-    * .NET Core SDK 3.1.100 or later
-    * .NET Core Runtime 3.1.100 or later
-    * ASP.NET Core Runtime 3.1.100 or later
-    * .NET Core Windows Desktop Runtime 3.1.0 or later
-
-    The following resources are available for further information:
-
-    * [.NET Core Documentation](https://aka.ms/dotnet-docs)
-    * [.NET Core dependencies and requirements](https://docs.microsoft.com/en-us/dotnet/core/install/dependencies?tabs=netcore31&pivots=os-windows)
-    * [SDK Documentation](https://aka.ms/dotnet-sdk-docs)
-    * [Release Notes](https://aka.ms/netcore3releasenotes)
-    * [Tutorials](https://aka.ms/dotnet-tutorials)
-
-#### Task 2: Install Visual Studio Code
-
-Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages (such as C++, C#, Java, Python, PHP, Go) and run times (such as .NET and Unity).
-
-1. To open the Visual Studio Code download page, click the following link: [Download Visual Studio Code](https://code.visualstudio.com/Download)
-
-    Instructions for installing Visual Studio Code on Mac OS X and Linux can be found on the Visual Studio Code set up guide [here](https://code.visualstudio.com/docs/setup/setup-overview). This page also includes more detailed instructions and tips for the Windows installation.
-
-1. On the Download Visual Studio Code page, click **Windows**.
-
-    When you start the download, two things will happen: a popup dialog opens and some getting started guidance will be displayed.
-
-1. On the popup dialog, to begin the set up process, click **Run** and then follow the on-screen instructions.
-
-    If you choose to Save the installer to your Downloads folder, you you can complete the installation by opening the folder and then double-clicking the VSCodeSetup executable.
-
-    By default, Visual Studio Code is installed in the "C:\Program Files (x86)\Microsoft VS Code" folder location (for a 64-bit machine). The set up process should only take about a minute.
-
-    > **Note**:  .NET Framework 4.5 is required for Visual Studio Code when installing on Windows. If you are using Windows 7, please ensure [.NET Framework 4.5](https://www.microsoft.com/en-us/download/details.aspx?id=30653) is installed.
-
-    For detailed instructions on installing Visual Studio Code, see the Microsoft Visual Studio Code Installation Instruction guide here: [https://code.visualstudio.com/Docs/editor/setup](https://code.visualstudio.com/Docs/editor/setup)
-
-#### Task 3: Install Azure CLI
-
-Azure CLI is a command-line tool that is designed to make scripting Azure-related tasks easier. It also enables you to flexibly query data, and it supports long-running operations as non-blocking processes.
-
-1. Open your browser, and then navigate to the Azure CLI tools download page: [Install Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest "Azure CLI Install")
-
-    You should be installing the latest version of the Azure CLI tools (currently version 2.4). If version 2.4 is not the latest version listed on this "azure-cli-latest" download page, install the more recent version.
-
-1. On the **Install Azure CLI** page, select the install option for your OS (such as **Install on Windows**), and then follow the on-screen instructions to install the Azure CLI tool.
-
-    You will be given detailed instructions for using the Azure CLI tools during the labs in this course, but if you want more information now, see [Get started with Azure CLI](https://docs.microsoft.com/en-us/cli/azure/get-started-with-azure-cli?view=azure-cli-latest)
-
-#### Task 4: Install Python 3.9
-
-You will be using Python 3.9 in support of IoT Edge and Docker.
-
-1. In your Web browser, navigate to [https://www.python.org/downloads/](https://www.python.org/downloads/)
-
-1. On the Python download page, select the installer file that is appropriate for your Operating System.
-
-1. When prompted, select the option to run the installer
-
-1. On the Install Python  dialog, click **Add Python 3.9 to PATH**.
-
-1. Click **Install Now**.
-
-1. When the "Setup was successful" page appears, click **Disable path length limit**.
-
-1. To finish the installation process, click **Close**.
-
-#### Task 5: Install Docker Desktop
-
-You will be using Docker Desktop Community (latest stable version) during a lab that covers creating and deploying custom IoT Edge modules.
-
-1. In your Web browser, navigate to [https://docs.docker.com/docker-for-windows/install/](https://docs.docker.com/docker-for-windows/install/)
-
-    The left-side navigation menu provides access to installations for additional operating systems.
-
-1. Verify that your PC meets the System Requirements.
-
-    You can use Windows Settings to open the Windows Features dialog, and use that to verify that Hyper-V and Containers are enabled.
-
-1. Click **Download from Docker Hub**
-
-1. Under Docker Desktop for Windows, click **Get Docker Desktop for Windows (stable)**.
-
-1. To start the installation, click **Run**.
-
-    It can take a little while for the installation dialog for Docker Desktop to appear.
-
-1. When the Installation Succeeded message appears, click **Close**.
-
-    Docker Desktop does not start automatically after installation. To start Docker Desktop, search for Docker, and select Docker Desktop in the search results. When the whale icon in the status bar stays steady, Docker Desktop is up-and-running, and is accessible from any terminal window.
-
-#### Task 6 - Install node.js
-
-Some sample web applications are run locally using node.js. The following steps ensure node.js is installed and running the latest version:
-
-1. Using a browser, open the [node.js download page](https://nodejs.org/en/#home-downloadhead)
-
-1. Download the latest LTS (Long Term Support) version - 14.16.0 at the time of writing.
-
-1. When prompted, select the option to run the installer.
-
-1. Step through the installer:
-
-   * **End-User License Agreement** - accept terms and click **Next**.
-   * **Destination Folder** - accept the default (or change if required) and click **Next**.
-   * **Custom Setup** - accept the defaults and click **Next**.
-   * **Tools for Native Modules** - check the **Automatically install** and click **Next**.
-   * **Ready to install Node.js** - click **Install**
-     * On the UAC dialog, click **Yes**.
-
-1. Wait for the install to complete and click **Finish**.
-
-1. In the **Install Additional Tools for Node.js** command window, when prompted, press **Enter** to continue.
-
-1. On the UAC dialog, click **Yes**.
-
-    Multiple packages will be downloaded and installed. This will take some time.
-
-1. Once the installation has completed, open a **new** command shell and enter the following command:
-
-    ```powershell
-    node --version
-    ```
-
-    If node is installed successfully, the installed version will be displayed.
-
-### Exercise 2: Install Dev Tool Extensions
-
-The Visual Studio Code and Azure CLI tools both support an Azure IoT extension that helps developers to create their solutions more efficiently. These extensions leverage the Azure IoT SDKs and will often reduce development time while ensuring security provisions. You will also be adding a C# extension for Visual Studio Code.
+The Visual Studio Code and Azure CLI tools (already installed on the virtual machine) both support an Azure IoT extension that helps developers to create their solutions more efficiently. These extensions leverage the Azure IoT SDKs and will often reduce development time while ensuring security provisions. You will also be adding a C# extension for Visual Studio Code.
 
 #### Task 1: Install Visual Studio Code Extensions
 
@@ -208,7 +75,7 @@ The Visual Studio Code and Azure CLI tools both support an Azure IoT extension t
 
 1. Close Visual Studio Code.
 
-#### Task 2: Install Azure CLI Extension - local environment
+#### Task 2: Install Azure CLI Extension - virtual machine environment
 
 1. Open a new command-line / terminal window, to install the Azure IoT CLI extensions.
 
@@ -230,11 +97,9 @@ The Visual Studio Code and Azure CLI tools both support an Azure IoT extension t
 
 Many of the labs will require the use of the Azure CLI IoT extensions via the Azure Cloud Shell. The following steps ensure the extension is installed and running the latest version.
 
-1. In your Web browser, navigate to the Azure cloud shell at the following address:
+1. Open Web browser window on your virtual machine, and then navigate to the Azure cloud shell at the following address:
 
-    **Local PC**: [Azure Cloud Shell](https://shell.azure.com/)
-
-    **Virtual machine environment**: +++https://shell.azure.com/+++
+    +++https://shell.azure.com/+++
 
 1. When prompted, login with the Azure subscription you are using for this course.
 
@@ -262,7 +127,7 @@ Many of the labs will require the use of the Azure CLI IoT extensions via the Az
     az extension add --name timeseriesinsights
     ```
 
-#### Task 4: Verify Development Environment Setup
+#### Task 4: Verify the Virtual Machine environment
 
 You should verify that the development environment has been set up successfully. Once this is complete, you will be ready to start building your IoT solutions.
 
@@ -297,11 +162,261 @@ You should verify that the development environment has been set up successfully.
 
 1. Verify that .NET Core 3.1 or higher is installed.
 
-Your development environment should now be set up!
+> **NOTE**: If you are using the LOD virtual machine environment to complete the labs in this course, your dev environment is configured and you are ready to move on to the next lab.
 
-### Exercise 3: Set Up Course Lab Files and Alternative Tools
+### Exercise 2: Install Developer Tools and Products on the local PC
 
-A number of the labs in this course rely on pre-built resources, such as a code project that can be used as a starting point for the lab activity. These lab resources are provided in a GitHub project that you should download to your dev environment.
+> **IMPORTANT**: Exercise 2 and all of the remaining Exercises in this lab are for students who are **NOT** using the LOD virtual machine that was created for this course. Students who need to configure their local PC as their dev environment can use Exercise 2 and the remaining Exercises to help them install tools and configure the dev environment on their local PC.
+
+#### Task 1: Install .NET Core on your local PC
+
+.NET Core is a cross-platform version of .NET for building websites, services, and console apps.
+
+1. To open the .NET Core download page, use the following link: [.NET Download](https://dotnet.microsoft.com/download)
+
+1. On the .NET download page, under .NET Core, click **Download .NET Core SDK**.
+
+    The .NET Core SDK is used to build .NET Core apps. You will be using it to build/edit code files during the labs in this course.
+
+1. On the popup menu, click **Run**, and then follow the on-screen instructions to complete the installation.
+
+    The installation should take less than a minute to complete. The following components will be installed:
+
+    * .NET Core SDK 3.1.100 or later
+    * .NET Core Runtime 3.1.100 or later
+    * ASP.NET Core Runtime 3.1.100 or later
+    * .NET Core Windows Desktop Runtime 3.1.0 or later
+
+    The following resources are available for further information:
+
+    * [.NET Core Documentation](https://aka.ms/dotnet-docs)
+    * [.NET Core dependencies and requirements](https://docs.microsoft.com/en-us/dotnet/core/install/dependencies?tabs=netcore31&pivots=os-windows)
+    * [SDK Documentation](https://aka.ms/dotnet-sdk-docs)
+    * [Release Notes](https://aka.ms/netcore3releasenotes)
+    * [Tutorials](https://aka.ms/dotnet-tutorials)
+
+#### Task 2: Install Visual Studio Code on your local PC
+
+Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages (such as C++, C#, Java, Python, PHP, Go) and run times (such as .NET and Unity).
+
+1. To open the Visual Studio Code download page, click the following link: [Download Visual Studio Code](https://code.visualstudio.com/Download)
+
+    Instructions for installing Visual Studio Code on Mac OS X and Linux can be found on the Visual Studio Code set up guide [here](https://code.visualstudio.com/docs/setup/setup-overview). This page also includes more detailed instructions and tips for the Windows installation.
+
+1. On the Download Visual Studio Code page, click **Windows**.
+
+    When you start the download, two things will happen: a popup dialog opens and some getting started guidance will be displayed.
+
+1. On the popup dialog, to begin the set up process, click **Run** and then follow the on-screen instructions.
+
+    If you choose to Save the installer to your Downloads folder, you you can complete the installation by opening the folder and then double-clicking the VSCodeSetup executable.
+
+    By default, Visual Studio Code is installed in the "C:\Program Files (x86)\Microsoft VS Code" folder location (for a 64-bit machine). The set up process should only take about a minute.
+
+    > **Note**:  .NET Framework 4.5 is required for Visual Studio Code when installing on Windows. If you are using Windows 7, please ensure [.NET Framework 4.5](https://www.microsoft.com/en-us/download/details.aspx?id=30653) is installed.
+
+    For detailed instructions on installing Visual Studio Code, see the Microsoft Visual Studio Code Installation Instruction guide here: [https://code.visualstudio.com/Docs/editor/setup](https://code.visualstudio.com/Docs/editor/setup)
+
+#### Task 3: Install Azure CLI on your local PC
+
+Azure CLI is a command-line tool that is designed to make scripting Azure-related tasks easier. It also enables you to flexibly query data, and it supports long-running operations as non-blocking processes.
+
+1. Open your browser, and then navigate to the Azure CLI tools download page: [Install Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest "Azure CLI Install")
+
+    You should be installing the latest version of the Azure CLI tools (currently version 2.4). If version 2.4 is not the latest version listed on this "azure-cli-latest" download page, install the more recent version.
+
+1. On the **Install Azure CLI** page, select the install option for your OS (such as **Install on Windows**), and then follow the on-screen instructions to install the Azure CLI tool.
+
+    You will be given detailed instructions for using the Azure CLI tools during the labs in this course, but if you want more information now, see [Get started with Azure CLI](https://docs.microsoft.com/en-us/cli/azure/get-started-with-azure-cli?view=azure-cli-latest)
+
+#### Task 4: Install Python 3.9 on your local PC
+
+You will be using Python 3.9 in support of IoT Edge and Docker.
+
+1. In your Web browser, navigate to [https://www.python.org/downloads/](https://www.python.org/downloads/)
+
+1. On the Python download page, select the installer file that is appropriate for your Operating System.
+
+1. When prompted, select the option to run the installer
+
+1. On the Install Python  dialog, click **Add Python 3.9 to PATH**.
+
+1. Click **Install Now**.
+
+1. When the "Setup was successful" page appears, click **Disable path length limit**.
+
+1. To finish the installation process, click **Close**.
+
+#### Task 5: Install Docker Desktop on your local PC
+
+You will be using Docker Desktop Community (latest stable version) during a lab that covers creating and deploying custom IoT Edge modules.
+
+1. In your Web browser, navigate to [https://docs.docker.com/docker-for-windows/install/](https://docs.docker.com/docker-for-windows/install/)
+
+    The left-side navigation menu provides access to installations for additional operating systems.
+
+1. Verify that your PC meets the System Requirements.
+
+    You can use Windows Settings to open the Windows Features dialog, and use that to verify that Hyper-V and Containers are enabled.
+
+1. Click **Download from Docker Hub**
+
+1. Under Docker Desktop for Windows, click **Get Docker Desktop for Windows (stable)**.
+
+1. To start the installation, click **Run**.
+
+    It can take a little while for the installation dialog for Docker Desktop to appear.
+
+1. When the Installation Succeeded message appears, click **Close**.
+
+    Docker Desktop does not start automatically after installation. To start Docker Desktop, search for Docker, and select Docker Desktop in the search results. When the whale icon in the status bar stays steady, Docker Desktop is up-and-running, and is accessible from any terminal window.
+
+#### Task 6 - Install node.js on your local PC
+
+Some sample web applications are run locally using node.js. The following steps ensure node.js is installed and running the latest version:
+
+1. Using a browser, open the [node.js download page](https://nodejs.org/en/#home-downloadhead)
+
+1. Download the latest LTS (Long Term Support) version - 14.16.0 at the time of writing.
+
+1. When prompted, select the option to run the installer.
+
+1. Step through the installer:
+
+   * **End-User License Agreement** - accept terms and click **Next**.
+   * **Destination Folder** - accept the default (or change if required) and click **Next**.
+   * **Custom Setup** - accept the defaults and click **Next**.
+   * **Tools for Native Modules** - check the **Automatically install** and click **Next**.
+   * **Ready to install Node.js** - click **Install**
+     * On the UAC dialog, click **Yes**.
+
+1. Wait for the install to complete and click **Finish**.
+
+1. In the **Install Additional Tools for Node.js** command window, when prompted, press **Enter** to continue.
+
+1. On the UAC dialog, click **Yes**.
+
+    Multiple packages will be downloaded and installed. This will take some time.
+
+1. Once the installation has completed, open a **new** command shell and enter the following command:
+
+    ```powershell
+    node --version
+    ```
+
+    If node is installed successfully, the installed version will be displayed.
+
+### Exercise 3: Install Tool Extensions for the local PC environment
+
+The Visual Studio Code and Azure CLI tools both support an Azure IoT extension that helps developers to create their solutions more efficiently. These extensions leverage the Azure IoT SDKs and will often reduce development time while ensuring security provisions. You will also be adding a C# extension for Visual Studio Code.
+
+#### Task 1: Install Visual Studio Code Extensions on the local PC
+
+1. Open Visual Studio Code.
+
+1. On the left side of the Visual Studio Code window, click **Extensions**.
+
+    You can hover the mouse pointer over the buttons to display the button titles. The Extensions button is sixth from the top.
+
+1. In the Visual Studio Code Extension manager, search for and then install the following Extensions:
+
+    * [Azure IoT Tools](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.azure-iot-tools) (`vsciot-vscode.azure-iot-tools`) by Microsoft
+    * [C# for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) (`ms-vscode.csharp`) by Microsoft
+    * [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) (ms-vscode.vscode-node-azure-pack) by Microsoft
+    * [DTDL Editor for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-dtdl) (vsciot-vscode.vscode-dtdl) by Microsoft
+
+1. Close Visual Studio Code.
+
+#### Task 2: Install Azure CLI Extension - local PC environment
+
+1. Open a new command-line / terminal window, to install the Azure IoT CLI extensions.
+
+    For example, you can use the Windows **Command Prompt** command-line application.
+
+1. At the command prompt, to install the Azure CLI extension for IoT, enter the following command:
+
+    ```bash
+    az extension add --name azure-iot
+    ```
+
+1. At the command prompt, to install the Azure CLI extension for Time Series Insights, enter the following command:
+
+    ```bash
+    az extension add --name timeseriesinsights
+    ```
+
+#### Task 3: Install Azure CLI Extension - cloud environment
+
+Many of the labs will require the use of the Azure CLI IoT extensions via the Azure Cloud Shell. The following steps ensure the extension is installed and running the latest version.
+
+1. In your Web browser, navigate to the Azure cloud shell at the following address:
+
+    **Local PC**: [Azure Cloud Shell](https://shell.azure.com/)
+
+1. When prompted, login with the Azure subscription you are using for this course.
+
+1. If you are prompted about setting up storage for Cloud Shell, accept the defaults.
+
+1. Verify that the Cloud Shell is using **Bash**.
+
+    The dropdown in the top-left corner of the Azure Cloud Shell page is used to select the environment. Verify that the selected dropdown value is **Bash**.
+
+1. At the command prompt, to install the Azure CLI extension for IoT, enter the following command:
+
+    ```bash
+    az extension add --name azure-iot
+    ```
+
+    **Note**: If the extension is already installed, you can ensure you are running the latest version by entering the following command:
+
+    ```bash
+    az extension update --name azure-iot
+    ```
+
+1. At the command prompt, to install the Azure CLI extension for Time Series Insights, enter the following command:
+
+    ```bash
+    az extension add --name timeseriesinsights
+    ```
+
+#### Task 4: Verify Development Environment Setup
+
+You should verify that the development environment has been set up successfully.
+
+1. Open a new command-line / terminal window.
+
+1. Validate the **Azure CLI** installation by running the following command that will output the version information for the currently installed version of the Azure CLI.
+
+    ```cmd/sh
+    az --version
+    ```
+
+    The `az --version` command will output the version information for Azure CLI that you have installed (the `azure-cli` version number). This command also outputs the version number for all the Azure CLI modules installed, including the IoT extension. You should see output similar to the following:
+
+    ```cmd/sh
+    azure-cli                           2.21.0
+
+    core                                2.21.0
+    telemetry                            1.0.6
+
+    Extensions:
+    azure-iot                          0.10.10
+    timeseriesinsights                   0.2.1
+    ```
+
+1. Validate the **.NET Core 3.x SDK** installation by running the following command that will output the version number for the currently installed version of the .NET Core SDK.
+
+    ```cmd/sh
+    dotnet --version
+    ```
+
+    The `dotnet --version` command will output the version of the .NET Core SDK that is currently installed.
+
+1. Verify that .NET Core 3.1 or higher is installed.
+
+### Exercise 4: Set Up Course Lab Files and Alternative Tools
+
+A number of the labs in this course rely on pre-built resources, such as a code project that can be used as a starting point for the lab activity. These lab resources are provided in a GitHub project that you should download to your local PC dev environment.
 
 In addition to the resources that directly support the course labs (the resources contained in the GitHub project), there are some optional tools that you may choose to install because they support learning opportunities outside of this course. One example is PowerShell, which you may see referenced within Microsoft tutorials and other resources.
 
@@ -375,9 +490,9 @@ Azure PowerShell is a set of cmdlets for managing Azure resources directly from 
 > Update-Module -Name Az
 > ```
 
-### Exercise 3 - Register resource providers
+### Exercise 5 - Register Resource Providers on the Local PC
 
-Many different types of resources will be created during this course, some of which may not have been register for use in the current subscription. While some resources are registered automatically during the first use, others must be registered before they can be used, otherwise errors will be reported.
+Many different types of resources will be created during this course, some of which may not have been registered for use in the current subscription. While some resources are registered automatically during the first use, others must be registered before they can be used, otherwise errors will be reported.
 
 #### Task 1 - Register resource providers using the Azure CLI
 
