@@ -115,8 +115,13 @@ In this exercise, you will will install the Azure IoT EdgeHub Dev Tool.
 
     ```cmd/sh
     curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+    ```
+
+    ```cmd/sh
     python get-pip.py
     ```
+
+    You can ignore warnings about the pip version. You can ignore the error about wheel.exe.
 
     Pip is required to install the Azure IoT EdgeHub Dev Tool on your development machine.
 
@@ -164,7 +169,7 @@ In this exercise, you will use the Azure portal to create a new Azure Container 
 
 1. On the **Create container registry** blade, under **Registry name**, enter a globally unique name.
 
-    To provide a globally unique name, enter **acraz220training{your-id}**.
+    To provide a globally unique name, enter +++acraz220training{your-id}+++.
 
     For example: **acraz220trainingcah191204**
 
@@ -230,7 +235,7 @@ In this exercise, you will use the Azure portal to create a new Azure Container 
 
 Now that you have created the Azure Container Registry and authenticated your local machine against it, you can create a custom IoT Edge Module container that will be stored in the registry.
 
-### Exercise 4: Create Custom Edge Module in C\#
+### Exercise 4: Create Custom Edge Module in C#
 
 In this exercise, you will create an Azure IoT Edge Solution that contains a custom Azure IoT Edge Module written in C#.
 
