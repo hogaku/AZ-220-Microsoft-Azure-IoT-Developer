@@ -96,13 +96,18 @@ To ensure these resources are available, complete the following tasks.
     * connectionString
 
 The resources have now been created.
+
 ### Exercise 2: Install Azure IoT EdgeHub Dev Tool
 
 In this exercise, you will will install the Azure IoT EdgeHub Dev Tool.
 
-1. Verify that you have Python 3.8 installed in your development environment.
+1. Verify that you have Python 3.9 (or later) installed in your development environment.
 
-    Lab 3 of this course has you prepare the lab environment, including the installation Python 3.8. If Python is not installed, refer back to the instructions in Lab 3.
+    The virtual machine environment includes Python version 3.9 and 3.7. The Windows PATH is set for version 3.9.2.
+
+    If you are working on your own PC rather than the lab VM, lab 3 of this course provides instructions on preparing the lab environment, including the installation Python 3.9. If Python is not installed, refer back to the instructions in Lab 3.
+
+    > **Note**: You can check the installed version of Python by opening a command prompt and entering the following command: **python --version**
 
 1. With Python installed, open Windows Command Prompt.
 
@@ -119,7 +124,7 @@ In this exercise, you will will install the Azure IoT EdgeHub Dev Tool.
 
     If you have issues installing Pip, please reference the official Pip [installation instructions](https://pip.pypa.io/en/stable/installing/).
 
-    > **Note**: On Windows, Python and/or Pip are sometimes installed but are not in the `PATH`. Check with your instructor if you have Python installed but it does not seem to be available.
+    > **Note**: On Windows, Python and/or Pip are sometimes installed but are not in the **PATH**. Check with your instructor if you have Python installed but it does not seem to be available.
 
 1. To install the Azure IoT EdgeHub Dev Tool, enter the following command:
 
