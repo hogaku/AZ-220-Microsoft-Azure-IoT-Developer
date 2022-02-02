@@ -58,7 +58,7 @@ In this lab, you will configure your development environment. The lab includes t
 
 The Visual Studio Code and Azure CLI tools (already installed on the virtual machine) both support an Azure IoT extension that helps developers to create their solutions more efficiently. These extensions leverage the Azure IoT SDKs and will often reduce development time while ensuring security provisions. You will also be adding a C# extension for Visual Studio Code.
 
-#### Task 1: Install Visual Studio Code Extensions
+#### Task 1: Install Visual Studio Code Extensions on the Virtual Machine
 
 1. Open Visual Studio Code.
 
@@ -166,7 +166,7 @@ You should verify that the development environment has been set up successfully.
 
 ### Exercise 2: Install Developer Tools and Products on the local PC
 
-> **IMPORTANT**: Exercise 2 and all of the remaining Exercises in this lab are for students who are **NOT** using the LOD virtual machine that was created for this course. Students who need to configure their local PC as their dev environment can use Exercise 2 and the remaining Exercises to help them install tools and configure the dev environment on their local PC.
+> **IMPORTANT**: Exercise 2 and all of the remaining Exercises in this lab are for students who are **NOT** using the LOD virtual machine that was created for this course. Students who need to configure their local PC as their dev environment can use Exercises 2-5 to help them install tools and configure the dev environment on their local PC.
 
 #### Task 1: Install .NET Core on your local PC
 
@@ -414,7 +414,7 @@ You should verify that the development environment has been set up successfully.
 
 1. Verify that .NET Core 3.1 or higher is installed.
 
-### Exercise 4: Set Up Course Lab Files and Alternative Tools
+### Exercise 4: Set Up Course Lab Files and Alternative Tools on the Local PC
 
 A number of the labs in this course rely on pre-built resources, such as a code project that can be used as a starting point for the lab activity. These lab resources are provided in a GitHub project that you should download to your local PC dev environment.
 
@@ -422,7 +422,7 @@ In addition to the resources that directly support the course labs (the resource
 
 The instructions below lead you through the configuration of both these resource types.
 
-#### Task 1: Download Course Lab Files
+#### Task 1: Download Course Lab Files to the Local PC
 
 Microsoft has created a GitHub repo to provide access to lab resource files. Having these files local to the dev environment is required in some cases and convenient in many others. In this task you will be downloading and extracting the contents of the repo within your development environment.
 
@@ -444,7 +444,7 @@ Microsoft has created a GitHub repo to provide access to lab resource files. Hav
 
     Be sure to make note of where you located the files.
 
-#### Task 2: Install Azure PowerShell Module
+#### Task 2: Install Azure PowerShell Module on the Local PC
 
 > **Note**: The lab activities in this course do NOT include using PowerShell, however, you may see sample code in reference documents that use PowerShell. If you want to run PowerShell code, you can use the following instructions to complete the installation steps.
 
