@@ -103,9 +103,9 @@ In this exercise, you will will install the Azure IoT EdgeHub Dev Tool.
 
 1. Verify that you have Python 3.9 (or later) installed in your development environment.
 
-    The virtual machine environment includes Python version 3.9 and 3.7. The Windows PATH is set for version 3.9.2.
+    The virtual machine environment includes Python version 3.9 and 3.7. The Windows environment PATH is configured for version 3.9.2.
 
-    If you are working on your own PC rather than the lab VM, lab 3 of this course provides instructions on preparing the lab environment, including the installation Python 3.9. If Python is not installed, refer back to the instructions in Lab 3.
+    If you are working on your own PC rather than the virtual machine environment, lab 3 of this course provides instructions on preparing the lab environment locally, including the installation Python 3.9. If Python is not installed, refer back to the instructions in Lab 3.
 
     > **Note**: You can check the installed version of Python by opening a command prompt and entering the following command: **python --version**
 
