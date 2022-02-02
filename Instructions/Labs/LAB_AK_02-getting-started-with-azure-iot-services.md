@@ -139,9 +139,9 @@ In this exercise, you will use the Azure portal to create and configure your IoT
 
 1. In the lab virtual machine environment, open a Microsoft Edge browser window, and then navigate to the Azure portal using the following Web address:
 
-    > **NOTE**: Whenever you see the green "T" symbol, for example +++enter this text+++, you can click the associated text and the information will be typed into the current field within the virtual machine environment.
+    +++http://portal.azure.com+++
 
-    **Web address**: +++http://portal.azure.com+++
+    > **NOTE**: Whenever you see the green "T" symbol, for example +++enter this text+++, you can click the associated text and the information will be typed into the current field within the virtual machine environment.
 
 1. When prompted to Sign in using Azure account credentials, enter the Azure credentials that you are using for this course.
 
@@ -287,8 +287,7 @@ In this exercise, you will examine some of the features that IoT Hub provides.
 
 1. If you closed your Azure portal window, open a Microsoft Edge browser window, and then navigate to the Azure portal:
 
-    **Azure portal**: +++http://portal.azure.com+++
-
+    +++http://portal.azure.com+++
 
     If you have more than one Azure account, be sure that you are logged in with the account that is tied to the subscription that you will be using for this course.
 
@@ -361,7 +360,7 @@ There are several methods that you can use to create an instance of the IoT Hub 
 
 1. If you closed your Azure portal window, open a Microsoft Edge browser window, and then navigate to the Azure portal:
 
-    **Azure portal**: +++http://portal.azure.com+++
+    +++http://portal.azure.com+++
 
     If you have more than one Azure account, be sure that you are logged in with the account that is tied to the subscription that you will be using for this course.
 
@@ -457,7 +456,7 @@ The IoT Hub Device Provisioning Service is a helper service for IoT Hub that ena
 
 1. If you closed your Azure portal window, open a Microsoft Edge browser window, and then navigate to the Azure portal:
 
-    **Azure portal**: +++http://portal.azure.com+++
+    +++http://portal.azure.com+++
 
     If you have more than one Azure account, be sure that you are logged in with the account that is tied to the subscription that you will be using for this course.
 

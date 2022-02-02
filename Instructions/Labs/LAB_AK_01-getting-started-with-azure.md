@@ -31,9 +31,9 @@ Although Azure commonly referred to as a 'cloud', it is actually a web portal th
 
 1. In the lab virtual machine environment, open a Microsoft Edge browser window, and then navigate to the Azure portal using the following Web address:
 
-    > **NOTE**: Whenever you see the green "T" symbol, for example +++enter this text+++, you can click the associated text and the information will be typed into the current field within the virtual machine environment.
+    +++http://portal.azure.com+++
 
-    **Web address**: +++http://portal.azure.com+++
+    > **NOTE**: Whenever you see the green "T" symbol, for example +++enter this text+++, you can click the associated text and the information will be typed into the current field within the virtual machine environment.
 
 1. When prompted to Sign in using Azure account credentials, enter the credentials that you are using for this course.
 
@@ -162,7 +162,7 @@ In this exercise, you will:
 
 1. If you closed the Azure portal browser window, open the Microsoft Edge browser, and then navigate to the Azure portal:
 
-    **Azure portal**: +++http://portal.azure.com+++
+    +++http://portal.azure.com+++
 
     When prompted to Sign in using Azure account credentials, enter the Azure credentials that you are using for this course.
 
