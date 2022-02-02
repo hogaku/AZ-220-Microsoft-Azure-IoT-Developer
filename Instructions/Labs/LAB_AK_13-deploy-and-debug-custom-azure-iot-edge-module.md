@@ -55,11 +55,6 @@ This lab assumes that the following Azure resources are available:
 
 To ensure these resources are available, complete the following tasks.
 
-1. Select **Deploy to Azure**:
-
-    [Deploy To Azure](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab13.json)
-
-1. If prompted, login to the **Azure Portal**.
 
     The **Custom deployment** page will be displayed.
 

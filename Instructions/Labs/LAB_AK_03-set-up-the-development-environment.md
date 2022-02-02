@@ -33,7 +33,7 @@ In support of these decisions, you will be setting up the following environment:
 * IoT Extensions for VS Code and Azure CLI
 * node.js (latest)
 
-> **Note**: A virtual machine has been created for this course that provides a majority of the tools specified above. The instructions below support using the prepared VM or setting up the development environment locally using your PC.
+> **IMPORTANT**: A virtual machine has been created for this course that provides a majority of the tools specified above. The instructions below support using the prepared VM or setting up the development environment locally using your PC.
 
 ## In This Lab
 
@@ -47,7 +47,7 @@ In this lab, you will set up the base developer tools for your development envir
 
 ### Exercise 1: Install Developer Tools and Products
 
-> **Important**: The tools and products associated with this Exercise are pre-installed on the virtual machine created for this course. Before continuing, check with your course Instructor to understand if you will be completing labs using the hosted lab VM environment or setting up the dev environment locally on your PC.
+> **IMPORTANT**: The tools and products associated with this Exercise are pre-installed on the virtual machine created for this course. Before continuing, check with your course Instructor to understand if you will be completing labs using the hosted lab VM environment or setting up the dev environment locally on your PC.
 
 #### Task 1: Install .NET Core
 
@@ -210,7 +210,7 @@ The Visual Studio Code and Azure CLI tools both support an Azure IoT extension t
 
 #### Task 2: Install Azure CLI Extension - local environment
 
-1. Open a new command-line / terminal window, to install the Azure IoT CLI extensions locally.
+1. Open a new command-line / terminal window, to install the Azure IoT CLI extensions.
 
     For example, you can use the Windows **Command Prompt** command-line application.
 
@@ -230,7 +230,13 @@ The Visual Studio Code and Azure CLI tools both support an Azure IoT extension t
 
 Many of the labs will require the use of the Azure CLI IoT extensions via the Azure Cloud Shell. The following steps ensure the extension is installed and running the latest version.
 
-1. Using a browser, open the [Azure Cloud Shell](https://shell.azure.com/) and login with the Azure subscription you are using for this course.
+1. In your Web browser, navigate to the Azure cloud shell at the following address:
+
+    **Local PC**: [Azure Cloud Shell](https://shell.azure.com/)
+
+    **Virtual machine environment**: +++https://shell.azure.com/+++
+
+1. When prompted, login with the Azure subscription you are using for this course.
 
 1. If you are prompted about setting up storage for Cloud Shell, accept the defaults.
 

@@ -48,11 +48,13 @@ This lab assumes that the following Azure resources are available:
 
 To ensure these resources are available, complete the following tasks.
 
-1. Select **Deploy to Azure**:
+1. In the virtual machine environment, open a Microsoft Edge browser window, and then navigate to the following Web address:
 
-    [Deploy To Azure](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab17.json)
+    > **NOTE**: Whenever you see the green "T" symbol, for example +++enter this text+++, you can click the associated text and the information will be typed into the current field within the virtual machine environment.
+ 
+    **Web address**: +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab17.json+++
 
-1. If prompted, login to the **Azure Portal**.
+1. If prompted to log in to the Azure portal, enter the Azure credentials that you are using for this course.
 
     The **Custom deployment** page will be displayed.
 

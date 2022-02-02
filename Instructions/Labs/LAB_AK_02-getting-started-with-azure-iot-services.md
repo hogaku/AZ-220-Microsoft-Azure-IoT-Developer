@@ -137,9 +137,15 @@ In this exercise, you will use the Azure portal to create and configure your IoT
 
 #### Task 1: Use the Azure portal to create a resource (IoT Hub)
 
-1. Login to [portal.azure.com](https://portal.azure.com) using your Azure account credentials.
+1. In the lab virtual machine environment, open a Microsoft Edge browser window, and then navigate to the Azure portal using the following Web address:
 
-    If you have more than one Azure account, be sure that you are logged in with the account that is tied to the subscription that you will be using for this course.  You may find it easiest to use an InPrivate / Incognito browser session to avoid accidentally using the wrong account.
+    > **NOTE**: Whenever you see the green "T" symbol, for example +++enter this text+++, you can click the associated text and the information will be typed into the current field within the virtual machine environment.
+
+    **Web address**: +++http://portal.azure.com+++
+
+1. When prompted to Sign in using Azure account credentials, enter the Azure credentials that you are using for this course.
+
+    If you have more than one Azure account, be sure that you are logged in with the account that is tied to the subscription that you will be using for this course.
 
 1. Notice that the AZ-220 dashboard that you created in the previous lab has been loaded.
 
@@ -149,7 +155,7 @@ In this exercise, you will use the Azure portal to create and configure your IoT
 
     The **New** blade that opens is a front-end to the Azure Marketplace, which is a collection of all the resources you can create in Azure. The marketplace contains resources from both Microsoft and the community.
 
-1. In the Search textbox, type **IoT Hub** and then press **Enter**.
+1. In the Search textbox, type **iot hub** and then press **Enter**.
 
     The **Marketplace** blade will open to display the available services matching your search criteria.
 
@@ -279,7 +285,10 @@ In this exercise, you will examine some of the features that IoT Hub provides.
 
 #### Task 1: Explore the IoT Hub Overview information
 
-1. If necessary, log in to [portal.azure.com](https://portal.azure.com) using your Azure account credentials.
+1. If you closed your Azure portal window, open a Microsoft Edge browser window, and then navigate to the Azure portal:
+
+    **Azure portal**: +++http://portal.azure.com+++
+
 
     If you have more than one Azure account, be sure that you are logged in with the account that is tied to the subscription that you will be using for this course.
 
@@ -350,7 +359,9 @@ There are several methods that you can use to create an instance of the IoT Hub 
 
 #### Task 1: Use the Azure portal to create a resource (Device Provisioning Service)
 
-1. If necessary, log in to [portal.azure.com](https://portal.azure.com) using your Azure account credentials.
+1. If you closed your Azure portal window, open a Microsoft Edge browser window, and then navigate to the Azure portal:
+
+    **Azure portal**: +++http://portal.azure.com+++
 
     If you have more than one Azure account, be sure that you are logged in with the account that is tied to the subscription that you will be using for this course.
 
@@ -358,7 +369,7 @@ There are several methods that you can use to create an instance of the IoT Hub 
 
     As you saw previously, the **New** blade provides you with the capability to search the Azure Marketplace for services.
 
-1. In the Search textbox, type **Device Provisioning Service** and then press Enter.
+1. In the Search textbox, type **device provisioning service** and then press Enter.
 
 1. On the **Marketplace** blade, click **IoT Hub Device Provisioning Service** search result.
 
@@ -444,7 +455,9 @@ The IoT Hub Device Provisioning Service is a helper service for IoT Hub that ena
 
 #### Task 1: Explore the Device Provisioning Service Overview information
 
-1. If necessary, log in to [portal.azure.com](https://portal.azure.com) using your Azure account credentials.
+1. If you closed your Azure portal window, open a Microsoft Edge browser window, and then navigate to the Azure portal:
+
+    **Azure portal**: +++http://portal.azure.com+++
 
     If you have more than one Azure account, be sure that you are logged in with the account that is tied to the subscription that you will be using for this course.
 

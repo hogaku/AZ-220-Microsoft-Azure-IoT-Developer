@@ -29,7 +29,13 @@ Although Azure commonly referred to as a 'cloud', it is actually a web portal th
 
 #### Task 1: Examine the Azure portal Home page
 
-1. In your Web browser, to open the Azure portal, navigate to [portal.azure.com](http://portal.azure.com).
+1. In the lab virtual machine environment, open a Microsoft Edge browser window, and then navigate to the Azure portal using the following Web address:
+
+    > **NOTE**: Whenever you see the green "T" symbol, for example +++enter this text+++, you can click the associated text and the information will be typed into the current field within the virtual machine environment.
+
+    **Web address**: +++http://portal.azure.com+++
+
+1. When prompted to Sign in using Azure account credentials, enter the credentials that you are using for this course.
 
     When you log into Azure you will arrive at the Azure portal. The Azure portal provides you with a customizable UI that you can use to access your Azure resources.
 
@@ -154,9 +160,11 @@ In this exercise, you will:
 
 #### Task 1: Create a Dashboard
 
-1. If necessary, open your Web browser and navigate to your Azure portal.
+1. If you closed the Azure portal browser window, open the Microsoft Edge browser, and then navigate to the Azure portal:
 
-    You can use the following link to open the Azure portal: [Azure portal](https://portal.azure.com)
+    **Azure portal**: +++http://portal.azure.com+++
+
+    When prompted to Sign in using Azure account credentials, enter the Azure credentials that you are using for this course.
 
 1. On the Azure portal menu, click **Dashboard**.
 
