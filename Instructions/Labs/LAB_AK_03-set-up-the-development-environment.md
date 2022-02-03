@@ -132,8 +132,10 @@ You will be using Python 3.9 in support of IoT Edge and Docker.
 
 You will be using Docker Desktop Community (latest stable version) during a lab that covers creating and deploying custom IoT Edge modules.
 
-1. In your Web browser, navigate to [https://docs.docker.com/docker-for-windows/install/](https://docs.docker.com/docker-for-windows/install/)
-
+1. In your Web browser, navigate to [https://docs.docker.com/docker-for-windows/install/]
+    ```
+https://docs.docker.com/docker-for-windows/install/ 
+    ```
     The left-side navigation menu provides access to installations for additional operating systems.
 
 1. Verify that your PC meets the System Requirements.
