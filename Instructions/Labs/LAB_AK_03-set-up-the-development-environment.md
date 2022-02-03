@@ -80,8 +80,10 @@ In this lab, you will set up the base developer tools for your development envir
 
 Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages (such as C++, C#, Java, Python, PHP, Go) and run times (such as .NET and Unity).
 
-1. To open the Visual Studio Code download page, click the following link: [Download Visual Studio Code](https://code.visualstudio.com/Download)
-
+1. To open the Visual Studio Code download page, open a new browser tab, and type: [Download Visual Studio Code]
+  ```
+ https://code.visualstudio.com/Download
+    ```
     Instructions for installing Visual Studio Code on Mac OS X and Linux can be found on the Visual Studio Code set up guide [here](https://code.visualstudio.com/docs/setup/setup-overview). This page also includes more detailed instructions and tips for the Windows installation.
 
 1. On the Download Visual Studio Code page, click **Windows**.
