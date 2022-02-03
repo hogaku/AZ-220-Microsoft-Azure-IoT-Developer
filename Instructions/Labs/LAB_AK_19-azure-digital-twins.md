@@ -30,7 +30,7 @@ The following resources will be created:
 
 In this lab, you will complete the following activities:
 
-* Verify that the lab prerequisites are met (that you have the required Azure resources)
+* Configure Lab Prerequisites (required Azure resources)
 * Create and configure digital twins
   * Create a digital twin by using the supplied DTDL
   * Build ADT graph using digital twin instances
@@ -43,7 +43,7 @@ In this lab, you will complete the following activities:
 
 ## Lab Instructions
 
-### Exercise 1 - Verify Lab Prerequisites
+### Exercise 1 - Configure Lab Prerequisites
 
 #### Task 1 - Create resources
 
@@ -56,7 +56,7 @@ This lab assumes that the following Azure resources are available:
 | TSI            | tsi-az220-training-{your-id} |
 | TSI Access Policy | access1                   |
 
-To ensure these resources are available, complete the following tasks.
+To ensure these resources are available, complete the following steps.
 
 1. In the virtual machine environment, open a Microsoft Edge browser window, and then navigate to the following Web address:
  

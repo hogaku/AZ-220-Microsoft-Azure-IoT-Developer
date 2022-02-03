@@ -22,11 +22,7 @@ The following resources will be created:
 
 In this lab, you will complete the following activities:
 
-* Verify that the lab prerequisites are met (that you have the required Azure resources)
-
-  * The script will create an IoT Hub if needed.
-  * The script will create a new device identity needed for this lab.
-
+* Configure Lab Prerequisites (required Azure resources)
 * Deploy Azure IoT Edge Enabled Linux VM
 * Setup an IoT Edge Parent device with a Child IoT device
 * Configure the IoT Edge device as Gateway
@@ -37,7 +33,7 @@ In this lab, you will complete the following activities:
 
 ## Lab Instructions
 
-### Exercise 1: Verify Lab Prerequisites
+### Exercise 1: Configure Lab Prerequisites
 
 This lab assumes the following Azure resources are available:
 
@@ -48,7 +44,7 @@ This lab assumes the following Azure resources are available:
 | IoT Edge Device | vm-az220-training-gw0002-{your-id} |
 | IoT Device | sensor-th-0084 |
 
-To ensure these resources are available, complete the following tasks.
+To ensure these resources are available, complete the following steps.
 
 1. In the virtual machine environment, open a Microsoft Edge browser window, and then navigate to the following Web address:
  

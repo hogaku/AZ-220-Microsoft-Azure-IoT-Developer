@@ -26,13 +26,13 @@ The following resources will be created:
 
 In this lab, you will begin by reviewing the lab prerequisites and you will run a script if needed to ensure that your Azure subscription includes the required resources. You will then use the Azure portal to register a device ID with Azure IoT Hub and develop the corresponding simulated device app in Visual Studio Code. You will then insert the connection string (created by IoT Hub when you registered the device) into your simulated device code and run the app to test the connection and verify that telemetry is reaching IoT Hub as intended. The lab includes the following exercises:
 
-* Verify Lab Prerequisites
+* Configure Lab Prerequisites (required Azure resources)
 * Create an Azure IoT Hub Device ID using the Azure portal
 * Create and Test a Simulated Device (C#)
 
 ## Lab Instructions
 
-### Exercise 1: Verify Lab Prerequisites
+### Exercise 1: Configure Lab Prerequisites
 
 This lab assumes that the following Azure resources are available:
 
@@ -41,8 +41,7 @@ This lab assumes that the following Azure resources are available:
 | Resource Group | rg-az220                     |
 | IoT Hub        | iot-az220-training-{your-id} |
 
-To ensure these resources are available, complete the following tasks.
-
+To ensure these resources are available, complete the following steps.
 
 1. In the virtual machine environment, open a Microsoft Edge browser window, and then navigate to the following Web address:
  

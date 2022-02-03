@@ -26,9 +26,9 @@ In this lab, you will create and examine an Azure IoT Hub and an IoT Hub Device 
 
 ### Exercise 1: Explore Globally Unique Resource Naming Requirements
 
-In labs 2-20 of this course, you will be creating Azure resources that are used to develop your IoT solution. To ensure consistency across the labs and to help in tidying up resources when you are finished with them, suggested resource names will be provided within the lab instructions. As much as possible, the suggested resource names will follow the naming guidelines recommended here: [Recommended naming and tagging conventions](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging). However, many of the resources that you will create during this course expose services that can be consumed across the web, which means that they must have globally unique names. To ensure that these resources satisfy the globally unique requirement, you will be adding a unique identifier to the end of the resource names when needed.
+In labs 2-19 of this course, you will be creating and configuring the Azure resources that are used to develop your IoT solution. To ensure consistency across the labs and to help in tidying up resources when you are finished with them, suggested resource names will be provided within the lab instructions. As much as possible, the suggested resource names will follow the naming guidelines recommended here: [Recommended naming and tagging conventions](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging). However, many of the resources that you will create during this course expose services that can be consumed across the web, which means that they must have globally unique names. To ensure that these resources satisfy the globally unique requirement, you will be adding a unique identifier to the end of the resource names when needed.
 
-In this exercise, you will create your unique ID and review some examples that help to illustrate how you will use your unique ID during labs 2-20 of this course.
+In this exercise, you will create your unique ID and review some examples that help to illustrate how you will use your unique ID during labs 2-19 of this course.
 
 #### Task 1: Create Your Unique ID
 

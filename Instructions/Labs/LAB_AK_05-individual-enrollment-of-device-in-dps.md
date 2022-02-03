@@ -24,7 +24,7 @@ The following resources will be created:
 
 In this lab, you will begin by reviewing the lab prerequisites and you will run a script if needed to ensure that your Azure subscription includes the required resources. You will then create a new individual enrollment in DPS that uses Symmetric Key attestation and specifies an initial Device Twin State (telemetry rate) for the device. With the device enrollment saved, you will go back into the enrollment and get the auto-generated Primary and Secondary keys needed for device attestation. Next, you create a simulated device and verify that device connects successfully with IoT hub and that the initial device twin properties are applied by the device as expected. To finish up, you will complete a deprovisioning process that securely removes the device from your solution by both disenrolling and deregistering the device (from DPS and IoT hub respectively). The lab includes the following exercises:
 
-* Verify Lab Prerequisites
+* Configure Lab Prerequisites (required Azure resources)
 * Create new individual enrollment (Symmetric keys) in DPS
 * Configure Simulated Device
 * Test the Simulated Device
@@ -32,7 +32,7 @@ In this lab, you will begin by reviewing the lab prerequisites and you will run 
 
 ## Lab Instructions
 
-### Exercise 1: Verify Lab Prerequisites
+### Exercise 1: Configure Lab Prerequisites
 
 This lab assumes that the following Azure resources are available:
 
@@ -42,7 +42,7 @@ This lab assumes that the following Azure resources are available:
 | IoT Hub | iot-az220-training-{your-id} |
 | Device Provisioning Service | dps-az220-training-{your-id} |
 
-To ensure these resources are available, complete the following tasks.
+To ensure these resources are available, complete the following steps.
 
 1. In the virtual machine environment, open a Microsoft Edge browser window, and then navigate to the following Web address:
  

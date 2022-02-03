@@ -20,7 +20,7 @@ The following resources will be created:
 
 In this lab, you will begin by reviewing the lab prerequisites and you will run a script if needed to ensure that your Azure subscription includes the required resources. You will then generate an X.509 root CA Certificate using OpenSSL within the Azure Cloud Shell, and use the root certificate to configure the Group Enrollment within the Device Provisioning Service (DPS). After that, you will use the root certificate to generate a device certificate, which you will use within a simulated device code to provision your device to IoT hub. While in your device code, you will implement access to the device twin properties used to perform initial configuration of the device. You will then test your simulated device. To finish up this lab, you will deprovision the entire group enrollment. The lab includes the following exercises:
 
-* Verify Lab Prerequisites
+* Configure Lab Prerequisites (required Azure resources)
 * Generate and Configure X.509 CA Certificates using OpenSSL
 * Configure simulated device with X.509 certificate
 * Test the Simulated Device
@@ -28,7 +28,7 @@ In this lab, you will begin by reviewing the lab prerequisites and you will run 
 
 ## Lab Instructions
 
-### Exercise 1: Verify Lab Prerequisites
+### Exercise 1: Configure Lab Prerequisites
 
 This lab assumes that the following Azure resources are available:
 
@@ -38,7 +38,7 @@ This lab assumes that the following Azure resources are available:
 | IoT Hub | iot-az220-training-{your-id} |
 | Device Provisioning Service | dps-az220-training-{your-id} |
 
-To ensure these resources are available, complete the following tasks.
+To ensure these resources are available, complete the following steps.
 
 1. In the virtual machine environment, open a Microsoft Edge browser window, and then navigate to the following Web address:
  

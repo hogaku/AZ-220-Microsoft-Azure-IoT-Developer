@@ -24,12 +24,12 @@ The following resources will be created:
 
 In this lab, you will complete the following activities:
 
-* Verify that the lab prerequisites are met (that you have the required Azure resources)
+* Configure Lab Prerequisites (required Azure resources)
 * Create a Logic App that sends an email
 * Configure an Azure IoT Hub Event Subscription
 * Create new devices to trigger the Logic App
 
-### Exercise 1: Verify Lab Prerequisites
+### Exercise 1: Configure Lab Prerequisites
 
 This lab assumes the following Azure resources are available:
 
@@ -38,7 +38,7 @@ This lab assumes the following Azure resources are available:
 | Resource Group | rg-az220              |
 | IoT Hub        | iot-az220-training-{your-id} |
 
-To ensure these resources are available, complete the following tasks.
+To ensure these resources are available, complete the following steps.
 
 1. In the virtual machine environment, open a Microsoft Edge browser window, and then navigate to the following Web address:
  

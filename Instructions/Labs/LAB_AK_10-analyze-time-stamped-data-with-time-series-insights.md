@@ -26,18 +26,14 @@ The following resources will be created:
 
 In this lab, you will complete the following activities:
 
-* Verify that the lab prerequisites are met (that you have the required Azure resources)
-
-    * The script will create an IoT Hub if needed.
-    * The script will create three new device identities for this lab.
-
+* Configure Lab Prerequisites (required Azure resources)
 * Create an Azure Time Series Insights (TSI) environment
 * Connect to IoT Hub with Time Series Insights (TSI)
 * View time series data using the Time Series Insights (TSI) Explorer
 
 ## Lab Instructions
 
-### Exercise 1: Verify Lab Prerequisites
+### Exercise 1: Configure Lab Prerequisites
 
 This lab assumes the following Azure resources are available:
 
@@ -49,7 +45,7 @@ This lab assumes the following Azure resources are available:
 | Device ID | `sensor-th-airplane0001` |
 | Device ID | `sensor-th-container0001` |
 
-To ensure these resources are available, complete the following tasks.
+To ensure these resources are available, complete the following steps.
 
 1. In the virtual machine environment, open a Microsoft Edge browser window, and then navigate to the following Web address:
  

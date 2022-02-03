@@ -26,7 +26,7 @@ The following resources will be created:
 
 In this lab, you will complete the following activities:
 
-* Verify that the lab prerequisites are met (that you have the required Azure resources)
+* Configure Lab Prerequisites (required Azure resources)
 * Deploy an Azure IoT Edge Enabled Linux VM as an IoT Edge Device
 * Generate and Configure IoT Edge Device CA Certificates
 * Create an IoT Edge Device Identity in IoT Hub using Azure Portal
@@ -39,7 +39,7 @@ In this lab, you will complete the following activities:
 
 ## Lab Instructions
 
-### Exercise 1: Verify Lab Prerequisites
+### Exercise 1: Configure Lab Prerequisites
 
 This lab assumes that the following Azure resources are available:
 
