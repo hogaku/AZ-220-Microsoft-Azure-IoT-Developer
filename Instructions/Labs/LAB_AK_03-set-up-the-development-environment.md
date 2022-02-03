@@ -102,7 +102,10 @@ Visual Studio Code is a lightweight but powerful source code editor which runs o
 
 Azure CLI is a command-line tool that is designed to make scripting Azure-related tasks easier. It also enables you to flexibly query data, and it supports long-running operations as non-blocking processes.
 
-1. Open your browser, and then navigate to the Azure CLI tools download page: [Install Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest "Azure CLI Install")
+1. Open your browser, and then navigate to the Azure CLI tools download page: [Install Azure CLI]"Azure CLI Install"
+```
+https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest  
+    ```
 
     You should be installing the latest version of the Azure CLI tools (currently version 2.4). If version 2.4 is not the latest version listed on this "azure-cli-latest" download page, install the more recent version.
 
