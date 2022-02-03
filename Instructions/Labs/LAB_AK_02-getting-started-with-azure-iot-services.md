@@ -307,7 +307,7 @@ In this exercise, you will examine some of the features that IoT Hub provides.
 
     As you would expect, these menu options are used to open panes that provide access to properties and features of your IoT Hub. For example, some panes provides access to devices that are connected to your hub.
 
-1. On the left-side menu, under **Explorers**, click **IoT devices**
+1. On the left-side menu, under **Device management**, click **Devices**
 
     This pane can be used to add, modify, and delete devices registered to your hub. You will get pretty familiar with this pane by the end of this course.
 
