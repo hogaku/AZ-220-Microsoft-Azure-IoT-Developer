@@ -322,7 +322,7 @@ In this exercise, you will examine some of the features that IoT Hub provides.
     * _Events_
     * _Cloud to device messaging_
 
-1. On the left-side menu, under **Messaging**, click **Message routing**
+2. On the left-side menu, under **Hub Settings**, click **Message routing**
 
     The IoT Hub message routing feature enables you to route incoming device-to-cloud messages to service endpoints such as Azure Storage containers, Event Hubs, and Service Bus queues. You can also create routing rules to perform query-based routes.
 
