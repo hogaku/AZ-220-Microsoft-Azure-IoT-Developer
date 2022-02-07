@@ -112,7 +112,7 @@ In this task, you will enable **Azure Defender for IoT** for your IoT Hub.
 
     The rg-az220 resource group tile on your dashboard should have a link to your IoT Hub.
 
-1. On the left-side menu, under **Defender for IoT**, and then click **Overview**.
+1. On the left-side menu, under **Defender for IoT**, click **Overview**.
 
     Azure Defender for IoT Hub will onboard the first time a Security pane is opened.
 
