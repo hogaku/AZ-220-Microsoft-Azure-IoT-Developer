@@ -223,7 +223,7 @@ Azure CLI is a command-line tool that is designed to make scripting Azure-relate
 
 1. Open your browser, and then navigate to the Azure CLI tools download page: [Install Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest "Azure CLI Install")
 
-    You should be installing the latest version of the Azure CLI tools (currently version 2.4). If version 2.4 is not the latest version listed on this "azure-cli-latest" download page, install the more recent version.
+    You should be installing the latest version of the Azure CLI tools. The current version of Azure CLI (as of February 2022) is version 2.33, but be aware that new versions are released monthly, so the latest version is likely to have changed.
 
 1. On the **Install Azure CLI** page, select the install option for your OS (such as **Install on Windows**), and then follow the on-screen instructions to install the Azure CLI tool.
 
