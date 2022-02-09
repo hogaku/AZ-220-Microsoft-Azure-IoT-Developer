@@ -294,7 +294,7 @@ In this exercise, you will add a Simulated Temperature Sensor as a custom IoT Ed
 
 1. On your Resource group tile, to open your IoT Hub, click **iot-az220-training-{your-id}**.
 
-1. At the left of the **IoT Hub** blade, under **Automatic Device Management**, click **IoT Edge**.
+1. At the left of the **IoT Hub** blade, under **Device Management**, click **IoT Edge**.
 
 1. On the list of IoT Edge Devices, click **sensor-th-0067**.
 
