@@ -214,7 +214,7 @@ In this exercise, you will use the Azure portal to create a new Azure Container 
     ```
 
     Replace `<loginserver>` with the name you recorded, and enter the username and password you recorded when prompted. 
-    Note: When password is entered on the command prompot, even though it may have been applied the value, it not displayed to the user. Caution not to paste the value multiple times. 
+    Note: When password is entered on the command prompt, even though it may have been applied the value, it not displayed to the user. Caution not to paste the value multiple times. 
     For example:
 
     ```cmd/sh
