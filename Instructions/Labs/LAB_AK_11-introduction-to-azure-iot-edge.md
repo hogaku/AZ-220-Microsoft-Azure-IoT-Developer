@@ -182,7 +182,7 @@ In this task, you will use an ARM (Azure Resource Manager) Template to provision
 
 1. Under **Project details**, in the **Subscription** dropdown, ensure that the Azure subscription that you intend to use for this course is selected.
 
-1. Beneath the **Resource group** dropdown, clicke **Create new** and enter **rg-az220vm**.
+1. Beneath the **Resource group** dropdown, click **Create new** and enter **rg-az220vm**.
 
 1. In the **Region** field, enter the same location you have used earlier.
 
