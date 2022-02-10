@@ -24,7 +24,7 @@ The following resources will be created:
 
 In this lab, you will begin by reviewing the lab prerequisites and you will run a script if needed to ensure that your Azure subscription includes the required resources. You will then create a new individual enrollment in DPS that uses Symmetric Key attestation and specifies an initial Device Twin State (telemetry rate) for the device. With the device enrollment saved, you will go back into the enrollment and get the auto-generated Primary and Secondary keys needed for device attestation. Next, you create a simulated device and verify that device connects successfully with IoT hub and that the initial device twin properties are applied by the device as expected. To finish up, you will complete a deprovisioning process that securely removes the device from your solution by both disenrolling and deregistering the device (from DPS and IoT hub respectively). The lab includes the following exercises:
 
-* Verify Lab Prerequisites
+* Configure Lab Prerequisites (required Azure resources)
 * Create new individual enrollment (Symmetric keys) in DPS
 * Configure Simulated Device
 * Test the Simulated Device
@@ -32,7 +32,7 @@ In this lab, you will begin by reviewing the lab prerequisites and you will run 
 
 ## Lab Instructions
 
-### Exercise 1: Verify Lab Prerequisites
+### Exercise 1: Configure Lab Prerequisites
 
 This lab assumes that the following Azure resources are available:
 
@@ -42,13 +42,15 @@ This lab assumes that the following Azure resources are available:
 | IoT Hub | iot-az220-training-{your-id} |
 | Device Provisioning Service | dps-az220-training-{your-id} |
 
-To ensure these resources are available, complete the following tasks.
+To ensure these resources are available, complete the following steps.
 
-1. Select **Deploy to Azure**:
+1. In the virtual machine environment, open a Microsoft Edge browser window, and then navigate to the following Web address:
+ 
+    +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab05.json+++
 
-    [Deploy To Azure](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab05.json)
+    > **NOTE**: Whenever you see the green "T" symbol, for example +++enter this text+++, you can click the associated text and the information will be typed into the current field within the virtual machine environment.
 
-1. If prompted, login to the **Azure Portal**.
+1. If prompted to log in to the Azure portal, enter the Azure credentials that you are using for this course.
 
     The **Custom deployment** page will be displayed.
 
@@ -336,7 +338,7 @@ With the simulated device running, the `telemetryDelay` configuration can be upd
 
 1. Open the Azure portal (if it is not already open), and then navigate to your **Azure IoT Hub** service.
 
-1. On the IoT Hub blade, on the left-side menu under **Explorers**, click **IoT devices**.
+1. On the IoT Hub blade, on the left-side menu under **Device management**, click **Devices**.
 
 1. Under **DEVICE ID**, click **sensor-thl-1000**.
 
@@ -433,7 +435,7 @@ In this exercise, you will perform the tasks necessary to deprovision the device
 
 1. On your Resource group tile, to open your Azure IoT Hub blade, click **iot-az220-training-{your-id}**.
 
-1. On the left-side menu under **Explorers**, click **IoT devices**.
+1. On the left-side menu under **Device management**, click **Devices**.
 
 1. To the left of **sensor-thl-1000**, click the checkbox.
 

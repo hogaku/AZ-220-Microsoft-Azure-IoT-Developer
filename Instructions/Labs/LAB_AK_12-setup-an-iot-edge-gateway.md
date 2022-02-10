@@ -26,7 +26,7 @@ The following resources will be created:
 
 In this lab, you will complete the following activities:
 
-* Verify that the lab prerequisites are met (that you have the required Azure resources)
+* Configure Lab Prerequisites (required Azure resources)
 * Deploy an Azure IoT Edge Enabled Linux VM as an IoT Edge Device
 * Generate and Configure IoT Edge Device CA Certificates
 * Create an IoT Edge Device Identity in IoT Hub using Azure Portal
@@ -39,7 +39,7 @@ In this lab, you will complete the following activities:
 
 ## Lab Instructions
 
-### Exercise 1: Verify Lab Prerequisites
+### Exercise 1: Configure Lab Prerequisites
 
 This lab assumes that the following Azure resources are available:
 
@@ -50,11 +50,13 @@ This lab assumes that the following Azure resources are available:
 
 To ensure these resources are available, complete the following tasks.
 
-1. Select **Deploy to Azure**:
+1. In the virtual machine environment, open a Microsoft Edge browser window, and then navigate to the following Web address:
+ 
+    +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab12.json+++
 
-    [Deploy To Azure](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab12.json)
+    > **NOTE**: Whenever you see the green "T" symbol, for example +++enter this text+++, you can click the associated text and the information will be typed into the current field within the virtual machine environment.
 
-1. If prompted, login to the **Azure Portal**.
+1. If prompted to log in to the Azure portal, enter the Azure credentials that you are using for this course.
 
     The **Custom deployment** page will be displayed.
 
@@ -102,7 +104,7 @@ In this task, you will use Azure IoT Hub to create a new IoT Edge device identit
 
 1. On the **rg-az220** resource group tile, to open your IoT hub, click **iot-az220-training-{your-id}**.
 
-1. On the **iot-az220-training-{your-id}** blade, on the left-side menu under **Automatic Device Management**, click **IoT Edge**.
+1. On the **iot-az220-training-{your-id}** blade, on the left-side menu under **Device management**, click **IoT Edge**.
 
     The IoT Edge pane allows you to manage the IoT Edge devices connected to the IoT Hub.
 
@@ -335,6 +337,8 @@ In this exercise, you will explore the **vm-az220-training-gw0001-{your-id}** Vi
 
     > **Important**: Make a note of this IP address - you will need it later. The IP Address will usually change every time the VM is restarted.
 
+    > **Note**: If the public IP doesn't display in Azure Cloud shell, use Azure Portal, to locate the Public IP address of the VM.
+
 #### Task 2: Explore the IoT Edge configuration
 
 During the initial launch of the VM, a script was executed that configured IoT Edge. This script performed the following operations:
@@ -505,11 +509,11 @@ In this task, you will create a new IoT device identity in Azure IoT Hub for the
 
 1. On your Azure dashboard, to open your IoT Hub, click **iot-az220-training-{your-id}**.
 
-1. On the **iot-az220-training-{your-id}** blade, on the left-side menu under **Explorers**, click **IoT devices**.
+1. On the **iot-az220-training-{your-id}** blade, on the left-side menu under **Device management**, click **Devices**.
 
     This pane of the IoT Hub blade allows you to manage the IoT Devices connected to the IoT Hub.
 
-1. At the top of the pane, to begin configuring a new IoT device, click **+ New**.
+1. At the top of the pane, to begin configuring a new IoT device, click **+ Add Device**.
 
 1. On the **Create a device** blade, under **Device ID**, enter **sensor-th-0072**
 

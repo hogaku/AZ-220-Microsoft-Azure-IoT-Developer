@@ -22,11 +22,7 @@ The following resources will be created:
 
 In this lab, you will complete the following activities:
 
-* Verify that the lab prerequisites are met (that you have the required Azure resources)
-
-  * The script will create an IoT Hub if needed.
-  * The script will create a new device identity needed for this lab.
-
+* Configure Lab Prerequisites (required Azure resources)
 * Deploy Azure IoT Edge Enabled Linux VM
 * Setup an IoT Edge Parent device with a Child IoT device
 * Configure the IoT Edge device as Gateway
@@ -37,7 +33,7 @@ In this lab, you will complete the following activities:
 
 ## Lab Instructions
 
-### Exercise 1: Verify Lab Prerequisites
+### Exercise 1: Configure Lab Prerequisites
 
 This lab assumes the following Azure resources are available:
 
@@ -48,13 +44,15 @@ This lab assumes the following Azure resources are available:
 | IoT Edge Device | vm-az220-training-gw0002-{your-id} |
 | IoT Device | sensor-th-0084 |
 
-To ensure these resources are available, complete the following tasks.
+To ensure these resources are available, complete the following steps.
 
-1. Select **Deploy to Azure**:
+1. In the virtual machine environment, open a Microsoft Edge browser window, and then navigate to the following Web address:
+ 
+    +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab14.json+++
 
-    [Deploy To Azure](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab14.json)
+    > **NOTE**: Whenever you see the green "T" symbol, for example +++enter this text+++, you can click the associated text and the information will be typed into the current field within the virtual machine environment.
 
-1. If prompted, login to the **Azure Portal**.
+1. If prompted to log in to the Azure portal, enter the Azure credentials that you are using for this course.
 
     The **Custom deployment** page will be displayed.
 
@@ -343,7 +341,7 @@ In this exercise, you will use the Azure Portal user interface for Azure IoT Hub
 
 1. On your **rg-az220** resource group tile, click **iot-az220-training-{your-id}**.
 
-1. On left-side menu of your IoT hub blade, under **Automatic Device Management**, click **IoT Edge**.
+1. On left-side menu of your IoT hub blade, under **Device management**, click **IoT Edge**.
 
     This pane allows you to manage the IoT Edge devices connected to the IoT Hub.
 

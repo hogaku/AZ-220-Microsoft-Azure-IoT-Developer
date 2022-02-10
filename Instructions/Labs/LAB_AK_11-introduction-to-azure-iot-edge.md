@@ -24,7 +24,7 @@ The following resources will be created:
 
 In this lab, you will complete the following activities:
 
-* Verify that the lab prerequisites are met (that you have the required Azure resources)
+* Configure Lab Prerequisites (required Azure resources)
 * Deploy an Azure IoT Edge Enabled Linux VM
 * Create an IoT Edge Device Identity in IoT Hub using Azure CLI
 * Connect the IoT Edge Device to IoT Hub
@@ -33,7 +33,7 @@ In this lab, you will complete the following activities:
 
 ## Lab Instructions
 
-### Exercise 1: Verify Lab Prerequisites
+### Exercise 1: Configure Lab Prerequisites
 
 This lab assumes that the following Azure resources are available:
 
@@ -42,13 +42,15 @@ This lab assumes that the following Azure resources are available:
 | Resource Group | rg-az220 |
 | IoT Hub | iot-az220-training-{your-id} |
 
-To ensure these resources are available, complete the following tasks.
+To ensure these resources are available, complete the following steps.
 
-1. Select **Deploy to Azure**:
+1. In the virtual machine environment, open a Microsoft Edge browser window, and then navigate to the following Web address:
+ 
+    +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab11.json+++
 
-    [Deploy To Azure](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab11.json)
+    > **NOTE**: Whenever you see the green "T" symbol, for example +++enter this text+++, you can click the associated text and the information will be typed into the current field within the virtual machine environment.
 
-1. If prompted, login to the **Azure Portal**.
+1. If prompted to log in to the Azure portal, enter the Azure credentials that you are using for this course.
 
     The **Custom deployment** page will be displayed.
 
@@ -182,7 +184,7 @@ In this task, you will use an ARM (Azure Resource Manager) Template to provision
 
 1. Under **Project details**, in the **Subscription** dropdown, ensure that the Azure subscription that you intend to use for this course is selected.
 
-1. In the **Resource group** dropdown, select  create and enter **rg-az220vm**.
+1. Beneath the **Resource group** dropdown, click **Create new** and enter **rg-az220vm**.
 
 1. In the **Region** field, enter the same location you have used earlier.
 
@@ -292,7 +294,7 @@ In this exercise, you will add a Simulated Temperature Sensor as a custom IoT Ed
 
 1. On your Resource group tile, to open your IoT Hub, click **iot-az220-training-{your-id}**.
 
-1. At the left of the **IoT Hub** blade, under **Automatic Device Management**, click **IoT Edge**.
+1. At the left of the **IoT Hub** blade, under **Device Management**, click **IoT Edge**.
 
 1. On the list of IoT Edge Devices, click **sensor-th-0067**.
 
@@ -610,10 +612,6 @@ To prepare the Stream Analytics job to be deployed to an IoT Edge Device, it nee
 
 1. In the **Storage account** dropdown, ensure that the **az220store{your-id}** storage account is selected.
 
-> **TODO**: The container step is no longer present...
-
-1. Under **Container**, click **Create new**, and then enter **jobdefinition** as the name of the container.
-
 1. At the top of the pane, click **Save**.
 
     If prompted to confirm that you want to save the changes, click **Yes**
@@ -622,7 +620,7 @@ To prepare the Stream Analytics job to be deployed to an IoT Edge Device, it nee
 
 1. In the Azure portal, navigate to your **iot-az220-training-{your-id}** IoT Hub resource.
 
-1. On the left side navigation menu, under **Automatic Device Management**, click **IoT Edge**.
+1. On the left side navigation menu, under **Device Management**, click **IoT Edge**.
 
 1. Under **Device ID**, click **sensor-th-0067**.
 

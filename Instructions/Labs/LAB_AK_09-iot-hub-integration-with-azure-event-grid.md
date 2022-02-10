@@ -24,12 +24,12 @@ The following resources will be created:
 
 In this lab, you will complete the following activities:
 
-* Verify that the lab prerequisites are met (that you have the required Azure resources)
+* Configure Lab Prerequisites (required Azure resources)
 * Create a Logic App that sends an email
 * Configure an Azure IoT Hub Event Subscription
 * Create new devices to trigger the Logic App
 
-### Exercise 1: Verify Lab Prerequisites
+### Exercise 1: Configure Lab Prerequisites
 
 This lab assumes the following Azure resources are available:
 
@@ -38,13 +38,15 @@ This lab assumes the following Azure resources are available:
 | Resource Group | rg-az220              |
 | IoT Hub        | iot-az220-training-{your-id} |
 
-To ensure these resources are available, complete the following tasks.
+To ensure these resources are available, complete the following steps.
 
-1. Select **Deploy to Azure**:
+1. In the virtual machine environment, open a Microsoft Edge browser window, and then navigate to the following Web address:
+ 
+    +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab09.json+++
 
-    [Deploy To Azure](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab09.json)
+    > **NOTE**: Whenever you see the green "T" symbol, for example +++enter this text+++, you can click the associated text and the information will be typed into the current field within the virtual machine environment.
 
-1. If prompted, login to the **Azure Portal**.
+1. If prompted to log in to the Azure portal, enter the Azure credentials that you are using for this course.
 
     The **Custom deployment** page will be displayed.
 
@@ -292,9 +294,7 @@ In this exercise, you will create an Event Subscription within Azure IoT Hub to 
 
 1. Ensure that the **EventSchema** filed is set to **Event Grid Schema**.
 
-1. Leave the **TOPIC DETAILS** section unchanged.
-
-    This section is informational and read-only
+1. Under **TOPIC DETAILS**, type **myDeviceTopic-{your-id}**
 
 1. Under **EVENT TYPES**, open the **Filter to Event Types** dropdown, and then de-select all of the choices except **Device Created**.
 
@@ -330,7 +330,7 @@ Test your logic app by creating a new device to trigger an event notification em
 
 1. In your Azure portal, if needed, navigate to your IoT Hub blade.
 
-1. On the left side navigation menu, under **Explorers**, click **IoT Devices**.
+1. On the left side navigation menu, under **Device management**, click **Devices**.
 
 1. At the top of the IoT devices blade, click **+ New**.
 

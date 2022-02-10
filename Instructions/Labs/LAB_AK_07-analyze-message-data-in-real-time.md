@@ -37,17 +37,14 @@ The following resources will be created:
 
 In this lab, you will begin by reviewing the lab prerequisites and you will run a script if needed to ensure that your Azure subscription includes the required resources. You will then create a simulated device that sends vibration telemetry to your IoT hub. With your simulated data arriving at IoT hub, you will implement an IoT Hub Message Route and Azure Stream Analytics job that can be used to archive data. The lab includes the following exercises:
 
-* Verify Lab Prerequisites
-
-  * A script will be used to create any missing resources and a new device identity (sensor-v-3000) for this lab
-
+* Configure Lab Prerequisites (required Azure resources)
 * Write Code to generate Vibration Telemetry
 * Create a Message Route to Azure Blob Storage
 * Logging Route Azure Stream Analytics Job
 
 ## Lab Instructions
 
-### Exercise 1: Verify Lab Prerequisites
+### Exercise 1: Configure Lab Prerequisites
 
 This lab assumes that the following Azure resources are available:
 
@@ -57,13 +54,15 @@ This lab assumes that the following Azure resources are available:
 | IoT Hub | iot-az220-training-{your-id} |
 | Device ID | sensor-v-3000 |
 
-To ensure these resources are available, complete the following tasks.
+To ensure these resources are available, complete the following steps.
 
-1. Select **Deploy to Azure**:
+1. In the virtual machine environment, open a Microsoft Edge browser window, and then navigate to the following Web address:
+ 
+    +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab07.json+++
 
-    [Deploy To Azure](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab07.json)
+    > **NOTE**: Whenever you see the green "T" symbol, for example +++enter this text+++, you can click the associated text and the information will be typed into the current field within the virtual machine environment.
 
-1. If prompted, login to the **Azure Portal**.
+1. If prompted to log in to the Azure portal, enter the Azure credentials that you are using for this course.
 
     The **Custom deployment** page will be displayed.
 
@@ -394,7 +393,7 @@ In this exercise, you will create and test the logging route.
 
     If your Resources tile does not list your Storage account, click the **Refresh** button at the top of the resource group tile, and then follow the instruction above to open your storage account.
 
-1. On the left-side menu of your **vibrationstore{your-id}** blade, click **Storage Explorer (preview)**.
+1. On the left-side menu of your **vibrationstore{your-id}** blade, click **Storage Browser (preview)**.
 
     You can use the Storage Explorer to verify that your data is being added to the storage account.
 
@@ -412,7 +411,7 @@ In this exercise, you will create and test the logging route.
 
 1. Double-click the Block Blob for the data with the earliest time stamp.
 
-1. Click the **Click here to begin download** link.
+1. Click the **Download** menu at the top.
 
     A file named **{day_num}.avro** (i.e. **22.avro**) will be downloaded to the **Downloads** folder.
 
@@ -487,6 +486,8 @@ This will enable you to verify that your route includes the following settings:
 1. On the **IoT Hub - New input** pane, under **Input alias**, enter `vibrationInput`.
 
 1. Ensure that **Select IoT Hub from your subscriptions** is selected.
+
+1. Under **IoT Hub**, ensure that your **iot-az220-training-{your-id}** IoT hub is selected.
 
 1. Under **Subscription**, ensure that the subscription you used to create the IoT Hub earlier is selected.
 
@@ -603,13 +604,13 @@ Now for the fun part. Does the telemetry your device app is pumping out work its
 
     You should see activity in the charts.
 
-1. On the left-side menu, click **Storage Explorer (preview)**.
+1. On the left-side menu, click **Storage Browser (preview)**.
 
     You can use Storage Explorer for additional reassurance that all of your data is getting to the storage account.
 
     > **Note**:  The Storage Explorer is currently in preview mode, so its exact mode of operation may change.
 
-1. In **Storage Explorer (preview)**, under **BLOB CONTAINERS**, click **vibrationcontainer**.
+1. In **Storage Browser (preview)**, under **BLOB CONTAINERS**, click **vibrationcontainer**.
 
 1. To view the data, select the json file and click **Download**, then click **Click here to download**.
 

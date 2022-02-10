@@ -30,7 +30,7 @@ The following resources will be created:
 
 In this lab, you will complete the following activities:
 
-* Verify that the lab prerequisites are met (that you have the required Azure resources)
+* Configure Lab Prerequisites (required Azure resources)
 * Create and configure digital twins
   * Create a digital twin by using the supplied DTDL
   * Build ADT graph using digital twin instances
@@ -43,7 +43,7 @@ In this lab, you will complete the following activities:
 
 ## Lab Instructions
 
-### Exercise 1 - Verify Lab Prerequisites
+### Exercise 1 - Configure Lab Prerequisites
 
 #### Task 1 - Create resources
 
@@ -56,13 +56,15 @@ This lab assumes that the following Azure resources are available:
 | TSI            | tsi-az220-training-{your-id} |
 | TSI Access Policy | access1                   |
 
-To ensure these resources are available, complete the following tasks.
+To ensure these resources are available, complete the following steps.
 
-1. Select **Deploy to Azure**:
+1. In the virtual machine environment, open a Microsoft Edge browser window, and then navigate to the following Web address:
+ 
+    +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab19.json+++
 
-    [Deploy To Azure](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab19.json)
+    > **NOTE**: Whenever you see the green "T" symbol, for example +++enter this text+++, you can click the associated text and the information will be typed into the current field within the virtual machine environment.
 
-1. If prompted, login to the **Azure Portal**.
+1. If prompted to log in to the Azure portal, enter the Azure credentials that you are using for this course.
 
     The **Custom deployment** page will be displayed.
 
@@ -113,15 +115,29 @@ The resources have now been created.
 
 #### Task 2 - Verify tools
 
-1. Open a command prompt and verify the Azure CLI is installed locally, by entering the following command:
+1. In your virtual machine environment, open a Windows Command Prompt window.
+
+1. To display the version of Azure CLI that is installed locally, enter the following command:
 
     ```powershell
     az --version
     ```
 
-1. Verify that azure-cli version 2.4.0 or later is listed
+1. Verify that azure-cli version 2.11.0 or later is listed.
 
-    If Azure CLI is not installed, you must install it before you continue.
+    Azure CLI version 2.11 provides the ability to upgrade to the latest version. To upgrade, enter the following command:
+
+        ```powershell
+        az update
+        ```
+
+    > **NOTE**: If Azure CLI is not installed, you must install it before you continue:
+
+    1. Open your browser, and then navigate to the Azure CLI tools download page: [Install Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest "Azure CLI Install")
+
+        You should be installing the latest version of the Azure CLI tools. The current version of Azure CLI (as of February 2022) is version 2.33, but be aware that new versions are released monthly, so the latest version is likely to have changed.
+
+    1. On the **Install Azure CLI** page, select the install option for your OS (such as **Install on Windows**), and then follow the on-screen instructions to install the Azure CLI tool.
 
 ### Exercise 2 - Create an instance of the Azure Digital Twins resource
 
@@ -277,6 +293,7 @@ The ADT explorer is incorporated into the Azure Portal as a preview feature and 
 1. To open the ADT Explorer in a new browser tab, click **Open Azure Digital Twins Explorer (preview)**.
 
     A new browser tab hosting the ADT Explorer will open. You will see an alert indicating no results have been found - this is expected as no models have been imported.
+    **Note**: If the new window prompts to enter the URL of the ADT, enter the "https://adt......" name that you created on the 'adt-connection.txt'
 
     > **Important**: If you are prompted to login, ensure you use the same account that you used when creating the Azure Digital Twins instance, otherwise you will not have access to the data plane APIs and will see errors.
 
@@ -329,7 +346,8 @@ In this task, you will use Azure CLI commands and the ADT Explorer sample app to
         }
     ]
     ```
-
+  **Note**: If not successful, Alternately, one could import MODELS from lab 19 folder under Final/Models subfolder.
+  
 1. Return to the **ADT Explorer**.
 
     > **TIP**: Click the **Refresh** button in the **MODELS** explorer to update the list of models.

@@ -26,9 +26,9 @@ In this lab, you will create and examine an Azure IoT Hub and an IoT Hub Device 
 
 ### Exercise 1: Explore Globally Unique Resource Naming Requirements
 
-In labs 2-20 of this course, you will be creating Azure resources that are used to develop your IoT solution. To ensure consistency across the labs and to help in tidying up resources when you are finished with them, suggested resource names will be provided within the lab instructions. As much as possible, the suggested resource names will follow the naming guidelines recommended here: [Recommended naming and tagging conventions](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging). However, many of the resources that you will create during this course expose services that can be consumed across the web, which means that they must have globally unique names. To ensure that these resources satisfy the globally unique requirement, you will be adding a unique identifier to the end of the resource names when needed.
+In labs 2-19 of this course, you will be creating and configuring the Azure resources that are used to develop your IoT solution. To ensure consistency across the labs and to help in tidying up resources when you are finished with them, suggested resource names will be provided within the lab instructions. As much as possible, the suggested resource names will follow the naming guidelines recommended here: [Recommended naming and tagging conventions](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging). However, many of the resources that you will create during this course expose services that can be consumed across the web, which means that they must have globally unique names. To ensure that these resources satisfy the globally unique requirement, you will be adding a unique identifier to the end of the resource names when needed.
 
-In this exercise, you will create your unique ID and review some examples that help to illustrate how you will use your unique ID during labs 2-20 of this course.
+In this exercise, you will create your unique ID and review some examples that help to illustrate how you will use your unique ID during labs 2-19 of this course.
 
 #### Task 1: Create Your Unique ID
 
@@ -137,9 +137,15 @@ In this exercise, you will use the Azure portal to create and configure your IoT
 
 #### Task 1: Use the Azure portal to create a resource (IoT Hub)
 
-1. Login to [portal.azure.com](https://portal.azure.com) using your Azure account credentials.
+1. In the lab virtual machine environment, open a Microsoft Edge browser window, and then navigate to the Azure portal using the following Web address:
 
-    If you have more than one Azure account, be sure that you are logged in with the account that is tied to the subscription that you will be using for this course.  You may find it easiest to use an InPrivate / Incognito browser session to avoid accidentally using the wrong account.
+    +++http://portal.azure.com+++
+
+    > **NOTE**: Whenever you see the green "T" symbol, for example +++enter this text+++, you can click the associated text and the information will be typed into the current field within the virtual machine environment.
+
+1. When prompted to Sign in using Azure account credentials, enter the Azure credentials that you are using for this course.
+
+    If you have more than one Azure account, be sure that you are logged in with the account that is tied to the subscription that you will be using for this course.
 
 1. Notice that the AZ-220 dashboard that you created in the previous lab has been loaded.
 
@@ -149,7 +155,7 @@ In this exercise, you will use the Azure portal to create and configure your IoT
 
     The **New** blade that opens is a front-end to the Azure Marketplace, which is a collection of all the resources you can create in Azure. The marketplace contains resources from both Microsoft and the community.
 
-1. In the Search textbox, type **IoT Hub** and then press **Enter**.
+1. In the Search textbox, type **iot hub** and then press **Enter**.
 
     The **Marketplace** blade will open to display the available services matching your search criteria.
 
@@ -279,7 +285,9 @@ In this exercise, you will examine some of the features that IoT Hub provides.
 
 #### Task 1: Explore the IoT Hub Overview information
 
-1. If necessary, log in to [portal.azure.com](https://portal.azure.com) using your Azure account credentials.
+1. If you closed your Azure portal window, open a Microsoft Edge browser window, and then navigate to the Azure portal:
+
+    +++http://portal.azure.com+++
 
     If you have more than one Azure account, be sure that you are logged in with the account that is tied to the subscription that you will be using for this course.
 
@@ -307,7 +315,7 @@ In this exercise, you will examine some of the features that IoT Hub provides.
 
     As you would expect, these menu options are used to open panes that provide access to properties and features of your IoT Hub. For example, some panes provides access to devices that are connected to your hub.
 
-1. On the left-side menu, under **Explorers**, click **IoT devices**
+1. On the left-side menu, under **Device management**, click **Devices**
 
     This pane can be used to add, modify, and delete devices registered to your hub. You will get pretty familiar with this pane by the end of this course.
 
@@ -315,14 +323,13 @@ In this exercise, you will examine some of the features that IoT Hub provides.
 
     As the name implies, this pane gives you access to a log that can be used to review activities and diagnose issues. You can also define queries that help with routine tasks. Very handy.
 
-1. On the left-side menu, under **Settings**, click **Built-in endpoints**
-
+1. On the left-side menu, under **Hub Settings**, click **Built-in endpoints**
     IoT Hub exposes "endpoints" that enable external connections. Essentially, an endpoint is anything connected to or communicating with your IoT Hub. You should see that your hub already has two endpoints defined:
 
     * _Events_
     * _Cloud to device messaging_
 
-1. On the left-side menu, under **Messaging**, click **Message routing**
+2. On the left-side menu, under **Hub Settings**, click **Message routing**
 
     The IoT Hub message routing feature enables you to route incoming device-to-cloud messages to service endpoints such as Azure Storage containers, Event Hubs, and Service Bus queues. You can also create routing rules to perform query-based routes.
 
@@ -350,7 +357,9 @@ There are several methods that you can use to create an instance of the IoT Hub 
 
 #### Task 1: Use the Azure portal to create a resource (Device Provisioning Service)
 
-1. If necessary, log in to [portal.azure.com](https://portal.azure.com) using your Azure account credentials.
+1. If you closed your Azure portal window, open a Microsoft Edge browser window, and then navigate to the Azure portal:
+
+    +++http://portal.azure.com+++
 
     If you have more than one Azure account, be sure that you are logged in with the account that is tied to the subscription that you will be using for this course.
 
@@ -358,7 +367,7 @@ There are several methods that you can use to create an instance of the IoT Hub 
 
     As you saw previously, the **New** blade provides you with the capability to search the Azure Marketplace for services.
 
-1. In the Search textbox, type **Device Provisioning Service** and then press Enter.
+1. In the Search textbox, type **device provisioning service** and then press Enter.
 
 1. On the **Marketplace** blade, click **IoT Hub Device Provisioning Service** search result.
 
@@ -444,7 +453,9 @@ The IoT Hub Device Provisioning Service is a helper service for IoT Hub that ena
 
 #### Task 1: Explore the Device Provisioning Service Overview information
 
-1. If necessary, log in to [portal.azure.com](https://portal.azure.com) using your Azure account credentials.
+1. If you closed your Azure portal window, open a Microsoft Edge browser window, and then navigate to the Azure portal:
+
+    +++http://portal.azure.com+++
 
     If you have more than one Azure account, be sure that you are logged in with the account that is tied to the subscription that you will be using for this course.
 

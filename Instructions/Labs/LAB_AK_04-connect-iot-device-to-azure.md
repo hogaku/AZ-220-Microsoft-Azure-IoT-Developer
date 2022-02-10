@@ -26,13 +26,13 @@ The following resources will be created:
 
 In this lab, you will begin by reviewing the lab prerequisites and you will run a script if needed to ensure that your Azure subscription includes the required resources. You will then use the Azure portal to register a device ID with Azure IoT Hub and develop the corresponding simulated device app in Visual Studio Code. You will then insert the connection string (created by IoT Hub when you registered the device) into your simulated device code and run the app to test the connection and verify that telemetry is reaching IoT Hub as intended. The lab includes the following exercises:
 
-* Verify Lab Prerequisites
+* Configure Lab Prerequisites (required Azure resources)
 * Create an Azure IoT Hub Device ID using the Azure portal
 * Create and Test a Simulated Device (C#)
 
 ## Lab Instructions
 
-### Exercise 1: Verify Lab Prerequisites
+### Exercise 1: Configure Lab Prerequisites
 
 This lab assumes that the following Azure resources are available:
 
@@ -41,13 +41,17 @@ This lab assumes that the following Azure resources are available:
 | Resource Group | rg-az220                     |
 | IoT Hub        | iot-az220-training-{your-id} |
 
-To ensure these resources are available, complete the following tasks.
+To ensure these resources are available, complete the following steps.
 
-1. Select **Deploy to Azure**:
+1. In the virtual machine environment, open a Microsoft Edge browser window, and then navigate to the following Web address:
 
-    [Deploy To Azure](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab04.json)
+    ```text
+    https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab04.json
+    ```
 
-1. If prompted, login to the **Azure Portal**.
+    > **NOTE**: Whenever you see the green "T" symbol, for example +++enter this text+++, you can click the associated text and the information will be typed into the current field within the virtual machine environment.
+
+1. If prompted to log in to the Azure portal, enter the Azure credentials that you are using for this course.
 
     The **Custom deployment** page will be displayed.
 
@@ -91,7 +95,9 @@ In this exercise, you will open your IoT Hub in the Azure portal, add a new IoT 
 
 #### Task 1: Create the Device
 
-1. If necessary, log in to [portal.azure.com](https://portal.azure.com) using your Azure account credentials.
+1. If necessary, log in to the Azure portal.
+
+    In the virtual machine environment, open a browser window and navigate to: +++https://portal.azure.com+++
 
     If you have more than one Azure account, be sure that you are logged in with the account that is tied to the subscription that you will be using for this course.
 
@@ -99,7 +105,7 @@ In this exercise, you will open your IoT Hub in the Azure portal, add a new IoT 
 
 1. On the **rg-az220** resource group tile, click **iot-az220-training-{your-id}**
 
-1. On the left-side menu of your IoT Hub blade, under **Explorers**, click **IoT devices**.
+1. On the left-side menu of your IoT Hub blade, under **Device management**, click **Devices**.
 
 1. At the top of the **IoT devices** pane, click **Add Device**.
 
@@ -640,11 +646,15 @@ In this task, you will use Visual Studio Code to enter the code that leverages t
 
     > **Note**: Leave the simulated device app running for now. Your next task will be to verify that your IoT Hub is receiving the telemetry messages.
 
-#### Task 3: Verify Telemetry Stream sent to Azure IoT Hub
+#### Task 5: Verify Telemetry Stream sent to Azure IoT Hub
 
 In this task, you will use the Azure CLI to verify telemetry sent by the simulated device is being received by Azure IoT Hub.
 
-1. Using a browser, open the [Azure Cloud Shell](https://shell.azure.com/) and login with the Azure subscription you are using for this course.
+1. In a browser window, use the following Web address to navigate to the Azure Cloud Shell:
+
+    +++https://shell.azure.com/+++
+
+    If prompted, login with the Azure subscription you are using for this course.
 
 1. In the Azure Cloud Shell, to monitor the event messages that are being received by your IoT hub, enter the following command:
 

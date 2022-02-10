@@ -37,14 +37,14 @@ The following resources will be created:
 
 In this lab, you will complete the following activities:
 
-* Verify that the lab prerequisites are met (that you have the required Azure resources)
+* Configure Lab Prerequisites (required Azure resources)
 * Create the Container Registry
 * Create and customize an Edge module
 * Deploy modules to Edge device
 
 ## Lab Instructions
 
-### Exercise 1: Verify Lab Prerequisites
+### Exercise 1: Configure Lab Prerequisites
 
 This lab assumes that the following Azure resources are available:
 
@@ -53,13 +53,15 @@ This lab assumes that the following Azure resources are available:
 | Resource Group | rg-az220 |
 | IoT Hub | iot-az220-training-{your-id} |
 
-To ensure these resources are available, complete the following tasks.
+To ensure these resources are available, complete the following steps.
 
-1. Select **Deploy to Azure**:
+1. In the virtual machine environment, open a Microsoft Edge browser window, and then navigate to the following Web address:
+ 
+    +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab13.json+++
 
-    [Deploy To Azure](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab13.json)
+    > **NOTE**: Whenever you see the green "T" symbol, for example +++enter this text+++, you can click the associated text and the information will be typed into the current field within the virtual machine environment.
 
-1. If prompted, login to the **Azure Portal**.
+1. If prompted to log in to the Azure portal, enter the Azure credentials that you are using for this course.
 
     The **Custom deployment** page will be displayed.
 
@@ -94,13 +96,18 @@ To ensure these resources are available, complete the following tasks.
     * connectionString
 
 The resources have now been created.
+
 ### Exercise 2: Install Azure IoT EdgeHub Dev Tool
 
 In this exercise, you will will install the Azure IoT EdgeHub Dev Tool.
 
-1. Verify that you have Python 3.8 installed in your development environment.
+1. Verify that you have Python 3.9 (or later) installed in your development environment.
 
-    Lab 3 of this course has you prepare the lab environment, including the installation Python 3.8. If Python is not installed, refer back to the instructions in Lab 3.
+    The virtual machine environment includes Python version 3.9 and 3.7. The Windows environment PATH is configured for version 3.9.2.
+
+    If you are working on your own PC rather than the virtual machine environment, lab 3 of this course provides instructions on preparing the lab environment locally, including the installation Python 3.9. If Python is not installed, refer back to the instructions in Lab 3.
+
+    > **Note**: You can check the installed version of Python by opening a command prompt and entering the following command: **python --version**
 
 1. With Python installed, open Windows Command Prompt.
 
@@ -108,8 +115,13 @@ In this exercise, you will will install the Azure IoT EdgeHub Dev Tool.
 
     ```cmd/sh
     curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+    ```
+
+    ```cmd/sh
     python get-pip.py
     ```
+
+    You can ignore warnings about the pip version. You can ignore the error about wheel.exe.
 
     Pip is required to install the Azure IoT EdgeHub Dev Tool on your development machine.
 
@@ -117,7 +129,7 @@ In this exercise, you will will install the Azure IoT EdgeHub Dev Tool.
 
     If you have issues installing Pip, please reference the official Pip [installation instructions](https://pip.pypa.io/en/stable/installing/).
 
-    > **Note**: On Windows, Python and/or Pip are sometimes installed but are not in the `PATH`. Check with your instructor if you have Python installed but it does not seem to be available.
+    > **Note**: On Windows, Python and/or Pip are sometimes installed but are not in the **PATH**. Check with your instructor if you have Python installed but it does not seem to be available.
 
 1. To install the Azure IoT EdgeHub Dev Tool, enter the following command:
 
@@ -157,7 +169,7 @@ In this exercise, you will use the Azure portal to create a new Azure Container 
 
 1. On the **Create container registry** blade, under **Registry name**, enter a globally unique name.
 
-    To provide a globally unique name, enter **acraz220training{your-id}**.
+    To provide a globally unique name, enter +++acraz220training{your-id}+++.
 
     For example: **acraz220trainingcah191204**
 
@@ -213,17 +225,23 @@ In this exercise, you will use the Azure portal to create a new Azure Container 
     docker login <loginserver>
     ```
 
-    Replace `<loginserver>` with the name you recorded, and enter the username and password you recorded when prompted.  For example:
+    Be sure to replace `<loginserver>` with the name you recorded.
+
+    For example:
 
     ```cmd/sh
     docker login az220acrcah191204.azurecr.io
     ```
 
+1. When prompted, enter the username and password that you recorded earlier.
+
+    > **Note**: When you enter the password at the command prompt it will not be displayed. Do not enter the value multiple times.
+
     This command will record your credentials in the local Docker client configuration file (`$HOME/.docker/config.json`) or your operating system's secure credential storage mechanism (depending on the Docker configuration) for future use by the Docker toolset.
 
 Now that you have created the Azure Container Registry and authenticated your local machine against it, you can create a custom IoT Edge Module container that will be stored in the registry.
 
-### Exercise 4: Create Custom Edge Module in C\#
+### Exercise 4: Create Custom Edge Module in C#
 
 In this exercise, you will create an Azure IoT Edge Solution that contains a custom Azure IoT Edge Module written in C#.
 
@@ -413,17 +431,17 @@ In this exercise, you will build and run a custom IoT Edge Module solution using
 
 1. On your Resource group tile, click **iot-az220-training-{your-id}**.
 
-1. On the left hand navigation menu, under **Settings**, click **Shared access policies**.
+1. On the left hand navigation menu, under **Security Settings**, click **Shared access policies**.
 
 1. In the list of policies, click **iothubowner**.
 
     > **Important**: The Edge Simulator requires a privileged role for configuration. You would not use such a privileged role for normal use cases.
 
-1. In the **iothubowner** pane, copy the value for **Connection string--primary key**.
+1. In the **iothubowner** pane, copy the value for **Primary connection string**.
 
     Record this value, as you will need it below.
 
-1. On the left hand navigation menu, under **Automatic Device Management**, click **IoT Edge**.
+1. On the left hand navigation menu, under **Device Management**, click **IoT Edge**.
 
     This pane allows you to manage the IoT Edge devices connected to the IoT Hub.
 
@@ -648,7 +666,7 @@ In this exercise, you will build and publish the custom IoT Edge Module into the
 
     With the custom `objectcountingmodule` IoT Edge Module published to Azure Container Registry (ACR), the next step is to create a new IoT Edge Device within IoT Hub and configure it to run the new custom IoT Edge Module.
 
-1. On the **iot-az220-training-{your-id}** blade, on the left side navigation menu under **Automatic Device Management**, click **IoT Edge**.
+1. On the **iot-az220-training-{your-id}** blade, on the left side navigation menu under **Device management**, click **IoT Edge**.
 
 1. On the **IoT Edge** pane, at the top of the pane, click **Add an IoT Edge device**.
 

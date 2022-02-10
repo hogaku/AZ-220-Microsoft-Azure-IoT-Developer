@@ -29,7 +29,13 @@ Although Azure commonly referred to as a 'cloud', it is actually a web portal th
 
 #### Task 1: Examine the Azure portal Home page
 
-1. In your Web browser, to open the Azure portal, navigate to [portal.azure.com](http://portal.azure.com).
+1. In the lab virtual machine environment, open a Microsoft Edge browser window, and then navigate to the Azure portal using the following Web address:
+
+    +++http://portal.azure.com+++
+
+    > **NOTE**: Whenever you see the green "T" symbol, for example +++enter this text+++, you can click the associated text and the information will be typed into the current field within the virtual machine environment.
+
+1. When prompted to Sign in using Azure account credentials, enter the credentials that you are using for this course.
 
     When you log into Azure you will arrive at the Azure portal. The Azure portal provides you with a customizable UI that you can use to access your Azure resources.
 
@@ -95,7 +101,7 @@ Although Azure commonly referred to as a 'cloud', it is actually a web portal th
 
     > **Tip**: When you add a new item to your list of favorites, it is placed at the bottom of the favorites list on the Azure portal menu. You can rearrange your favorites into the order that you want by using a drag-and-drop operation.
 
-1. Use the same process to add the following services to your favorites: **Device Provisioning Services**, **Logic Apps**, **Stream Analytics jobs**, and **Storage Accounts**.
+1. Use the same process to add the following services to your favorites: **Device Provisioning Services**, **Logic Apps**, and **Stream Analytics jobs**.
 
     > **Note**: You can remove a service from the list of your favorite services by clicking the star of a selected service.
 
@@ -125,17 +131,11 @@ Although Azure commonly referred to as a 'cloud', it is actually a web portal th
 
     On the far right is a button for your account information, providing you with access to things like your account password and billing information.
 
-1. On the toolbar, click **Help**, and then click **Help + support**
-
-1. On the **Help + support** blade, notice the four Tiles for _Getting started_, _Documentation_, _Billing FAQs_, and _Support plans_.
-
-    The Help + support blade gives you access to lots of great resources. You may want to come back to this later for further exploration.
-
-1. On the **Help + support** blade, click **Billing FAQs**
+1. On the toolbar, click **Help**, and then click **Billing FAQs**
 
     A new browser tab should open to display Azure billing documentation.
 
-1. Take a moment to scan the contents of the **Prevent unexpected charges with Azure billing and cost management** page. 
+1. Take a moment to scan the contents of the **I have unexpected charges. How do I understand them?** page. 
 
     If *you* are using a paid Azure subscription and you are responsible for billing (you are the Account Administrator), you can set up cost alerts to help manage your billing.
 
@@ -154,9 +154,11 @@ In this exercise, you will:
 
 #### Task 1: Create a Dashboard
 
-1. If necessary, open your Web browser and navigate to your Azure portal.
+1. If you closed the Azure portal browser window, open the Microsoft Edge browser, and then navigate to the Azure portal:
 
-    You can use the following link to open the Azure portal: [Azure portal](https://portal.azure.com)
+    +++http://portal.azure.com+++
+
+    When prompted to Sign in using Azure account credentials, enter the Azure credentials that you are using for this course.
 
 1. On the Azure portal menu, click **Dashboard**.
 

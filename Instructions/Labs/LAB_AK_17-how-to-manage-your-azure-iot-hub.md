@@ -24,7 +24,7 @@ The following resources will be created:
 
 In this lab, you will complete the following activities:
 
-* Verify that the lab prerequisites are met (that you have the required Azure resources).
+* Configure Lab Prerequisites (required Azure resources)
 * Download and run an app that simulates an IoT device sending messages to the hub.
 * Run the app to generate telemetry.
 * Enable diagnostic logs.
@@ -35,7 +35,7 @@ In this lab, you will complete the following activities:
 
 ## Lab Instructions
 
-### Exercise 1: Verify Lab Prerequisites
+### Exercise 1: Configure Lab Prerequisites
 
 This lab assumes that the following Azure resources are available:
 
@@ -46,13 +46,15 @@ This lab assumes that the following Azure resources are available:
 | Storage Account | staz220training{your-id} |
 | Device ID | sensor-thl-2001 |
 
-To ensure these resources are available, complete the following tasks.
+To ensure these resources are available, complete the following steps.
 
-1. Select **Deploy to Azure**:
+1. In the virtual machine environment, open a Microsoft Edge browser window, and then navigate to the following Web address:
+ 
+    +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab17.json+++
 
-    [Deploy To Azure](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab17.json)
+    > **NOTE**: Whenever you see the green "T" symbol, for example +++enter this text+++, you can click the associated text and the information will be typed into the current field within the virtual machine environment.
 
-1. If prompted, login to the **Azure Portal**.
+1. If prompted to log in to the Azure portal, enter the Azure credentials that you are using for this course.
 
     The **Custom deployment** page will be displayed.
 
@@ -113,10 +115,10 @@ You will now configure and run the device simulator.
 
 1. Ensure that you have the **Program.cs** file opened in Visual Studio Code.
 
-1. Near the top of the **Program** class, locate the declaration of the `deviceConnectionString` variable:
+1. Near the top of the **Program** class, locate the declaration of the `connectionString` variable:
 
     ```csharp
-    private readonly static string deviceConnectionString = "<your device connection string>";
+    private readonly static string connectionString = "<your device connection string>";
     ```
 
 1. Replace `<your device connection string>` with the device connection string that you saved earlier.
@@ -230,7 +232,7 @@ In this task, you will set up various metrics to watch for when messages are sen
 
 1. In the context menu that appears, under **Time range**, click **Last 30 minutes**.
 
-1. In the same context menu, in the **Time granularity** dropdown, click **1 minute**, and under **Show time as**, ensure that **Local** is selected.
+1. In the same context menu, in the **Time granularity**, ensure that **Local** is selected.
 
 1. To save your time settings, click **Apply**.
 
@@ -479,7 +481,7 @@ In this exercise, you are going to add an alert that triggers when 5 or more dev
 
     > **NOTE**: If the pane has not automatically updated, click **Refresh**.
 
-### Exercise 4: Review Metrics, Alerts and Archive
+### Exercise 5: Review Metrics, Alerts and Archive
 
 In this exercise, you will examine some of the reporting and logging resources that you configured earlier in this lab, and review the event data has been recorded in the short time that has elapsed.
 

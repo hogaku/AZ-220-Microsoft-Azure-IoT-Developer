@@ -20,7 +20,7 @@ The following resources will be created:
 
 In this lab, you will begin by reviewing the lab prerequisites and you will run a script if needed to ensure that your Azure subscription includes the required resources. You will then generate an X.509 root CA Certificate using OpenSSL within the Azure Cloud Shell, and use the root certificate to configure the Group Enrollment within the Device Provisioning Service (DPS). After that, you will use the root certificate to generate a device certificate, which you will use within a simulated device code to provision your device to IoT hub. While in your device code, you will implement access to the device twin properties used to perform initial configuration of the device. You will then test your simulated device. To finish up this lab, you will deprovision the entire group enrollment. The lab includes the following exercises:
 
-* Verify Lab Prerequisites
+* Configure Lab Prerequisites (required Azure resources)
 * Generate and Configure X.509 CA Certificates using OpenSSL
 * Configure simulated device with X.509 certificate
 * Test the Simulated Device
@@ -28,7 +28,7 @@ In this lab, you will begin by reviewing the lab prerequisites and you will run 
 
 ## Lab Instructions
 
-### Exercise 1: Verify Lab Prerequisites
+### Exercise 1: Configure Lab Prerequisites
 
 This lab assumes that the following Azure resources are available:
 
@@ -38,13 +38,15 @@ This lab assumes that the following Azure resources are available:
 | IoT Hub | iot-az220-training-{your-id} |
 | Device Provisioning Service | dps-az220-training-{your-id} |
 
-To ensure these resources are available, complete the following tasks.
+To ensure these resources are available, complete the following steps.
 
-1. Select **Deploy to Azure**:
+1. In the virtual machine environment, open a Microsoft Edge browser window, and then navigate to the following Web address:
+ 
+    +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab06.json+++
 
-    [Deploy To Azure](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab06.json)
+    > **NOTE**: Whenever you see the green "T" symbol, for example +++enter this text+++, you can click the associated text and the information will be typed into the current field within the virtual machine environment.
 
-1. If prompted, login to the **Azure Portal**.
+1. If prompted to log in to the Azure portal, enter the Azure credentials that you are using for this course.
 
     The **Custom deployment** page will be displayed.
 
@@ -749,7 +751,7 @@ With the simulated devices running, the `telemetryDelay` configuration can be up
 
 1. Close the **sensor-thl-2000** blade, and then navigate back to your Azure portal Dashboard.
 
-### Exercise 5: Deprovision a single device from the Group Enrollment
+### Exercise 6: Deprovision a single device from the Group Enrollment
 
 There are many reasons why you might need to deprovision just a portion of the devices that are registered as part of a group enrollment. For example, a device may no longer be needed, a newer version of the device may have become available, or it may have been broken or compromised.
 
@@ -821,7 +823,7 @@ In this task, you will use the **sensor-thl-2001** device for the individual enr
 
 1. On the Resources tile, click **iot-az220-training-{your-id}**.
 
-1. On the left-side mnu of your IoT hub blade, under **Explorers**, click **IoT devices**.
+1. On the left-side mnu of your IoT hub blade, under **Device management**, click **Devices**.
 
 1. On the **IoT devices** pane, under **DEVICE ID**, locate the **sensor-thl-2001** device.
 
@@ -864,7 +866,7 @@ In this task, you will use the **sensor-thl-2001** device for the individual enr
 
     If you were to go back into your Azure portal and either enable the individual enrollment or delete the individual enrollment, the device will once again be able to authenticate with DPS and connect to IoT hub. If the individual enrollment is deleted, the device is automatically added back to the group enrollment.
 
-### Exercise 6: Deprovision the Group Enrollment
+### Exercise 7: Deprovision the Group Enrollment
 
 In this exercise, you will deprovision the full enrollment group. Again, this includes disenrolling from Device Provisioning Service and deregistering the devices from IoT Hub.
 
@@ -911,7 +913,7 @@ Once the enrollment group has been removed from the Device Provisioning Service 
 
 1. On your Resources tile, click **iot-az220-training-{your-id}**.
 
-1. On the left-side menu of your IoT hub blade, under **Explorers**, click **IoT devices**.
+1. On the left-side menu of your IoT hub blade, under **Device management**, click **Devices**.
 
 1. Notice that the device IDs for **sensor-thl-2000** and the other group enrolled devices still exist within the Azure IoT Hub device registry.
 

@@ -24,10 +24,7 @@ The following resources will be created:
 
 In this lab, you will complete the following activities:
 
-* Verify that the lab prerequisites are met (that you have the required Azure resources)
-
-    * The script will create an IoT Hub if needed
-
+* Configure Lab Prerequisites (required Azure resources)
 * Enable Azure Defender for IoT
 * Create and register a new Device
 * Create a Security Module Twin
@@ -39,7 +36,7 @@ In this lab, you will complete the following activities:
 
 ## Lab Instructions
 
-### Exercise 1: Verify Lab Prerequisites
+### Exercise 1: Configure Lab Prerequisites
 
 This lab assumes that the following Azure resources are available:
 
@@ -48,13 +45,15 @@ This lab assumes that the following Azure resources are available:
 | Resource Group | rg-az220 |
 | IoT Hub | iot-az220-training-{your-id} |
 
-To ensure these resources are available, complete the following tasks.
+To ensure these resources are available, complete the following steps.
 
-1. Select **Deploy to Azure**:
+1. In the virtual machine environment, open a Microsoft Edge browser window, and then navigate to the following Web address:
+ 
+    +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab18.json+++
 
-    [Deploy To Azure](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab18.json)
+    > **NOTE**: Whenever you see the green "T" symbol, for example +++enter this text+++, you can click the associated text and the information will be typed into the current field within the virtual machine environment.
 
-1. If prompted, login to the **Azure Portal**.
+1. If prompted to log in to the Azure portal, enter the Azure credentials that you are using for this course.
 
     The **Custom deployment** page will be displayed.
 
@@ -113,7 +112,7 @@ In this task, you will enable **Azure Defender for IoT** for your IoT Hub.
 
     The rg-az220 resource group tile on your dashboard should have a link to your IoT Hub.
 
-1. On the left-side menu, under **Defender for IoT**, and then click **Overview**.
+1. On the left-side menu, under **Defender for IoT**, click **Overview**.
 
     Azure Defender for IoT Hub will onboard the first time a Security pane is opened.
 
@@ -131,7 +130,7 @@ When Azure Defender for IoT is turned on, an Azure Log Analytics workspace shoul
 
 In this task, you will take a quick look at the workspace configuration of Log Analytics.
 
-1. In the left navigation area, under **Security**, click **Settings**..
+1. In the left navigation area under **Defender for IoT**, click **Settings**.
 
     The **Settings Page** is displayed, listing the four areas that can be configured:
 
@@ -246,9 +245,9 @@ As a device must be registered with your IoT hub before it can connect, let's cr
 
     There are plenty of other ways to open your IoT Hub blade, use whatever method you prefer.
 
-1. In the left-side menu, under **Explorers**, click **IoT devices**.
+1. In the left-side menu, under **Device management**, click **Devices**.
 
-1. At the top of **IoT devices** pane, click **+ New**
+1. At the top of **Devices** pane, click **+ Add Device**
 
 1. Under **Device ID**, enter **vm-az220-training-edge0002-{your-id}**
 
@@ -273,7 +272,7 @@ In this task, you will be creating a security module twin manually.
 
 1. In the Azure portal, if necessary, navigate to your the **IoT devices** pane of your IoT Hub.
 
-    To open the **IoT devices** pane from your IoT Hub blade, in the left-side menu, under **Explorers**, click **IoT devices**.
+    To open the **IoT devices** pane from your IoT Hub blade, in the left-side menu, under **Device management**, click **Devices**.
 
 1. Under **DEVICE ID**, click **vm-az220-training-edge0002-{your-id}**.
 
@@ -486,7 +485,7 @@ In this lab, you will be using the symmetric key as authentication and will need
 
 1. In the Azure portal, navigate back your IoT Hub blade, and then open the **vm-az220-training-edge0002-{your-id}** device blade.
 
-    Open your IoT Hub blade, on the navigation menu under **Explorers**, click **IoT devices**, and then click **vm-az220-training-edge0002-{your-id}**.
+    Open your IoT Hub blade, on the navigation menu under **Device management**, click **Devices**, and then click **vm-az220-training-edge0002-{your-id}**.
 
 1. Under **Module Identities**, notice that your **azureiotsecurity** module is now in a **Connected** state.
 
@@ -508,7 +507,7 @@ In addition to automatic relationship detection, you can also pick and choose wh
 
 1. In your browser, open the Azure Portal and navigate to your IoT Hub.
 
-1. On the left-side menu, under **Security**, click **Settings**.
+1. On the left-side menu, under **Defender for IoT**, click **Settings**.
 
     The **Settings Page** lists the following areas:
 
@@ -546,7 +545,7 @@ After defining all of the resource relationships, Azure Defender for IoT leverag
 
 You now have your the security agent installed on your device and your solution configured. It is a good time to check out the different views for Azure Defender for IoT.
 
-1. On the left-side menu, under **Security**, click **Overview**.
+1. On the left-side menu, under **Defender for IoT**, click **Overview**.
 
     You will see the health overview for your devices, hubs, and other resources appear on two charts. You can see the Built-in real-time monitoring, recommendations and alerts that were enabled right when you turn on your Azure IoT Defender.
 
@@ -583,7 +582,7 @@ In this task, you will create a custom alert.
 
 1. On your Azure portal, navigate to your IoT Hub blade.
 
-1. On the left-side menu, under **Security**, click **Settings**.
+1. On the left-side menu, under **Defender for IoT**, click **Settings**.
 
     The **Settings Page** lists the following areas:
 
@@ -655,9 +654,9 @@ A device must be registered with your IoT hub before it can connect.
 
 1. On the Azure portal menu, click **Dashboard**, and then open your IoT Hub.
 
-1. On the left-side menu, under **Explorers**, click **IoT devices**.
+1. On the left-side menu, under **Device management**, click **Devices**.
 
-1. At the top of the **IoT devices** pane, click  **+ New**
+1. At the top of the **IoT devices** pane, click  **+ Add Device**
 
 1. On the **Create a device** blade, under **Device ID**, enter **sensor-th-0070**
 
@@ -859,7 +858,7 @@ At this point, your console app will have sent enough telemetry to trigger the C
 
 1. On the Azure portal menu, click **Dashboard** and then open your IoT Hub.
 
-1. On the left-side menu, under **Security**, click **Overview**.
+1. On the left-side menu, under **Defender IoT**, click **Overview**.
 
     Take a look at the **Threat detection** section. You should see one or more alerts displayed in the **Device security alerts** chart:
 
