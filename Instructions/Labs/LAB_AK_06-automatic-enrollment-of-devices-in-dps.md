@@ -751,7 +751,7 @@ With the simulated devices running, the `telemetryDelay` configuration can be up
 
 1. Close the **sensor-thl-2000** blade, and then navigate back to your Azure portal Dashboard.
 
-### Exercise 5: Deprovision a single device from the Group Enrollment
+### Exercise 6: Deprovision a single device from the Group Enrollment
 
 There are many reasons why you might need to deprovision just a portion of the devices that are registered as part of a group enrollment. For example, a device may no longer be needed, a newer version of the device may have become available, or it may have been broken or compromised.
 
