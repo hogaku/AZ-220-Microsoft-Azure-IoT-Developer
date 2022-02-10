@@ -294,7 +294,7 @@ In this exercise, you will create an Event Subscription within Azure IoT Hub to 
 
 1. Ensure that the **EventSchema** filed is set to **Event Grid Schema**.
 
-1. Under **TOPIC DETAILS**, type **myDeviceTopic-{your-d}**
+1. Under **TOPIC DETAILS**, type **myDeviceTopic-{your-id}**
 
 1. Under **EVENT TYPES**, open the **Filter to Event Types** dropdown, and then de-select all of the choices except **Device Created**.
 
