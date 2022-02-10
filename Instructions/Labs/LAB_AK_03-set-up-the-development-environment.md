@@ -288,8 +288,10 @@ https://docs.docker.com/docker-for-windows/install/
 
 Some sample web applications are run locally using node.js. The following steps ensure node.js is installed and running the latest version:
 
-1. Using a browser, open the [node.js download page](https://nodejs.org/en/#home-downloadhead)
-
+1. Using a browser, open the [node.js download page]
+    ```
+       https://nodejs.org/en/#home-downloadhead
+    ```
 1. Download the latest LTS (Long Term Support) version - 14.16.0 at the time of writing.
 
 1. When prompted, select the option to run the installer.
