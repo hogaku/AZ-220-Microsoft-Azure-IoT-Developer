@@ -232,7 +232,7 @@ In this task, you will set up various metrics to watch for when messages are sen
 
 1. In the context menu that appears, under **Time range**, click **Last 30 minutes**.
 
-1. In the same context menu, in the **Time granularity** dropdown, click **1 minute**, and under **Show time as**, ensure that **Local** is selected.
+1. In the same context menu, in the **Time granularity**, ensure that **Local** is selected.
 
 1. To save your time settings, click **Apply**.
 
