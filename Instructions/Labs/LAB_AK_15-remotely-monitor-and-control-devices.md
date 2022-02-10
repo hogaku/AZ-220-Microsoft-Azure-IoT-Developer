@@ -565,7 +565,6 @@ In this exercise, you will enable some code in the back-end service app, to show
 
     The **RegistryManager** class encapsulates some of the IoT Hub Service REST APIs that include operations on the device identity registry, querying device twins, and import/export jobs. In this exercise, it will be used to update a device twin.
 
-1. Locate the `UNCOMMENT registry manager variable below here` comment.
 
 1. To insert the registry manager variable, enter the following code:
 
