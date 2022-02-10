@@ -823,7 +823,7 @@ In this task, you will use the **sensor-thl-2001** device for the individual enr
 
 1. On the Resources tile, click **iot-az220-training-{your-id}**.
 
-1. On the left-side mnu of your IoT hub blade, under **Explorers**, click **IoT devices**.
+1. On the left-side mnu of your IoT hub blade, under **Device management**, click **Devices**.
 
 1. On the **IoT devices** pane, under **DEVICE ID**, locate the **sensor-thl-2001** device.
 
