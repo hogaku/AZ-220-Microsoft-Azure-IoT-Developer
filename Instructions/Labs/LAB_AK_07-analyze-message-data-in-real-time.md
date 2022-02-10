@@ -411,7 +411,7 @@ In this exercise, you will create and test the logging route.
 
 1. Double-click the Block Blob for the data with the earliest time stamp.
 
-1. Click the **Click here to begin download** link.
+1. Click the **Download** menu at the top.
 
     A file named **{day_num}.avro** (i.e. **22.avro**) will be downloaded to the **Downloads** folder.
 
