@@ -644,7 +644,7 @@ In this task, you will use Visual Studio Code to enter the code that leverages t
 
     > **Note**: Leave the simulated device app running for now. Your next task will be to verify that your IoT Hub is receiving the telemetry messages.
 
-#### Task 3: Verify Telemetry Stream sent to Azure IoT Hub
+#### Task 5: Verify Telemetry Stream sent to Azure IoT Hub
 
 In this task, you will use the Azure CLI to verify telemetry sent by the simulated device is being received by Azure IoT Hub.
 
