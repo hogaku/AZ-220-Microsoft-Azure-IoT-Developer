@@ -137,6 +137,8 @@ In this exercise, you will setup Time Series Insights integration with Azure IoT
 
 1. In the **Tier** field, ensure that the **Gen1 (S1)** pricing tier is selected and that **Capacity** is set to **1**.
 
+1. In the field next to Property name, type **TSI_env-{your-id}*
+
 1. At the bottom of the blade, click **Next: Event Source**.
 
 1. Under the **EVENT SOURCE DETAILS** section, ensure that **Create an event source?** is set to **Yes**.
