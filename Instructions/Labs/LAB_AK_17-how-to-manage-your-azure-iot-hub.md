@@ -481,7 +481,7 @@ In this exercise, you are going to add an alert that triggers when 5 or more dev
 
     > **NOTE**: If the pane has not automatically updated, click **Refresh**.
 
-### Exercise 4: Review Metrics, Alerts and Archive
+### Exercise 5: Review Metrics, Alerts and Archive
 
 In this exercise, you will examine some of the reporting and logging resources that you configured earlier in this lab, and review the event data has been recorded in the short time that has elapsed.
 
