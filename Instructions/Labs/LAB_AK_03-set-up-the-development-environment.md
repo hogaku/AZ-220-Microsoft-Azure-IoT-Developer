@@ -172,7 +172,7 @@ You should verify that the development environment has been set up successfully.
 
 .NET Core is a cross-platform version of .NET for building websites, services, and console apps.
 
-1. To open the .NET Core download page, open a new browser tab and type: [.NET Download]
+1. To open the .NET Core download page, open a new browser tab, and then navigate to the following page:
 
     ```
     https://dotnet.microsoft.com/download
@@ -203,10 +203,12 @@ You should verify that the development environment has been set up successfully.
 
 Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages (such as C++, C#, Java, Python, PHP, Go) and run times (such as .NET and Unity).
 
-1. To open the Visual Studio Code download page, open a new browser tab, and type: [Download Visual Studio Code]
-  ```
- https://code.visualstudio.com/Download
+1. To open the Visual Studio Code download page, open a new browser tab, and then navigate to the following page:
+
     ```
+    https://code.visualstudio.com/Download
+    ```
+
     Instructions for installing Visual Studio Code on Mac OS X and Linux can be found on the Visual Studio Code set up guide [here](https://code.visualstudio.com/docs/setup/setup-overview). This page also includes more detailed instructions and tips for the Windows installation.
 
 1. On the Download Visual Studio Code page, click **Windows**.
@@ -227,9 +229,10 @@ Visual Studio Code is a lightweight but powerful source code editor which runs o
 
 Azure CLI is a command-line tool that is designed to make scripting Azure-related tasks easier. It also enables you to flexibly query data, and it supports long-running operations as non-blocking processes.
 
-1. Open your browser, and then navigate to the Azure CLI tools download page: [Install Azure CLI]"Azure CLI Install"
-```
-https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest  
+1. To open the Azure CLI tools download page, open a new browser tab, and then navigate to the following page:
+
+    ```
+    https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest  
     ```
 
     You should be installing the latest version of the Azure CLI tools. The current version of Azure CLI (as of February 2022) is version 2.33, but be aware that new versions are released monthly, so the latest version is likely to have changed.
@@ -242,10 +245,12 @@ https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-late
 
 You will be using Python 3.9 in support of IoT Edge and Docker.
 
-1. In your Web browser, navigate to [https://www.python.org/downloads/]
-```
- https://www.python.org/downloads/
+1. To open the Python.org downloads page, open a new browser tab, and then navigate to the following page:
+
     ```
+    https://www.python.org/downloads/
+    ```
+
 1. On the Python download page, select the installer file that is appropriate for your Operating System.
 
 1. When prompted, select the option to run the installer
@@ -262,10 +267,12 @@ You will be using Python 3.9 in support of IoT Edge and Docker.
 
 You will be using Docker Desktop Community (latest stable version) during a lab that covers creating and deploying custom IoT Edge modules.
 
-1. In your Web browser, navigate to [https://docs.docker.com/docker-for-windows/install/]
+1. To open the Docker Desktop for Windows download page, open a new browser tab, and then navigate to the following page:
+
     ```
-https://docs.docker.com/docker-for-windows/install/ 
+    https://docs.docker.com/docker-for-windows/install/ 
     ```
+
     The left-side navigation menu provides access to installations for additional operating systems.
 
 1. Verify that your PC meets the System Requirements.
@@ -288,10 +295,12 @@ https://docs.docker.com/docker-for-windows/install/
 
 Some sample web applications are run locally using node.js. The following steps ensure node.js is installed and running the latest version:
 
-1. Using a browser, open the [node.js download page]
+1. To open the Node.js download page, open a new browser tab, and then navigate to the following page:
+
     ```
-       https://nodejs.org/en/#home-downloadhead
+    https://nodejs.org/en/#home-downloadhead
     ```
+
 1. Download the latest LTS (Long Term Support) version - 14.16.0 at the time of writing.
 
 1. When prompted, select the option to run the installer.
@@ -443,7 +452,7 @@ Microsoft has created a GitHub repo to provide access to lab resource files. Hav
 
 1. In your Web browser, navigate to the following location: [https://github.com/MicrosoftLearning/AZ-220-Microsoft-Azure-IoT-Developer](https://github.com/MicrosoftLearning/AZ-220-Microsoft-Azure-IoT-Developer)
 
-1. On the right side of the page, click on ***Code*** drop down arrow and then click **Download ZIP**.
+1. Open the **Code** dropdown, and then click **Download ZIP**.
 
 1. To save the ZIP file to your dev environment, click **Save**.
 

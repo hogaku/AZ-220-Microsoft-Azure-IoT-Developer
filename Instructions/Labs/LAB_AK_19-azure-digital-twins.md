@@ -293,7 +293,8 @@ The ADT explorer is incorporated into the Azure Portal as a preview feature and 
 1. To open the ADT Explorer in a new browser tab, click **Open Azure Digital Twins Explorer (preview)**.
 
     A new browser tab hosting the ADT Explorer will open. You will see an alert indicating no results have been found - this is expected as no models have been imported.
-    **Note**: If the new window prompts to enter the URL of the ADT, enter the "https://adt......" name that you created on the 'adt-connection.txt'
+
+    **Note**: If the new window prompts to enter the URL of your ADT instance, enter the URL value that you saved to your text editor.
 
     > **Important**: If you are prompted to login, ensure you use the same account that you used when creating the Azure Digital Twins instance, otherwise you will not have access to the data plane APIs and will see errors.
 
@@ -346,7 +347,8 @@ In this task, you will use Azure CLI commands and the ADT Explorer sample app to
         }
     ]
     ```
-  **Note**: If not successful, Alternately, one could import MODELS from lab 19 folder under Final/Models subfolder.
+
+    **Note**: If you are unable to configure the Azure CLI command, the instructions below will show you how to import a Model using the Azure Digitial Twins Explorer interface.
   
 1. Return to the **ADT Explorer**.
 
