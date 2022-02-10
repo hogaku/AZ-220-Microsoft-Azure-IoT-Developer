@@ -245,7 +245,7 @@ As a device must be registered with your IoT hub before it can connect, let's cr
 
     There are plenty of other ways to open your IoT Hub blade, use whatever method you prefer.
 
-1. In the left-side menu, under **Explorers**, click **IoT devices**.
+1. In the left-side menu, under **Device management**, click **Devices**.
 
 1. At the top of **IoT devices** pane, click **+ New**
 
