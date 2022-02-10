@@ -346,7 +346,8 @@ In this task, you will use Azure CLI commands and the ADT Explorer sample app to
         }
     ]
     ```
-
+  **Note**: If not successful, Alternately, one could import MODELS from lab 19 folder under Final/Models subfolder.
+  
 1. Return to the **ADT Explorer**.
 
     > **TIP**: Click the **Refresh** button in the **MODELS** explorer to update the list of models.
