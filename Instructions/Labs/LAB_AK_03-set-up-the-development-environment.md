@@ -443,7 +443,7 @@ Microsoft has created a GitHub repo to provide access to lab resource files. Hav
 
 1. In your Web browser, navigate to the following location: [https://github.com/MicrosoftLearning/AZ-220-Microsoft-Azure-IoT-Developer](https://github.com/MicrosoftLearning/AZ-220-Microsoft-Azure-IoT-Developer)
 
-1. On the right side of the page, click **Clone or download**, and then click **Download ZIP**.
+1. On the right side of the page, click on ***Code*** drop down arrow and then click **Download ZIP**.
 
 1. To save the ZIP file to your dev environment, click **Save**.
 
