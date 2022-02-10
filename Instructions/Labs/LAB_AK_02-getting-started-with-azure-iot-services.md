@@ -323,8 +323,7 @@ In this exercise, you will examine some of the features that IoT Hub provides.
 
     As the name implies, this pane gives you access to a log that can be used to review activities and diagnose issues. You can also define queries that help with routine tasks. Very handy.
 
-1. On the left-side menu, under **Settings**, click **Built-in endpoints**
-
+1. On the left-side menu, under **Hub Settings**, click **Built-in endpoints**
     IoT Hub exposes "endpoints" that enable external connections. Essentially, an endpoint is anything connected to or communicating with your IoT Hub. You should see that your hub already has two endpoints defined:
 
     * _Events_
