@@ -247,7 +247,7 @@ As a device must be registered with your IoT hub before it can connect, let's cr
 
 1. In the left-side menu, under **Device management**, click **Devices**.
 
-1. At the top of **IoT devices** pane, click **+ New**
+1. At the top of **Devices** pane, click **+ Add Device**
 
 1. Under **Device ID**, enter **vm-az220-training-edge0002-{your-id}**
 
