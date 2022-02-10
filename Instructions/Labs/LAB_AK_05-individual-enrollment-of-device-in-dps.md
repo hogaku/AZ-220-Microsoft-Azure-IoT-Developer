@@ -435,7 +435,7 @@ In this exercise, you will perform the tasks necessary to deprovision the device
 
 1. On your Resource group tile, to open your Azure IoT Hub blade, click **iot-az220-training-{your-id}**.
 
-1. On the left-side menu under **Explorers**, click **IoT devices**.
+1. On the left-side menu under **Device management**, click **Devices**.
 
 1. To the left of **sensor-thl-1000**, click the checkbox.
 
