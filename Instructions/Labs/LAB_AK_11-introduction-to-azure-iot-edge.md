@@ -620,7 +620,7 @@ To prepare the Stream Analytics job to be deployed to an IoT Edge Device, it nee
 
 1. In the Azure portal, navigate to your **iot-az220-training-{your-id}** IoT Hub resource.
 
-1. On the left side navigation menu, under **Automatic Device Management**, click **IoT Edge**.
+1. On the left side navigation menu, under **Device Management**, click **IoT Edge**.
 
 1. Under **Device ID**, click **sensor-th-0067**.
 
