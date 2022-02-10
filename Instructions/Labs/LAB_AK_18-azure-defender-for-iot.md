@@ -507,7 +507,7 @@ In addition to automatic relationship detection, you can also pick and choose wh
 
 1. In your browser, open the Azure Portal and navigate to your IoT Hub.
 
-1. On the left-side menu, under **Security**, click **Settings**.
+1. On the left-side menu, under **Defender for IoT**, click **Settings**.
 
     The **Settings Page** lists the following areas:
 
