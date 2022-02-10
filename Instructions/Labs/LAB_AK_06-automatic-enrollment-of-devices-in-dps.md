@@ -866,7 +866,7 @@ In this task, you will use the **sensor-thl-2001** device for the individual enr
 
     If you were to go back into your Azure portal and either enable the individual enrollment or delete the individual enrollment, the device will once again be able to authenticate with DPS and connect to IoT hub. If the individual enrollment is deleted, the device is automatically added back to the group enrollment.
 
-### Exercise 6: Deprovision the Group Enrollment
+### Exercise 7: Deprovision the Group Enrollment
 
 In this exercise, you will deprovision the full enrollment group. Again, this includes disenrolling from Device Provisioning Service and deregistering the devices from IoT Hub.
 
