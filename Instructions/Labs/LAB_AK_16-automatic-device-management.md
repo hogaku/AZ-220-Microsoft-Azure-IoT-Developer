@@ -227,7 +227,7 @@ In this exercise, you will use the Azure portal to create a new device managemen
 
     Your IoT Hub blade should now be displayed.
 
-1. On the left side navigation menu, under **Automatic Device Management**, click **IoT device configuration**.
+1. On the left side navigation menu, under **Device management**, click **Configurations**.
 
 1. On the **IoT device configuration** pane, click **+ Add Device Configuration**.
 
