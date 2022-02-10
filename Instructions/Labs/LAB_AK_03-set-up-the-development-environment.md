@@ -173,6 +173,7 @@ You should verify that the development environment has been set up successfully.
 .NET Core is a cross-platform version of .NET for building websites, services, and console apps.
 
 1. To open the .NET Core download page, open a new browser tab and type: [.NET Download]
+
     ```
     https://dotnet.microsoft.com/download
     ```
