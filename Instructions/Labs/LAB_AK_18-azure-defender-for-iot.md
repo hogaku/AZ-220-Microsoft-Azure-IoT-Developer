@@ -272,7 +272,7 @@ In this task, you will be creating a security module twin manually.
 
 1. In the Azure portal, if necessary, navigate to your the **IoT devices** pane of your IoT Hub.
 
-    To open the **IoT devices** pane from your IoT Hub blade, in the left-side menu, under **Explorers**, click **IoT devices**.
+    To open the **IoT devices** pane from your IoT Hub blade, in the left-side menu, under **Device management**, click **Devices**.
 
 1. Under **DEVICE ID**, click **vm-az220-training-edge0002-{your-id}**.
 
