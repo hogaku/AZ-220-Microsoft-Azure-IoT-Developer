@@ -336,6 +336,7 @@ In this exercise, you will explore the **vm-az220-training-gw0001-{your-id}** Vi
     The public IP of the VM is the final **Address** value - in this case **168.61.181.131**.
 
     > **Important**: Make a note of this IP address - you will need it later. The IP Address will usually change every time the VM is restarted.
+
     > **Note**: If the public IP doesn't display in Azure Cloud shell, use Azure Portal, to locate the Public IP address of the VM.
 
 #### Task 2: Explore the IoT Edge configuration
