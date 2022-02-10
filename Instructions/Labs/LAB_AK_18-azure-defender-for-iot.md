@@ -485,7 +485,7 @@ In this lab, you will be using the symmetric key as authentication and will need
 
 1. In the Azure portal, navigate back your IoT Hub blade, and then open the **vm-az220-training-edge0002-{your-id}** device blade.
 
-    Open your IoT Hub blade, on the navigation menu under **Explorers**, click **IoT devices**, and then click **vm-az220-training-edge0002-{your-id}**.
+    Open your IoT Hub blade, on the navigation menu under **Device management**, click **Devices**, and then click **vm-az220-training-edge0002-{your-id}**.
 
 1. Under **Module Identities**, notice that your **azureiotsecurity** module is now in a **Connected** state.
 
