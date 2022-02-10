@@ -105,7 +105,7 @@ In this exercise, you will open your IoT Hub in the Azure portal, add a new IoT 
 
 1. On the **rg-az220** resource group tile, click **iot-az220-training-{your-id}**
 
-1. On the left-side menu of your IoT Hub blade, under **Explorers**, click **IoT devices**.
+1. On the left-side menu of your IoT Hub blade, under **Device management**, click **Devices**.
 
 1. At the top of the **IoT devices** pane, click **Add Device**.
 
