@@ -341,7 +341,7 @@ In this exercise, you will use the Azure Portal user interface for Azure IoT Hub
 
 1. On your **rg-az220** resource group tile, click **iot-az220-training-{your-id}**.
 
-1. On left-side menu of your IoT hub blade, under **Automatic Device Management**, click **IoT Edge**.
+1. On left-side menu of your IoT hub blade, under **Device management**, click **IoT Edge**.
 
     This pane allows you to manage the IoT Edge devices connected to the IoT Hub.
 
