@@ -242,8 +242,10 @@ https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-late
 
 You will be using Python 3.9 in support of IoT Edge and Docker.
 
-1. In your Web browser, navigate to [https://www.python.org/downloads/](https://www.python.org/downloads/)
-
+1. In your Web browser, navigate to [https://www.python.org/downloads/]
+```
+ https://www.python.org/downloads/
+    ```
 1. On the Python download page, select the installer file that is appropriate for your Operating System.
 
 1. When prompted, select the option to run the installer
