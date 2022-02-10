@@ -338,7 +338,7 @@ With the simulated device running, the `telemetryDelay` configuration can be upd
 
 1. Open the Azure portal (if it is not already open), and then navigate to your **Azure IoT Hub** service.
 
-1. On the IoT Hub blade, on the left-side menu under **Explorers**, click **IoT devices**.
+1. On the IoT Hub blade, on the left-side menu under **Device management**, click **Devices**.
 
 1. Under **DEVICE ID**, click **sensor-thl-1000**.
 
