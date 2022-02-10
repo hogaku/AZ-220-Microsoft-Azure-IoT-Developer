@@ -612,10 +612,6 @@ To prepare the Stream Analytics job to be deployed to an IoT Edge Device, it nee
 
 1. In the **Storage account** dropdown, ensure that the **az220store{your-id}** storage account is selected.
 
-> **TODO**: The container step is no longer present...
-
-1. Under **Container**, click **Create new**, and then enter **jobdefinition** as the name of the container.
-
 1. At the top of the pane, click **Save**.
 
     If prompted to confirm that you want to save the changes, click **Yes**
