@@ -131,13 +131,7 @@ Although Azure commonly referred to as a 'cloud', it is actually a web portal th
 
     On the far right is a button for your account information, providing you with access to things like your account password and billing information.
 
-1. On the toolbar, click **Help**, and then click **Help + support**
-
-1. On the **Help + support** blade, notice the four Tiles for _Getting started_, _Documentation_, _Billing FAQs_, and _Support plans_.
-
-    The Help + support blade gives you access to lots of great resources. You may want to come back to this later for further exploration.
-
-1. On the **Help + support** blade, click **Billing FAQs**
+1. On the toolbar, click **Help**, and then click **Billing FAQs**
 
     A new browser tab should open to display Azure billing documentation.
 
