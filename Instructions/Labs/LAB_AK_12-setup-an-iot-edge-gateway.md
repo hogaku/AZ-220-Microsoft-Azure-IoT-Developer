@@ -513,7 +513,7 @@ In this task, you will create a new IoT device identity in Azure IoT Hub for the
 
     This pane of the IoT Hub blade allows you to manage the IoT Devices connected to the IoT Hub.
 
-1. At the top of the pane, to begin configuring a new IoT device, click **+ New**.
+1. At the top of the pane, to begin configuring a new IoT device, click **+ Add Device**.
 
 1. On the **Create a device** blade, under **Device ID**, enter **sensor-th-0072**
 
