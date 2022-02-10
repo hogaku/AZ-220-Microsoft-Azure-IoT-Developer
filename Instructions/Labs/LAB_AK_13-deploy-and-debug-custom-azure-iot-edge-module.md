@@ -225,13 +225,17 @@ In this exercise, you will use the Azure portal to create a new Azure Container 
     docker login <loginserver>
     ```
 
-    Replace `<loginserver>` with the name you recorded, and enter the username and password you recorded when prompted. 
-    Note: When password is entered on the command prompt, even though it may have been applied the value, it not displayed to the user. Caution not to paste the value multiple times. 
+    Be sure to replace `<loginserver>` with the name you recorded.
+
     For example:
 
     ```cmd/sh
     docker login az220acrcah191204.azurecr.io
     ```
+
+1. When prompted, enter the username and password that you recorded earlier.
+
+    > **Note**: When you enter the password at the command prompt it will not be displayed. Do not enter the value multiple times.
 
     This command will record your credentials in the local Docker client configuration file (`$HOME/.docker/config.json`) or your operating system's secure credential storage mechanism (depending on the Docker configuration) for future use by the Docker toolset.
 
