@@ -566,12 +566,6 @@ In this exercise, you will enable some code in the back-end service app, to show
     The **RegistryManager** class encapsulates some of the IoT Hub Service REST APIs that include operations on the device identity registry, querying device twins, and import/export jobs. In this exercise, it will be used to update a device twin.
 
 
-1. To insert the registry manager variable, enter the following code:
-
-    ```csharp
-    private static RegistryManager registryManager;
-    ```
-
 1. Locate the `UNCOMMENT device twin management below here` comment.
 
 1. To add the functionality that creates the registry manager instance and sets the twin properties, enter the following code:
