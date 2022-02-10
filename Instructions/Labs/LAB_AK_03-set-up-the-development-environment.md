@@ -172,8 +172,10 @@ You should verify that the development environment has been set up successfully.
 
 .NET Core is a cross-platform version of .NET for building websites, services, and console apps.
 
-1. To open the .NET Core download page, use the following link: [.NET Download](https://dotnet.microsoft.com/download)
-
+1. To open the .NET Core download page, open a new browser tab and type: [.NET Download]
+    ```
+    https://dotnet.microsoft.com/download
+    ```
 1. On the .NET download page, under .NET Core, click **Download .NET Core SDK**.
 
     The .NET Core SDK is used to build .NET Core apps. You will be using it to build/edit code files during the labs in this course.
