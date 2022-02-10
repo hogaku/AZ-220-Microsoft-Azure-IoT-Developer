@@ -858,7 +858,7 @@ At this point, your console app will have sent enough telemetry to trigger the C
 
 1. On the Azure portal menu, click **Dashboard** and then open your IoT Hub.
 
-1. On the left-side menu, under **Security**, click **Overview**.
+1. On the left-side menu, under **Defender IoT**, click **Overview**.
 
     Take a look at the **Threat detection** section. You should see one or more alerts displayed in the **Device security alerts** chart:
 
