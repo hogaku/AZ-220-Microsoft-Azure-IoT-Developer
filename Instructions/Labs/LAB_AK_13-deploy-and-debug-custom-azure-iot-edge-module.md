@@ -441,7 +441,7 @@ In this exercise, you will build and run a custom IoT Edge Module solution using
 
     Record this value, as you will need it below.
 
-1. On the left hand navigation menu, under **Automatic Device Management**, click **IoT Edge**.
+1. On the left hand navigation menu, under **Device Management**, click **IoT Edge**.
 
     This pane allows you to manage the IoT Edge devices connected to the IoT Hub.
 
