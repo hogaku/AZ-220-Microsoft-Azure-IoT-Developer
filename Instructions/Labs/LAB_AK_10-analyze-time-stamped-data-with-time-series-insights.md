@@ -127,11 +127,11 @@ In this exercise, you will setup Time Series Insights integration with Azure IoT
 
 1. On the **Time Series Insights** blade, click **Create**.
 
-1. On the **Create Time Series Insights environment** blade, in the **Environment name** field, enter **tsi-az220-training**
-
 1. In the **Subscription** dropdown, select the subscription that you are using for this course.
 
 1. In the **Resource group** dropdown, click **rg-az220**.
+
+1. On the **Create Time Series Insights environment** blade, in the **Environment name** field, enter **tsi-az220-training**
 
 1. In the **Location** dropdown, select the Azure region used by your resource group.
 
