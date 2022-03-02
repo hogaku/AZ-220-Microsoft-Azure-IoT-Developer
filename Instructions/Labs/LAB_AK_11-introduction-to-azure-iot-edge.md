@@ -174,9 +174,9 @@ In this task, you will create a new IoT Edge Device Identity within Azure IoT Hu
 
 In this task, you will use an ARM (Azure Resource Manager) Template to provision a Linux VM, install the IoT Edge runtime and configure the connection.
 
-1. Select **Deploy to Azure**:
+1. In the virtual machine environment, open a Microsoft Edge browser window, and then navigate to the following Web address:
 
-    [![Deploy To Azure](media/deploytoazure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab11a.json)
+    +++https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftLearning%2FAZ-220-Microsoft-Azure-IoT-Developer%2Fbicep%2FAllfiles%2FARM%2Flab11a.json+++
 
 1. If prompted, login to the **Azure Portal**.
 
@@ -227,7 +227,7 @@ In this task, you will use an ARM (Azure Resource Manager) Template to provision
     ssh username@vm-az220-training-edge0001-{your-id}.{region}.cloudapp.azure.com
     ```
 
-1. When prompted with **Are you sure you want to continue connecting?**, type `yes` and then press **Enter**.
+1. When prompted with **Are you sure you want to continue connecting?**, type **yes** and then press **Enter**.
 
     This prompt is a security confirmation since the certificate used to secure the connection to the VM is self-signed. The answer to this prompt will be remembered for subsequent connections, and is only prompted on the first connection.
 
