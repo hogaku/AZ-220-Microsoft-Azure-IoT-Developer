@@ -618,14 +618,12 @@ In this task, you will configure the downstream IoT device (child or leaf device
 
 1. Replace the placeholder value with the Primary Connection String for the **sensor-th-0084** IoT Device.
 
-1. Append the assigned **connectionString** value with a **GatewayHostName** property, and then set the value of GatewayHostName to be the full DNS name for your IoT Edge gateway device.
-
-    The full DNS name of your Edge gateway device is the Device ID, **vm-az220-training-gw0002-{your-id}**, appended with your specified region and the Azure commercial cloud domain name, for example: **.westus2.cloudapp.azure.com**.
+1. Append the assigned **connectionString** value with a **GatewayHostName** property, and then set the value of GatewayHostName to be the name for your IoT Edge gateway device. This must match the name provided in the Hosts file earlier in this lab.
 
     The completed connection string values should match the following format:
 
     ```text
-    HostName=<IoT-Hub-Name>.azure-devices.net;DeviceId=sensor-th-0072;SharedAccessKey=<Primary-Key-for-IoT-Device>;GatewayHostName=<DNS-Name-for-IoT-Edge-Device>
+    HostName=<IoT-Hub-Name>.azure-devices.net;DeviceId=sensor-th-0072;SharedAccessKey=<Primary-Key-for-IoT-Device>;GatewayHostName=<Name-for-IoT-Edge-Device>
     ```
 
     Be sure to replace the placeholders shown above with the appropriate values:
