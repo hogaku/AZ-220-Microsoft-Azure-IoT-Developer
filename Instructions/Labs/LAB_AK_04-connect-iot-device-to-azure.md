@@ -204,7 +204,9 @@ In this exercise, you will create a simulated device application using Visual St
     dotnet add package Microsoft.Azure.Devices.Client
     ```
 
-    > **Note**: The **Microsoft.Azure.Devices.Client** package contains the Azure IoT Device SDK for .NET and has the **Newtonsoft.Json** package as a dependency. The **Newtonsoft.Json** package contains APIs that aid in the creation and manipulation of JSON.
+    > **Note**: The **Microsoft.Azure.Devices.Client** package contains the Azure IoT Device SDK for .NET and has the **Newtonsoft.Json** package as a dependency. The **Newtonsoft.Json** package contains APIs that aid in the creation and manipulation of JSON. Use `dotnet add package Newtonsoft.Json` to install the Newtonsoft.Json package if necessary.
+
+    > **IMPORTANT**: If you get a "There are no versions available for the package" error, the Nuget configuration files in your development environment may need to be updated. Run the following command (and then retry the dotnet add package command): `dotnet nuget add source --name nuget.org https://api.nuget.org/v3/index.json`
 
     You will build and test your simulated device app in the next task.
 
