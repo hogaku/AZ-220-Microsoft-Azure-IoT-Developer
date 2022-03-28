@@ -155,7 +155,9 @@ In this task, you will take a quick look at the workspace configuration of Log A
 
 1. In the **Location** dropdown, select the Azure Region closest to you, or the region where your Azure IoT Hub is provisioned.
 
-1. Under **Pricing tier**, ensure **Pay-as-you-go** is selected,
+    To view the available regions, see [https://azure.microsoft.com/global-infrastructure/services/?products=monitor&regions=all](https://azure.microsoft.com/global-infrastructure/services/?products=monitor&regions=all).
+
+1. Under **Pricing tier**, ensure **Pay-as-you-go** is selected.
 
 1. To create the workspace, click **OK**.
 
