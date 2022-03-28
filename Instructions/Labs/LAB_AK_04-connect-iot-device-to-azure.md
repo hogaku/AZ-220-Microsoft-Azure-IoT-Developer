@@ -286,7 +286,7 @@ In this task, you will use Visual Studio Code to review the contents and purpose
     ```csharp
     using System;
 
-    namespace CaveSensor
+    namespace CaveDevice
     {
         class Program
         {
@@ -306,7 +306,7 @@ In this task, you will use Visual Studio Code to review the contents and purpose
         System.Console.WriteLine("Hello World!");
         ```
 
-    * The `namespace` area - this specifies that the classes contained with the `{ }` that follow the namespace are part of that namespace. So, similar to how **Console** is part of the **System** namespace, in the example above, the **Program** class is part of the **CaveSensor** namespace, and its full name is **CaveSensor.Program**.
+    * The `namespace` area - this specifies that the classes contained with the `{ }` that follow the namespace are part of that namespace. So, similar to how **Console** is part of the **System** namespace, in the example above, the **Program** class is part of the **CaveDevice** namespace, and its full name is **CaveDevice.Program**.
 
     * The `class` area - this defines the contents of the **Program** class. You can have more than one class within a single source file
 
@@ -355,23 +355,16 @@ In this task, you will use Visual Studio Code to enter the code that leverages t
 
     ```csharp
     // INSERT using statements below here
-
     namespace CaveDevice
     {
         class Program
         {
             // INSERT variables below here
-
             // INSERT Main method below here
-
             // INSERT SendDeviceToCloudMessagesAsync method below here
-
             // INSERT CreateMessageString method below here
-
         }
-
         // INSERT EnvironmentSensor class below here
-
     }
     ```
 
@@ -414,7 +407,7 @@ In this task, you will use Visual Studio Code to enter the code that leverages t
 
     The **deviceClient** variable is used to store an instance of **DeviceClient** - this class comes from the Azure IoT Device SDK and contains methods that a device can use to send messages to and receive from an IoT Hub.
 
-    The **connectionString** variable will contain the connection string for the device we created earlier. This value is used by the **DeviceClient** to connect to the IoT Hub.
+    The **connectionString** variable will contain the connection string for the device we created earlier. This value is used by the **DeviceClient** to connect to the IoT Hub. You will specify the value of connectionStrin in the next step.
 
     > **Important**: You will see examples in this and other labs throughout this course where connection strings, passwords and other configuration information is hard-coded into the application. This is done solely to simplify the labs and **is not** a recommended practice. As much as possible, security issues like this will be addressed as they come up in the labs. Security topics (and other important considerations) will be addressed during the instructor presentation and in your Student Handbook content in a manner that supports the overall flow of the course. The two may not always align perfectly. As a result, you may be exposed to topics in the labs that are not covered in detail until later in the course.
 
