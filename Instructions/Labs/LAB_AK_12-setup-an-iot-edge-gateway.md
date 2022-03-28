@@ -621,9 +621,7 @@ The local machine can now resolve the VM name to the appropriate IP Address.
 
 1. Locate the declaration for the **connectionString** variable, and then replace the placeholder value with the Primary Connection String for the **sensor-th-0072** IoT device.
 
-1. Append the assigned **connectionString** value with a **GatewayHostName** property, and then set the value of GatewayHostName to be the full DNS name for your IoT Edge gateway device.
-
-    The full DNS name of your Edge gateway device is the Device ID, **vm-az220-training-gw0001-{your-id}**, appended with your specified region and the Azure commercial cloud domain name, for example: **.westus2.cloudapp.azure.com**.
+1. Append the assigned **connectionString** value with a **GatewayHostName** property, and then set the value of GatewayHostName to be the name for your IoT Edge gateway device. This name must match the name that you provided in the Hosts file earlier in this lab.
 
     The completed connection string values should match the following format:
 
