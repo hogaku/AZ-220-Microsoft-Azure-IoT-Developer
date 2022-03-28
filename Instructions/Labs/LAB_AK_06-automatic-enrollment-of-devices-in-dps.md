@@ -386,14 +386,14 @@ In this task, you will complete the following:
 
     It will save some time to copy both certificate files now, but you will only be using the first one, `sensor-thl-2000-device.cert.pfx`, in the code project that you build initially.
 
-1. In File Explorer, navigate to the Starter folder for lab 6 (Automatic Enrollment of Devices in DPS).
+1. In File Explorer, navigate to the Final folder for lab 6 (Automatic Enrollment of Devices in DPS).
 
     In _Lab 3: Setup the Development Environment_, you cloned the GitHub repository containing lab resources by downloading a ZIP file and extracting the contents locally. The extracted folder structure includes the following folder path:
 
     * Allfiles
       * Labs
           * 06-Automatic Enrollment of Devices in DPS
-            * Starter
+            * Final
               * ContainerDevice
 
 1. With the ContainerDevice folder open, paste-in the copied device certificate files.
@@ -404,7 +404,7 @@ In this task, you will complete the following:
 
 1. On the **File** menu, click **Open Folder**
 
-1. In the **Open Folder** dialog, navigate to the Starter folder for lab 6 (Automatic Enrollment of Devices in DPS).
+1. In the **Open Folder** dialog, navigate to the Final folder for lab 6 (Automatic Enrollment of Devices in DPS).
 
 1. Click **ContainerDevice**, and then click **Select Folder**.
 
@@ -492,14 +492,14 @@ In this exercise, you will make copies of your simulated device project, and the
 
 1. Open Windows File Explorer.
 
-1. In File Explorer, navigate to the Starter folder for lab 6 (Automatic Enrollment of Devices in DPS).
+1. In File Explorer, navigate to the Final folder for lab 6 (Automatic Enrollment of Devices in DPS).
 
     In _Lab 3: Setup the Development Environment_, you cloned the GitHub repository containing lab resources by downloading a ZIP file and extracting the contents locally. The extracted folder structure includes the following folder path:
 
     * Allfiles
       * Labs
           * 06-Automatic Enrollment of Devices in DPS
-            * Starter
+            * Final
 
 1. Right-click **ContainerDevice**, and then click **Copy**.
 
@@ -517,7 +517,7 @@ In this exercise, you will make copies of your simulated device project, and the
 
 1. On the **File** menu, click **Open Folder**.
 
-1. Navigate to the lab 6 Starter folder.
+1. Navigate to the lab 6 Final folder.
 
 1. Click **ContainerDevice2001**, and then click **Select Folder**.
 
@@ -555,7 +555,7 @@ In this exercise, you will run the simulated device. When the device is started 
 
 1. On the **File** menu, click **Open Folder**.
 
-1. Navigate to the lab 6 Starter folder.
+1. Navigate to the lab 6 Final folder.
 
 1. Click **ContainerDevice**, and then click **Select Folder**.
 
@@ -567,7 +567,7 @@ In this exercise, you will run the simulated device. When the device is started 
 
     You should see something similar to the following:
 
-    `Allfiles\Labs\06-Automatic Enrollment of Devices in DPS\Starter\ContainerDevice>`
+    `Allfiles\Labs\06-Automatic Enrollment of Devices in DPS\Final\ContainerDevice>`
 
 1. To build and run the **ContainerDevice** project, enter the following command:
 
@@ -642,7 +642,7 @@ In this exercise, you will run the simulated device. When the device is started 
 
 1. In the new Visual Studio Code window, on the **File** menu, click **Open Folder**.
 
-1. Navigate to the lab 6 Starter folder.
+1. Navigate to the lab 6 Final folder.
 
 1. Click **ContainerDevice2001**, and then click **Select Folder**.
 
@@ -654,7 +654,7 @@ In this exercise, you will run the simulated device. When the device is started 
 
     You should see something similar to the following:
 
-    `Allfiles\Labs\06-Automatic Enrollment of Devices in DPS\Starter\ContainerDevice2001>`
+    `Allfiles\Labs\06-Automatic Enrollment of Devices in DPS\Final\ContainerDevice2001>`
 
 1. To build and run the **ContainerDevice** project, enter the following command:
 
@@ -859,8 +859,8 @@ In this task, you will use the **sensor-thl-2001** device for the individual enr
     ProvisioningClient AssignedHub: ; DeviceID:
     Unhandled exception. System.Exception: DeviceRegistrationResult.Status is NOT 'Assigned'
     at ContainerDevice.Program.ProvisionDevice(ProvisioningDeviceClient provisioningDeviceClient, SecurityProviderX509Certificate security) in C:\Users\howdc\Allfiles\Labs\06-Automatic Enrollment of Devices
-    in DPS\Starter\ContainerDevice2004\Program.cs:line 107
-    at ContainerDevice.Program.Main(String[] args) in C:\Users\howdc\Allfiles\Labs\06-Automatic Enrollment of Devices in DPS\Starter\ContainerDevice2004\Program.cs:line 49
+    in DPS\Final\ContainerDevice2004\Program.cs:line 107
+    at ContainerDevice.Program.Main(String[] args) in C:\Users\howdc\Allfiles\Labs\06-Automatic Enrollment of Devices in DPS\Final\ContainerDevice2004\Program.cs:line 49
     at ContainerDevice.Program.<Main>(String[] args)
     ```
 
@@ -929,7 +929,7 @@ With the group enrollment deleted from the Device Provisioning Service, and the 
 
 1. Switch to the Visual Studio Code window containing your ContainerDevice code project.
 
-    If you closed Visual Studio Code after the previous exercise, use Visual Studio Code to open the lab 6 Starter folder.
+    If you closed Visual Studio Code after the previous exercise, use Visual Studio Code to open the lab 6 Final folder.
 
 1. On the Visual Studio Code **View** menu, click **Terminal**.
 
