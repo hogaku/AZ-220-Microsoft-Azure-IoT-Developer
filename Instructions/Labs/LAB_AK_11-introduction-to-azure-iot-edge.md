@@ -312,7 +312,7 @@ In this exercise, you will add a Simulated Temperature Sensor as a custom IoT Ed
 
     We will be naming our custom module "tempsensor"
 
-1. Under **Image URI**, enter **asaedgedockerhubtest/asa-edge-test-module:simulated-temperature-sensor**
+1. Under **Image URI**, enter **mcr.microsoft.com/azureiotedge-simulated-temperature-sensor**
 
     > **Note**: This image is a published image on Docker Hub that is provided by the product group to support this testing scenario.
 
