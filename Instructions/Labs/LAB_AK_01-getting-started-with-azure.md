@@ -170,7 +170,7 @@ In this exercise, you will:
 
     In the upcoming steps you will be adding a tile to your dashboard manually. Another option would be to use drag-and-drop operations to add tiles from the Tile gallery to the space provided.
 
-1. At the top of the dashboard editor, click **Done customizing**
+1. At the top of the dashboard editor, click **Done customizing** and then select **Save**.
 
     You should see an empty dashboard at this point.
 
