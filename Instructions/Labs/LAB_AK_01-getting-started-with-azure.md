@@ -219,7 +219,9 @@ In this exercise, you will:
 
     > **Note**:  You don't want to open the resource group in a new blade, you just want to select it (check mark on the left).
 
-1. On the right side of the screen, click the ellipsis (...) corresponding to your resource group, and then click **Pin to dashboard**
+1. On the right side of the screen, click the ellipsis (...) corresponding to your resource group, and then click **Pin to dashboard**.
+ 
+1. Ensure that the dashboard you created is selected and then select **Pin**.
 
 1. Close your **Resource groups** blade.
 
