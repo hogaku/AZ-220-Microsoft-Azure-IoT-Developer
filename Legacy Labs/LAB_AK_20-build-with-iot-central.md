@@ -6,17 +6,19 @@ lab:
 
 # Create your first Azure IoT Central App
 
-Azure IoT Services and technologies work great and are easy to manage when you have the team of people, but a full IoT solution architecture can be a lot for a small, less specialized team to implement and support. Azure IoT Central is a SaaS application that encompasses a full range of underlying IoT technologies, including Azure IoT Hub, Azure Device Provisioning System (DPS), Azure Maps, Azure Time Series Insights, Azure IoT Edge, and others. Although IoT Central does not provide the level of granularity that you get when you implement these technologies directly, it does enable a smaller team to easily manage and monitor a fleet of remote devices.
+Azure IoT Services and technologies work well and are easy to manage when you have a team of people, but a full IoT solution architecture can be a lot for a small, less specialized team to implement and support. Azure IoT Central is a SaaS application that encompasses a full range of underlying IoT technologies, including Azure IoT Hub, Azure Device Provisioning System (DPS), Azure Maps, Azure Time Series Insights, Azure IoT Edge, and others. Although IoT Central does not provide the level of granularity that you get when you implement these technologies directly, it does enable a smaller team to easily manage and monitor a fleet of remote devices.
 
 Among other things, this lab will help you to decide when IoT Central is the right tool to support a particular scenario. So, get ready to explore what IoT Central can do.
 
 ## Lab Scenario
 
-Contoso operates a fleet of refrigerated trucks that are used to deliver cheese within a city and the surrounding area. You have a large number of customers in the region and use a centralized location in the city to operate the fleet. Each day, the trucks are loaded with products and the driver is given a delivery route by the dispatcher. The system works great and there are seldom issues. However, if the cooling system on a truck fails, the drivers and dispatcher needs discuss how best to proceed. The dispatcher will either have the products returned to the warehouse for inspection, or delivered to a customer location that is close by the vehicle's current location. The amount of product remaining undelivered on the truck as well as the temperature in the refrigeration area are both factors in the decision.
+Contoso operates a fleet of refrigerated trucks that are used to deliver cheese within a city and the surrounding area. You have a large number of customers in the region and use a centralized location in the city from where to operate the fleet. Each day, the trucks are loaded with products and the driver is given a delivery route by the dispatcher. The system works well and there are seldom issues. However, if the cooling system on a truck fails, the drivers and dispatcher need to discuss how best to proceed. The dispatcher will either have the products returned to the warehouse for inspection, or delivered to a customer location that is close by the vehicle's current location. The amount of product remaining undelivered on the truck as well as the temperature in the refrigeration area are both factors in the decision.
 
 In order to make an informed decision, the driver and dispatcher need up-to-date information about the truck and the products that it is carrying. They need to know the location of each truck on a map, the status of the truck's cooling system, and the status of the truck's cargo.
 
 IoT Central provides everything that you will need to handle this scenario.
+
+> **Note**: You can use a Microsoft account to complete this lab. Alternatively, you can use the same account you have been using for other labs of this course.
 
 The following resources will be created:
 
@@ -47,9 +49,11 @@ In this lab, you will complete the following activities:
 
     Notice that there are several options that provide a more advanced starting point for certain scenarios.
 
-1. Under **Featured**, click **Custom apps**.
+1. Under **Featured**, click **Create app** under **Custom app**. When prompted, sign in with your Microsoft account. 
 
 1. On the **New application** page, under **Application name**, enter **Refrigerated-Trucks-{your-id}**.
+
+    > **Note**: During this lab, you will see {your-id} listed as part of the suggested resource name whenever you need to enter globally unique resource name or value. The {your-id} portion of the suggested resource name is a placeholder. You will replace the entire placeholder string (including the {}) with your unique id. You can create your unique ID value by combining your initials (in lower case) with the current numeric date, using the  "YourInitialsYYMMDD" pattern. For example: ccj220515
 
     Notice that the Application name that you enter is being used as the root for your application URL (converted to lower-case).
 
@@ -59,7 +63,7 @@ In this lab, you will complete the following activities:
 
 1. Under **Application template**, leave the default **Custom application** value.
 
-1. Take a minute to review the fields under **Billing info**.
+1. Take a minute to review the fields in the **Pricing plan** and **Billing info** sections.
 
     The **Directory** field is used to specify an Azure Active Directory tenant. If your organization uses an AAD tenant, you would specify that here. For this course we will leave the default.
 
@@ -67,9 +71,9 @@ In this lab, you will complete the following activities:
 
 1. Under **Pricing plan**, click **Free**.
 
-    Notice that the free option provides a 7 day trial and includes 5 free devices. The **Billing info** section has also been updated for **Contact info** instead.
+    Notice that the free option provides a 7 day trial and includes 5 free devices. 
 
-1. Under **Contact info**, provide your contact information within each of the required fields.
+    > **Note**: Once you select the **Free** pricing plan, you are no longer required to provide **Billing info**.
 
     > **Note**: There is no commitment or termination fees associated with the plan. The **Build** page includes a link to [Get pricing details](https://aka.ms/iotcentral-pricing) if you are interested in reading more about IoT Central pricing.
 
@@ -103,9 +107,9 @@ The data that will be communicated between a remote device and IoT Central is sp
 
 1. At the bottom of the page, click **Next: Customize**
 
-1. In the **Enter a device template name** textbox, enter **RefrigeratedTruck** and then press **Enter**.
+1. In the **Enter a device template name** textbox, enter **RefrigeratedTruck**.
 
-    > **Note**: do not select **Gateway device**.
+    > **Note**: do not select **This is a gateway device**.
 
 1. At the bottom of the page, click **Next: Review**.
 
@@ -115,7 +119,7 @@ The data that will be communicated between a remote device and IoT Central is sp
 
     Once the template has been created, the **RefrigeratedTruck** page will be displayed.
 
-1. On the **RefrigeratedTruck** page, under **Create a capability model**, click **Custom**.
+1. On the **RefrigeratedTruck** page, under **Create a model**, click **Custom model**.
 
     You are now ready to add the specifics of the device template.
 
@@ -123,13 +127,13 @@ The data that will be communicated between a remote device and IoT Central is sp
 
 Telemetry is the data values transmitted by sensors. The most important sensor in our refrigerated truck, monitors the temperature of the contents.
 
-1. On the **RefrigeratedTruck** device template page, click **+ Add interface**, and then click **Custom**
+1. On the **RefrigeratedTruck** device template page, if needed, click the three dots and then click *+ Add inherited interface**, and then click **Custom**
 
     An interface defines a set of _capabilities_. To define the capabilities of your refrigerated truck you will be adding quite a few interfaces.
 
     The Custom interface allows you to start building from a blank interface.
 
-1. Under **Capabilities**, click **+ Add capability**
+1. Under **Inherited interfaces**, click **+ Add capability**
 
 1. Take a moment to examine the types of fields that are available.
 
@@ -142,7 +146,9 @@ Telemetry is the data values transmitted by sensors. The most important sensor i
     | Capability Type | Telemetry |
     | Semantic type | Temperature |
     | Schema | Double |
-    | Unit | <sup>o</sup>C |
+    | Unit | Degree celsius |
+
+    > **Note**: To access the Schema and Unit drop-down lists, select the down-facing caret.
 
 1. Take a minute to double-check the information that you entered.
 
@@ -152,8 +158,7 @@ Telemetry is the data values transmitted by sensors. The most important sensor i
 #### Task 4: Add state and event telemetry
 
 States are important, they let the operator know what is going on. A state in IoT Central is a name associated with a range of values. Later in this lab, you will choose a color to associate with each state value, making them easy to identify.
-
-1. Under **Capabilities**, click **+ Add capability**.
+1. Under **Inherited interfaces**, click **+ Add capability**
 
 1. To define a capability for the truck's cargo state, enter the following field values:
 
@@ -169,7 +174,7 @@ States are important, they let the operator know what is going on. A state in Io
 
     To simplify the lab scenario, you will define the truck's cargo state as one of the following: _empty_, _full_, or _melting_.
 
-1. Under the **Complex type has to be defined** message, click **+**.
+1. Under the **Complex type has to be defined** message, click **+ Add**.
 
 1. Under **Display name**, enter **empty**
 
@@ -179,7 +184,7 @@ States are important, they let the operator know what is going on. A state in Io
 
     All three fields should contain **empty**.
 
-1. Directly below the fields that you just entered, click **+**.
+1. Directly below the fields that you just entered, click **+ Add**.
 
 1. Use the process above to add two more state values: **full** and **melting**.
 
@@ -189,7 +194,7 @@ States are important, they let the operator know what is going on. A state in Io
 
     Now, to add some uncertainty to our simulation, let's add a failure state for the truck's cooling system. If the cooling system fails, as you'll see later in this lab, the chances of the contents "melting" increase considerably! You will add _on_, _off_ and _failed_ entries for the truck's cooling system.
 
-1. On the **RefrigeratedTruck** device template page, under **Capabilities**, click **+ Add capability**.
+1. On the **RefrigeratedTruck** device template page, under **Inherited interfaces**, click **+ Add capability**.
 
 1. To define a capability for the truck's cooling system state, enter the following field values:
 
@@ -290,7 +295,7 @@ A property is a single value. If more complex sets of data need to be transmitte
     | Semantic type | None |
     | Schema | Double |
     | Writable | On |
-    | Unit |  <sup>o</sup>C  |
+    | Unit | Degree celsius |
 
 #### Task 7: Add commands
 
@@ -305,7 +310,7 @@ For refrigerated trucks, there are two commands you should add: a command to del
     | Display Name | Go to customer |
     | Name | GoToCustomer |
     | Capability Type | Command |
-    | Command | Synchronous |
+    | Queue if offline | Off |
 
 1. Under **Command**, click **Request**.
 
@@ -319,7 +324,6 @@ For refrigerated trucks, there are two commands you should add: a command to del
     | Display name | Customer ID |
     | Name | CustomerID |
     | Schema | Integer |
-    | Unit | None |
 
 1. To create a command capability for recalling the truck, click **+ Add capability**, and then create a new capability as follows:
 
@@ -328,11 +332,11 @@ For refrigerated trucks, there are two commands you should add: a command to del
     | Display Name | Recall |
     | Name | Recall |
     | Capability Type | Command |
-    | Command | Synchronous |
+    | Queue if offline | Off |
 
     For this command there are no additional parameters, so leave **Request** off.
 
-1. Near the top of the page, click **Save**.
+1. Scroll to the top of the page and click **Save**.
 
     Before going any further carefully double check your interface. After an interface has been published, there are very limited editing options. It's important to get it right before publishing.
 
@@ -342,15 +346,15 @@ For refrigerated trucks, there are two commands you should add: a command to del
 
 1. If you've made any changes since the last time you saved, click **Save**.
 
-1. in the top right corner of your **RefrigeratedTruck** device template, click **Publish**.
+1. In the top left corner of your **RefrigeratedTruck** device template, click **Publish**.
 
-    > **Note**: If a popup dialog appears asking for confirmation, click **Publish**.
+    > **Note**: If a popup dialog box appears prompting for confirmation, click **Publish**.
 
     You should see that the annotation changes from **Draft** to **Published**.
 
 Preparing a device template does take some care and some time.
 
-In the next Exercise, you will use the capabilities of your device template to prepare a controllers dashboard. Preparing views can be done before, or after, a device template is published.
+In the next exercise, you will use the capabilities of your device template to prepare a controllers dashboard. Preparing views can be done before, or after, a device template is published.
 
 ### Exercise 3: Monitor a Simulated Device
 
@@ -360,19 +364,21 @@ To begin this exercise, you will create a dashboard showing all the capabilities
 
 1. On the left menu of the **RefrigeratedTruck** device template, click **Views**, and then click **Visualizing the device**.
 
-1. Take a moment to review the list of available **Telemetry**, **Properties**, and **Commands**.
+1. In the **Add a tile** section, select **Start with devices**.
+
+1. Take a moment to review the list of available **Telemetry**, **Properties**, and **Commands** in their respective drop-down lists.
 
     These are the capabilities that you created, each with a selection check box.
 
-1. Under **Telemetry**, click **Location**, an then click **Add tile**.
+1. In the **Select a telemetry** drop down menu, click **Location**, an then click **Add tile**.
 
     Dashboards are constructed using tiles, and the tiles that you choose can be arranged and resized. The Location tile will show the location of the truck on a map of the world, and by creating it first, there is plenty of room for you to resize the map.
 
 1. Hover your mouse pointer over the lower-right corner of the tile, and then drag the corner so that the tile height and width are about twice the default size.
 
-1. Under **View name**, enter **Truck view**.
+1. In the **View name** text box, enter **Truck view**.
 
-1. Under **Telemetry**, click **Contents state**, and then click **Add tile**.
+1. In the **Select a telemetry** drop down menu, click **Contents state**, and then click **Add tile**.
 
 1. Repeat the previous step for each of the remaining Telemetry capabilities, working from the top down.
 
@@ -380,7 +386,7 @@ To begin this exercise, you will create a dashboard showing all the capabilities
 
 1. Use the same top-down process to add the Properties capabilities.
 
-    You will have a chance to arrange the tiles on your dashboard later later in the lab. For now, you just want a dashboard that will confirm all the telemetry being sent from your remote device.
+    You will have a chance to arrange the tiles on your dashboard later in the lab. For now, you just want a dashboard that will confirm all the telemetry being sent from your remote device.
 
     There's no need to add the commands to the dashboard, though that option does exist.
 
@@ -392,11 +398,9 @@ To begin this exercise, you will create a dashboard showing all the capabilities
 
     Don't spend too much time on this now, but notice that you can drag tiles around, and that the portal will try to rearrange them neatly.
 
-1. Click **Save**, and then click **Publish**.
+1. Click **Save**, then **Back** and then click **Publish**.
 
-    Notice that the publish dialog now shows **Yes** next to **Views**.
-
-1. On the publish dialog, click **Publish**.
+1. In the publish dialog box, note the **Yes** entry next to the **Views** entry, and click **Publish**.
 
 You can create as many views as you need, giving each a friendly name.
 
@@ -406,15 +410,15 @@ In the next Task, you will be creating a device from the device template.
 
 IoT Central can be connected to physical devices with real sensors, or to simulated devices that generate data based on an algorithm. In both of these cases, IoT Central understands that a remote app is generating the telemetry data, and either way it treats the connected device as a "real" device.
 
-1. On the left side navigation menu, click **Devices**.
+1. In the navigation menu on the left side of the IoT Central portal, click **Devices**.
 
-1. On the **Devices** menu, under **All devices**, click **RefrigeratedTruck**
+1. On the **Devices** pane, under **All devices**, click **RefrigeratedTruck**
 
     Notice that the screen refreshed and that the device template you selected is now shown in bold text. If you had a large number of device templates, this would help you to ensure that you're using the correct device template.
 
 1. On the top menu, click **+ New**.
 
-1. On the **Create new device** dialog, under **Device name**, verify that **RefrigeratedTruck** is listed as a prefix.
+1. In the **Create new device** dialog box, under **Device name**, verify that **RefrigeratedTruck** is listed as a prefix.
 
     This is another opportunity to ensure that you've selected the right device template.
 
@@ -422,13 +426,13 @@ IoT Central can be connected to physical devices with real sensors, or to simula
 
 1. Under **Device name**, enter **RefrigeratedTruck - 1**
 
-1. Under **Simulated**, ensure that **Off** is selected.
+1. In the **Simulate this device** section, ensure that **No** is selected.
 
     Recall that IoT Central treats the connection to physical and simulated devices in the same way. Both are remote apps, and both are real. You will be building a real truck here. Well, a simulated _real_ truck!
 
-    Setting this Simulated value to **On** would instruct IoT Central to pump out random values for your telemetry. These random values can be useful in validating a device template, but in this lab you will be simulating the telemetry with you own simulated device (truck).
+    Setting **Simulate this device?** value to **Yes** would instruct IoT Central to pump out random values for your telemetry. These random values can be useful in validating a device template, but in this lab you will be simulating the telemetry with you own simulated device (truck).
 
-1. On the **Create new device** dialog, click **Create**.
+1. In the **Create new device** dialog box, click **Create**.
 
     Wait a few seconds, then your device list should be populated with a single entry.
 
@@ -448,15 +452,13 @@ Your next step will be to create the keys that will allow a remote device to com
 
 1. On the top-right menu, click **Connect**.
 
-    Do _not_ click **Attach to gateway**.
+1. In the **Authentication type** drop-down list, ensure that **Shared access signature (SAS)** is selected.
 
-1. In the **Device connection** dialog, carefully copy the values of **ID scope**, **Device ID**, and **Primary key**, and save them to a text file named **Truck-connections.txt**.
+1. In the **Device connection groups** dialog box, carefully copy the values of **ID scope**, **Device ID**, and **Primary key**, and save them to a text file named **Truck-connections.txt**.
 
     Use Notepad (or another text editor) to save the values to a text file, providing a meaningful name such as Truck-connections.txt.
 
-1. Under **Connect method**, ensure that **Shared access signature (SAS)** is selected.
-
-1. At he bottom of the dialog, click **Close**.
+1. At the bottom of the dialog box, click **Close**.
 
 Leave the IoT portal open in your browser, waiting as it is.
 
@@ -468,13 +470,30 @@ If you do not already have an Azure Maps account, you will need to create one.
 
 1. To create a free account, in the upper right corner, click **Start free**, and then follow the instructions provided.
 
-    > **Note**: You can use the Subscription and Resource Group that you have been using for this course to create your Azure Maps account, and use AZ-220-MAPS for the name of the Account, and Standard S1 for the pricing tier.
+    > **Note**: Alternatively, you can use the Azure subscription you have been using for this course.
 
-1. Once your Azure Maps account is created, copy the Azure Maps account subscription key (Primary Key) to the Truck-connections.txt text file.
+1. In the same browser tab, navigate to the [Azure portal](https://portal.azure.com) and, use the **Search resources, services, and docs** to navigate to the **Azure Maps Accounts** page.
 
-    If you used the Azure Subscription that you are using for this course to create your Azure Maps account, you can find the Primary Key for the account in the Azure portal as follows: Open the Azure Maps (AZ-220-MAPS) blade, then open the Authentication pane. You will see the the Primary Key listed.
+1. On the **Azure Maps Accounts** page, select **+ Create**.
 
-    > **Note**: If you want to verify that your Primary Key (for Azure Maps) is correct/working. Save the following HTML to an .html file. Replace the `'<your Azure Maps subscription key>'` placeholder with the value of your Primary Key, and then load the file into a web browser. You should see a map of the world displayed.
+1. On the **Basics** tab of the **Create an Azure Maps Account resource** page, specify the following settings and click **Review + create**:
+
+    | Field | Value |
+    | --- | --- |
+    | Resource group | the name of a new resource group **az-220-l20-RG** |
+    | Name | AZ-220-MAPS |
+    | Region | the name of an Azure region in the proximity of your lab environment |
+    | Pricing tier | S1 |
+
+1. On the **Review + create** tab of the **Create an Azure Maps Account resource** page, click **Review + create**:
+
+1. Once your Azure Maps account is created, navigate to the **AZ-220-MAPS** page.
+
+1. On the **AZ-220-MAPS** page, in the vertical navigation menu, in the **Settings** section, click **Authentication**.
+
+1. On the **AZ-220-MAPS \| Authentication** page, copy the value of the **Primary Key** and paste it to the Truck-connections.txt text file.
+
+    > **Note**: If you want to verify that your Primary Key (for Azure Maps) is correct/working, save the following HTML code as an .html file, replace the `<your Azure Maps subscription key>` placeholder with the value of the primary key you copied from the Azure portal, and then load the file into a web browser. If your settings are correct, you should see a map of the world displayed on the browser page.
 
     ```html
     <!DOCTYPE html>
@@ -545,17 +564,17 @@ Using Visual Studio Code, build the device sensor app.
 
 1. On the **File** menu, click **Open Folder**.
 
-1. At the top of the **Open Folder** dialog, click **New folder**, type **RefrigeratedTruck** and then press **Enter**.
+1. At the top of the **Open Folder** dialog box, click **New folder**, type **RefrigeratedTruck** and then press **Enter**.
 
     You can create the RefrigeratedTruck folder under the Lab 20 folder for this course, or another location of your choice.
 
 1. Click **RefrigeratedTruck**, and then click **Select Folder**.
 
-    The Visual Studio Code EXPLORER pane should now be open.
+    The Visual Studio Code **EXPLORER** pane should now be open.
 
 1. On the **View** menu, to open the integrated terminal, click **Terminal**.
 
-    You should see RefrigeratedTruck folder listed in terminal command prompt. This is important because the following commands will run in the current folder.
+    You should see the path to the RefrigeratedTruck folder listed in terminal command prompt. This is important because the following commands will run in the current folder.
 
 1. At the Terminal command prompt, to create a new console app, enter the following command:
 
@@ -574,7 +593,7 @@ Using Visual Studio Code, build the device sensor app.
 1. At the Terminal command prompt, to install the required libraries, enter the following commands:
 
     ```CLI
-    dotnet add package AzureMapsRestToolkit
+    dotnet add package AzureMapsRestToolkit -v 3.0.0
     dotnet add package Microsoft.Azure.Devices.Client
     dotnet add package Microsoft.Azure.Devices.Provisioning.Client
     dotnet add package Microsoft.Azure.Devices.Provisioning.Transport.Mqtt
@@ -594,12 +613,22 @@ In this task, you will build the simulated device app for your Refrigerated Truc
 To make this process as simple as possible, each additional section of code should be appended to the end of the file, in the order listed here.
 
 > **Note**:
->  If you would like to skip this task, and load all of the code into your app, then download and copy all of the contents of Program.cs into the Program.cs file of your project. If you copy this code (and replace the connection and subscription strings) then go straight to the next task, and start testing! In Lab 3 of this course, "Setup the Development Environment", you cloned the GitHub repository containing lab resources by downloading a ZIP file and extracting the contents locally. The extracted folder structure includes the following folder path:
+>  If you would like to skip this task, and load all of the code into your app, then download and copy all of the contents of Program.cs into the Program.cs file of your project. If you copy this code (and update the connection and subscription strings) then go straight to the next task, and start testing! In Lab 3 of this course, "Setup the Development Environment", you cloned the GitHub repository containing lab resources by downloading a ZIP file and extracting the contents locally. The extracted folder structure includes the following folder path:
 
     * Allfiles
       * Labs
           * 20-Build with IoT Central
             * Final
+
+Once you replaced the content of the Program.cs file, update the following section by replacing the placeholders with the values you copied to the Truck-connections.txt file:
+
+```cs
+// User IDs.
+static string ScopeID = "<your Scope ID>";
+static string DeviceID = "<your Device ID>";
+static string PrimaryKey = "<your device Primary Key>";
+static string AzureMapsKey = "<your Azure Maps Subscription Key>";
+```
 
 1. In the Code Editor pane, to add the required `using` statements, enter the following code:
 
@@ -1357,7 +1386,7 @@ In addition to this list, there are edge-cases you could also investigate. One s
 
     Before you begin testing the connection between IoT Central and your device, ensure that your Azure IoT Central app is open in a browser. You left the app open to the Commands tab of your RefrigeratedTruck - 1 dashboard. If needed, you can reopen [Azure IoT Central](https://apps.azureiotcentral.com/?azure-portal=true) in a browser.
 
-1. In Visual Studio Code, the Terminal command prompt, enter the following command:
+1. In Visual Studio Code, from the Terminal command prompt, run the following command to execute the program:
 
     ```cmd/sh
     dotnet run
@@ -1399,11 +1428,11 @@ In addition to this list, there are edge-cases you could also investigate. One s
 
     If your RefrigeratedTruck device is not selected in IoT Central, perform the following:
 
-    * on the left side navigation menu, click **Devices**.
-    * in the list of devices, double-click **RefrigeratedTruck - 1**.
-    * on your dashboard, ensure that **Truck view** is selected.
+    * On the left side navigation menu, click **Devices**.
+    * In the list of devices, double-click **RefrigeratedTruck - 1**.
+    * On your dashboard, ensure that **Truck view** is selected.
 
-1. Verify that data is being on your **RefrigeratedTruck - 1** dashboard.
+1. Verify that data is being displayed on your **RefrigeratedTruck - 1** dashboard.
 
     For example, the Truck ID tile should show "Truck number 1", and the Truck state tile should display "ready" and a time value.
 
@@ -1419,7 +1448,7 @@ In addition to this list, there are edge-cases you could also investigate. One s
 
 1. Check the **Location** map view for the device.
 
-    A blue circle near Seattle, USA shows our truck ready to go. You may have to zoom out a bit.
+    A dark circle near Seattle, USA shows our truck ready to go. You may have to zoom out a bit.
 
     The truck should be located at its base, in the correct state, and waiting for a command.
 
@@ -1437,7 +1466,7 @@ In addition to this list, there are edge-cases you could also investigate. One s
 
 1. Switch back to **Truck view**.
 
-    In the console for the device app, you should both see a **New customer** event, and a **Route found** message.
+    In the console for the device app, you should see a **New customer** event.
 
    > **Note**:
    > If you see a message including the text **Access denied due to invalid subscription key**, then check your subscription key to Azure Maps.
@@ -1452,7 +1481,7 @@ In addition to this list, there are edge-cases you could also investigate. One s
 
 #### Task 6. Confirm the command to recall the truck works as expected
 
-1. Verify that when the truck returns to base and is reloaded with contents, that the Truck state is updated to **ready**.
+1. Verify that when the truck returns to base and is reloaded with contents, the Truck state is updated to **ready**.
 
     Try issuing another delivery command. Choose a different customer ID.
 
@@ -1464,7 +1493,7 @@ In addition to this list, there are edge-cases you could also investigate. One s
 
 To test a conflict event, you can send a command that you know doesn't make sense.
 
-1. With your truck at the base, issue a Recall command.
+1. With your truck at the base, issue the recall command.
 
 1. Verify that the truck responds with the "already at base" event.
 
@@ -1472,7 +1501,7 @@ To test a conflict event, you can send a command that you know doesn't make sens
 
 1. Verify that the **Truck ID** tile displays **Truck number 1**.
 
-    This Property is on of the simplest things to test.
+    This Property is one of the simplest things to test.
 
     Testing a writable property is more complex, The **OptimalTemperature** property is a writable property, so that will be the next test.
 
@@ -1480,19 +1509,19 @@ To test a conflict event, you can send a command that you know doesn't make sens
 
 1. Under **Jobs**, click **+ New**.
 
-1. Under **Jobs**, to replace **Enter new job name**, enter **Set optimal temperature to -10**
+1. On the **Configure your job page**, in the **Name** text box, enter **Set optimal temperature to -10**
 
-1. In the **Device group** dropdown, click **RefrigeratedTruck - All devices**.
+1. In the **Device group** drop-down list, click **RefrigeratedTruck - All devices**.
 
-1. In the **Job type** dropdown, click **Property**.
+1. In the **Job type** drop-down list, click **Property**.
 
-1. In the **Name** dropdown, click **Optimal Temperature**.
+1. In the **Name** drop-down list, click **Optimal Temperature**.
 
 1. In the **Value** textbox, enter **-10**
 
     When you run this job it should set the optimal temperature for all trucks in the device group, just one in our case.
 
-1. At the top of the window, click **Run**.
+1. At the top of the window, click **Next** twice, accept the default settings on **Delivery Options** and **Schedule** pages, and, on the **Review** page, select **Run**.
 
 1. Notice that after a short time, the **Status** of the job to change from **Pending** to **Completed**.
 
@@ -1512,7 +1541,7 @@ In this exercise, you will complete the steps required to add multiple trucks to
 
 1. Ensure that your IoT Central app is open.
 
-    If necessary, open the [Azure IoT Central](https://apps.azureiotcentral.com/?azure-portal=true) app
+    If necessary, open the [Azure IoT Central](https://apps.azureiotcentral.com/?azure-portal=true) app.
 
 1. On the left side navigation menu, click **Devices**.
 
@@ -1524,11 +1553,11 @@ In this exercise, you will complete the steps required to add multiple trucks to
 
     Verify that the default device name includes the **RefrigeratedTruck** text. If it doesn't, you've not selected the right device template.
 
-1. On the **Create new device** dialog, under **Device ID**, enter **RefrigeratedTruck2**
+1. In the **Create new device** dialog box, under **Device ID**, enter **RefrigeratedTruck2**
 
 1. Under **Device name**, enter **RefrigeratedTruck - 2**
 
-1. At the bottom of the **Create new device** dialog, click **Create**.
+1. At the bottom of the **Create a new device** dialog box, click **Create**.
 
     You can repeat the process above to additional trucks if you want.
 
@@ -1536,17 +1565,17 @@ In this exercise, you will complete the steps required to add multiple trucks to
 
 1. Under **Device name**, double-click **RefrigeratedTruck - 2**.
 
-1. In the top right of the page, click **Connect**.
+1. At the top left of the page, click **Connect**.
 
-1. On the **Device Connection** dialog, copy the **Device ID** and the **Primary Key** to your text file, noting that they are for the second truck.
+1. In the **Device Connection** dialog box, copy the values of the **Device ID** and the **Primary key** settings to your text file, noting that they are for the second truck.
 
-    There is no need to copy the **ID scope**, as this value is identical to the value for the first truck (it identifies your app, not an individual device).
+    There is no need to copy the **ID scope** value, since that is identical to the value for the first truck (it identifies your app, not an individual device).
 
-1. At the bottom of the **Device Connection** dialog, click **Close**.
+1. At the bottom of the **Device Connection** dialog box, click **Close**.
 
-1. Back on the **Devices** page, repeat the process for any other devices you created, copying their **Device ID** and **Primary Key** to your text file.
+1. Back on the **Devices** page, repeat the process for any other devices you created, copying their **Device ID** and **Primary key** values to your text file.
 
-1. When you have completed connecting all new trucks, notice that the **Provisioning Status** is still **Registered**.
+1. When you have completed recording connection information for all new trucks, notice that the **Provisioning Status** is still **Registered**.
 
     This will not change until you make the connection.
 
@@ -1554,11 +1583,11 @@ In this exercise, you will complete the steps required to add multiple trucks to
 
 Each truck will be simulated by a separately running instance of your simulated device app. So, you need multiple versions of your app running at the same time.
 
-1. To create the new simulated device apps, repeat the **Create a programming project for a real device** task for each of the new trucks you created in your IoT Central app.
+1. To create the new simulated device apps, repeat the task **Create a programming project for a real device** for each of the new trucks you created in your IoT Central app.
 
-1. Verify that you have replaced the **Device ID** and **Primary Key** with the values for the new truck.
+1. Verify that you have populated the **Device ID** and **Primary key** settings with the values for each new truck.
 
-    The **Scope ID** and **Azure Maps Account Primary Key** should identical for all devices.
+    The **Scope ID** and **Azure Maps Account Primary Key** should be identical for all devices.
 
 1. Remember to load the necessary libraries for each new project.
 
