@@ -6,19 +6,19 @@ lab:
 
 # Create your first Azure IoT Central App
 
-Azure IoT Services and technologies work well and are easy to manage when you have a team of people, but a full IoT solution architecture can be a lot for a small, less specialized team to implement and support. Azure IoT Central is a SaaS application that encompasses a full range of underlying IoT technologies, including Azure IoT Hub, Azure Device Provisioning System (DPS), Azure Maps, Azure Time Series Insights, Azure IoT Edge, and others. Although IoT Central does not provide the level of granularity that you get when you implement these technologies directly, it does enable a smaller team to easily manage and monitor a fleet of remote devices.
+Azure IoT Services and technologies work well and are easy to manage when you have a team of people, but a full IoT solution architecture can be a lot for a small, less specialized team to implement and support the solution. Azure IoT Central is an IoT  application platform as a service (aPaaS) that encompasses a full range of underlying IoT technologies, including Azure IoT Hub, Azure Device Provisioning System (DPS), Azure Maps, Azure Time Series Insights, Azure IoT Edge, and others. Although IoT Central does not provide the level of granularity that you get when you implement these technologies directly, it does enable a smaller team to easily manage and monitor a fleet of remote devices.
 
-Among other things, this lab will help you to decide when IoT Central is the right tool to support a particular scenario. So, get ready to explore what IoT Central can do.
+Among other things, this lab will help you to decide when IoT Central is the right tool to support a particular scenario.
 
 ## Lab Scenario
 
-Contoso operates a fleet of refrigerated trucks that are used to deliver cheese within a city and the surrounding area. You have a large number of customers in the region and use a centralized location in the city from where to operate the fleet. Each day, the trucks are loaded with products and the driver is given a delivery route by the dispatcher. The system works well and there are seldom issues. However, if the cooling system on a truck fails, the drivers and dispatcher need to discuss how best to proceed. The dispatcher will either have the products returned to the warehouse for inspection, or delivered to a customer location that is close by the vehicle's current location. The amount of product remaining undelivered on the truck as well as the temperature in the refrigeration area are both factors in the decision.
+The Contoso cheese company operates a fleet of refrigerated trucks that are used to deliver cheese within a city and the surrounding area. You have a large number of customers in the region and use a centralized location in the city as a base of operations for the fleet. Each day, the trucks are loaded with products and the driver is given a delivery route by the dispatcher. The system works well and there are seldom issues. However, if the cooling system on a truck fails, the drivers and dispatcher need to discuss how best to proceed. The dispatcher will either have the products returned to the warehouse for inspection, or delivered to a customer location that is close by the vehicle's current location. The amount of product remaining undelivered on the truck as well as the temperature in the refrigeration area are both factors in the decision.
 
 In order to make an informed decision, the driver and dispatcher need up-to-date information about the truck and the products that it is carrying. They need to know the location of each truck on a map, the status of the truck's cooling system, and the status of the truck's cargo.
 
 IoT Central provides everything that you will need to handle this scenario.
 
-> **Note**: You can use a Microsoft account to complete this lab. Alternatively, you can use the same account you have been using for other labs of this course.
+> **Note**: You can use a Microsoft account to complete this lab.
 
 The following resources will be created:
 
@@ -49,7 +49,9 @@ In this lab, you will complete the following activities:
 
     Notice that there are several options that provide a more advanced starting point for certain scenarios.
 
-1. Under **Featured**, click **Create app** under **Custom app**. When prompted, sign in with your Microsoft account. 
+1. Under **Featured**, to create a Custom app, click **Create app**.
+
+    When prompted, sign in with your Microsoft account. 
 
 1. On the **New application** page, under **Application name**, enter **Refrigerated-Trucks-{your-id}**.
 
@@ -59,13 +61,13 @@ In this lab, you will complete the following activities:
 
     Although your Application name can be any friendly name, the **URL** _must_ be unique. The two don't have to match exactly, but it can be less confusing when they do.
 
-    Appending `{your-id}` to the Application name helps to ensure that the URL will be unique.
+    Appending **{your-id}** to the Application name helps to ensure that the URL will be unique.
 
 1. Under **Application template**, leave the default **Custom application** value.
 
 1. Take a minute to review the fields in the **Pricing plan** and **Billing info** sections.
 
-    The **Directory** field is used to specify an Azure Active Directory tenant. If your organization uses an AAD tenant, you would specify that here. For this course we will leave the default.
+    The **Directory** field is used to specify an Azure Active Directory tenant. If your organization uses an AAD tenant, you would specify that here. For this lab we will leave the default.
 
     If you select a pricing option that includes a cost, you would need to specify an Azure subscription.
 
@@ -95,9 +97,9 @@ In this lab, you will complete the following activities:
 
 The data that will be communicated between a remote device and IoT Central is specified in a _device template_. The device template encapsulates all the details of the data, so that both the device and IoT Central have all they need to make sense of the communication.
 
-1. On the **Dashboard** page of your Azure IoT Central app, on the left side navigation menu under **App settings**, click **Device templates**.
+1. On the **Dashboard** page of your Azure IoT Central app, on the left side navigation menu under **Connect**, click **Device templates**.
 
-1. Under **Device templates**, click **+ New**.
+1. Under **Device templates**, click **Create a device template**.
 
     You should see a range of custom and preconfigured device template options.
 
@@ -107,13 +109,13 @@ The data that will be communicated between a remote device and IoT Central is sp
 
 1. At the bottom of the page, click **Next: Customize**
 
-1. In the **Enter a device template name** textbox, enter **RefrigeratedTruck**.
+1. In the **Device template name** textbox, enter **RefrigeratedTruck**.
 
     > **Note**: do not select **This is a gateway device**.
 
 1. At the bottom of the page, click **Next: Review**.
 
-    Verify the **Basic Info** shown.
+    Verify that the **Basic Info** shown is correct.
 
 1. At the bottom of the **Review** page, click **Create**.
 
@@ -125,9 +127,9 @@ The data that will be communicated between a remote device and IoT Central is sp
 
 #### Task 3: Add sensor telemetry
 
-Telemetry is the data values transmitted by sensors. The most important sensor in our refrigerated truck, monitors the temperature of the contents.
+Telemetry is the data values transmitted by sensors. The most important sensor in our refrigerated truck monitors the temperature of the contents.
 
-1. On the **RefrigeratedTruck** device template page, if needed, click the three dots and then click *+ Add inherited interface**, and then click **Custom**
+1. On the **RefrigeratedTruck** device template page, if needed, click the ellipsis (three dots), click **+ Add inherited interface**, and then click **Custom**
 
     An interface defines a set of _capabilities_. To define the capabilities of your refrigerated truck you will be adding quite a few interfaces.
 
@@ -135,7 +137,7 @@ Telemetry is the data values transmitted by sensors. The most important sensor i
 
 1. Under **Inherited interfaces**, click **+ Add capability**
 
-1. Take a moment to examine the types of fields that are available.
+1. Take a moment to examine the options for **Capability type** and **Semantic type**.
 
 1. To define a capability for the truck's temperature sensor, enter the following field values:
 
@@ -148,7 +150,7 @@ Telemetry is the data values transmitted by sensors. The most important sensor i
     | Schema | Double |
     | Unit | Degree celsius |
 
-    > **Note**: To access the Schema and Unit drop-down lists, select the down-facing caret.
+    > **Note**: To enter the Schema and Unit drop-down lists, expand the capability field by selecting the down-facing caret.
 
 1. Take a minute to double-check the information that you entered.
 
@@ -158,6 +160,7 @@ Telemetry is the data values transmitted by sensors. The most important sensor i
 #### Task 4: Add state and event telemetry
 
 States are important, they let the operator know what is going on. A state in IoT Central is a name associated with a range of values. Later in this lab, you will choose a color to associate with each state value, making them easy to identify.
+
 1. Under **Inherited interfaces**, click **+ Add capability**
 
 1. To define a capability for the truck's cargo state, enter the following field values:
@@ -226,7 +229,7 @@ States are important, they let the operator know what is going on. A state in Io
     | Semantic type | State |
     | Value schema | String |
 
-    For the state value options, use the following:
+    To define the state value options, add the following values under the complex type message:
 
     * ready
     * enroute
@@ -235,7 +238,7 @@ States are important, they let the operator know what is going on. A state in Io
     * loading
     * dumping
 
-    The next capability type that you need to specify is an Event. Events are issues triggered by the device, and communicated to the IoT Central app. Events can be one of three types: _Error_, _Warning_, or _Informational_.
+    The next capability type that you need to specify is an Event. Events are triggered by the device and communicated to the IoT Central app. Events can be one of three types: _Error_, _Warning_, or _Informational_.
 
 1. To create an event capability, click **+ Add capability**, and then create a new capability as follows:
 
@@ -247,13 +250,13 @@ States are important, they let the operator know what is going on. A state in Io
     | Semantic type | Event |
     | Schema | String |
 
-    One possible event a device might trigger is a conflicting command. An example might be a truck is returning empty from a customer, but receives a command to deliver its contents to another customer. If a conflict occurs, it's a good idea for the device to trigger an event to warn the operator of the IoT Central app.
+    One example for when a device might trigger an event is for a conflicting command. For example, consider a scenario when a truck is returning empty from a customer, then receives a command to deliver its contents to another customer. If this type of conflict occurs, it's a good idea for the device to trigger an event to warn the operator of the IoT Central app.
 
-    Another event might be just to acknowledge, and record, the customer ID that a truck is to deliver to.
+    Another use for events might be to verify information. For example, the event might be used to acknowledge, and record, the customer ID that a truck is delivering to.
 
 #### Task 5: Add location telemetry
 
-A location is probably the most important, and yet one of the easiest measurements to add to a device template. Under the hood, it consists of a latitude, longitude, and an optional altitude, for the device.
+The current location of a truck is very important to our delivery tracking scenario, and yet it one of the easiest telemetry measurements to add to a device template. Under the hood, it consists of a latitude, longitude, and an optional altitude, for the device.
 
 1. To create a location capability, click **+ Add capability**, and then create a new capability as follows:
 
@@ -310,9 +313,8 @@ For refrigerated trucks, there are two commands you should add: a command to del
     | Display Name | Go to customer |
     | Name | GoToCustomer |
     | Capability Type | Command |
-    | Queue if offline | Off |
 
-1. Under **Command**, click **Request**.
+1. Expand the Command capability to display additional field options, and then set **Request** to on.
 
     When you turn on the **Request** option, you'll be able to enter more details of the command.
 
@@ -320,6 +322,7 @@ For refrigerated trucks, there are two commands you should add: a command to del
 
     | Field | Value |
     | --- | --- |
+    | Queue if offline | Off |
     | Request | On |
     | Display name | Customer ID |
     | Name | CustomerID |
@@ -332,7 +335,6 @@ For refrigerated trucks, there are two commands you should add: a command to del
     | Display Name | Recall |
     | Name | Recall |
     | Capability Type | Command |
-    | Queue if offline | Off |
 
     For this command there are no additional parameters, so leave **Request** off.
 
@@ -354,17 +356,17 @@ For refrigerated trucks, there are two commands you should add: a command to del
 
 Preparing a device template does take some care and some time.
 
-In the next exercise, you will use the capabilities of your device template to prepare a controllers dashboard. Preparing views can be done before, or after, a device template is published.
+In the next exercise, you will use the capabilities of your device template to prepare a controller/operator view. Creating the views for a device template can be done before, or after, a device template is published.
 
 ### Exercise 3: Monitor a Simulated Device
 
-To begin this exercise, you will create a dashboard showing all the capabilities of the device template. After that you will use your device template to create a device, and make a record of the connection settings needed for the remote device app.
+To begin this exercise, you will create a view showing all the capabilities of the device template. After that, you will use your device template to create a device, and make a record of the connection settings needed for the remote device app.
 
-#### Task 1: Create a rich dashboard
+#### Task 1: Create a rich view
 
 1. On the left menu of the **RefrigeratedTruck** device template, click **Views**, and then click **Visualizing the device**.
 
-1. In the **Add a tile** section, select **Start with devices**.
+1. On the **Create view** pane, under **Add a tile**, select **Start with devices**.
 
 1. Take a moment to review the list of available **Telemetry**, **Properties**, and **Commands** in their respective drop-down lists.
 
@@ -372,29 +374,31 @@ To begin this exercise, you will create a dashboard showing all the capabilities
 
 1. In the **Select a telemetry** drop down menu, click **Location**, an then click **Add tile**.
 
-    Dashboards are constructed using tiles, and the tiles that you choose can be arranged and resized. The Location tile will show the location of the truck on a map of the world, and by creating it first, there is plenty of room for you to resize the map.
+    Views are constructed using tiles, and the tiles that you choose can be arranged and resized. The Location tile will show the location of the truck on a map of the world, and by creating it first, there is plenty of room for you to resize the map.
 
 1. Hover your mouse pointer over the lower-right corner of the tile, and then drag the corner so that the tile height and width are about twice the default size.
 
-1. In the **View name** text box, enter **Truck view**.
+1. At the top of the **Create view** pane, in the **View name** text box, enter **Truck view**.
 
 1. In the **Select a telemetry** drop down menu, click **Contents state**, and then click **Add tile**.
 
+    The **Add tile** button is located at the bottom of the **Create view** pane.
+ 
 1. Repeat the previous step for each of the remaining Telemetry capabilities, working from the top down.
 
     Recall that you've already added the Location tile.
 
 1. Use the same top-down process to add the Properties capabilities.
 
-    You will have a chance to arrange the tiles on your dashboard later in the lab. For now, you just want a dashboard that will confirm all the telemetry being sent from your remote device.
+    You will have a chance to arrange the tiles on your view later in the lab. For now, you just want a view that will confirm all the telemetry being sent from your remote device.
 
-    There's no need to add the commands to the dashboard, though that option does exist.
+    There's no need to add the commands to the view, though that option does exist.
 
-1. Take a minute to review your dashboard.
+1. Take a minute to review the layout of your view.
 
-    Scroll around to view your dashboard. Examine the contents of the tiles and consider how you might use that information.
+    Scroll around to examine the tiles on your view. Examine the contents of the tiles and consider how you might use that information.
 
-1. Quickly arrange the position of the tiles.
+1. Quickly arrange the position of the tiles based on your analysis of the tile contents.
 
     Don't spend too much time on this now, but notice that you can drag tiles around, and that the portal will try to rearrange them neatly.
 
@@ -410,7 +414,7 @@ In the next Task, you will be creating a device from the device template.
 
 IoT Central can be connected to physical devices with real sensors, or to simulated devices that generate data based on an algorithm. In both of these cases, IoT Central understands that a remote app is generating the telemetry data, and either way it treats the connected device as a "real" device.
 
-1. In the navigation menu on the left side of the IoT Central portal, click **Devices**.
+1. On the left side navigation menu under **Connect**, click **Devices**.
 
 1. On the **Devices** pane, under **All devices**, click **RefrigeratedTruck**
 
@@ -440,13 +444,13 @@ IoT Central can be connected to physical devices with real sensors, or to simula
 
 1. Under **Device name**, click **RefrigeratedTruck - 1**.
 
-    Your live dashboard should be displayed (with lots of **Waiting for data** messages).
+    A live view for your device should be displayed (with lots of **No data found** messages).
 
-1. Just below the **RefrigeratedTruck - 1** title of your device dashboard, click **Commands**
+1. Just below the **RefrigeratedTruck - 1** title of your device view, click **Commands**
 
     Notice that the two commands you entered are already listed and ready to be run.
 
-Your next step will be to create the keys that will allow a remote device to communicate with your IoT Central app.
+Your next step will be to create the SAS keys that will allow a remote device to communicate with your IoT Central app.
 
 #### Task 3: Record the connection keys
 
@@ -454,7 +458,7 @@ Your next step will be to create the keys that will allow a remote device to com
 
 1. In the **Authentication type** drop-down list, ensure that **Shared access signature (SAS)** is selected.
 
-1. In the **Device connection groups** dialog box, carefully copy the values of **ID scope**, **Device ID**, and **Primary key**, and save them to a text file named **Truck-connections.txt**.
+1. Use the **Device connection groups** dialog box to copy the values of **ID scope**, **Device ID**, and **Primary key**, and save them to a text file named **Truck-connections.txt**.
 
     Use Notepad (or another text editor) to save the values to a text file, providing a meaningful name such as Truck-connections.txt.
 
@@ -468,15 +472,15 @@ If you do not already have an Azure Maps account, you will need to create one.
 
 1. Open a new browser tab, and then navigate to [Azure Maps](https://azure.microsoft.com/services/azure-maps/?azure-portal=true).
 
-1. To create a free account, in the upper right corner, click **Start free**, and then follow the instructions provided.
+1. To create a free account, in the upper right corner, click **Free account**, and then follow the instructions provided.
 
-    > **Note**: Alternatively, you can use the Azure subscription you have been using for this course.
+    > **Note**: Alternatively, you can use the Azure subscription you have been using for this lab.
 
-1. In the same browser tab, navigate to the [Azure portal](https://portal.azure.com) and, use the **Search resources, services, and docs** to navigate to the **Azure Maps Accounts** page.
+1. In the same browser tab, navigate to the [Azure portal](https://portal.azure.com) and use the **Search resources, services, and docs** to navigate to the **Azure Maps Accounts** page.
 
 1. On the **Azure Maps Accounts** page, select **+ Create**.
 
-1. On the **Basics** tab of the **Create an Azure Maps Account resource** page, specify the following settings and click **Review + create**:
+1. On the **Basics** tab of the **Create an Azure Maps Account resource** page, specify the following settings:
 
     | Field | Value |
     | --- | --- |
@@ -485,13 +489,19 @@ If you do not already have an Azure Maps account, you will need to create one.
     | Region | the name of an Azure region in the proximity of your lab environment |
     | Pricing tier | S1 |
 
-1. On the **Review + create** tab of the **Create an Azure Maps Account resource** page, click **Review + create**:
+1. Select the option to confirm that you agree to the License and Privacy Statement.
 
-1. Once your Azure Maps account is created, navigate to the **AZ-220-MAPS** page.
+1. Click **Review + create**. 
 
-1. On the **AZ-220-MAPS** page, in the vertical navigation menu, in the **Settings** section, click **Authentication**.
+1. On the **Review + create** tab, click **Create**.
 
-1. On the **AZ-220-MAPS \| Authentication** page, copy the value of the **Primary Key** and paste it to the Truck-connections.txt text file.
+    Deployment may take a minute or two.
+
+1. Once your Azure Maps account is created, click **Go to resource**.
+
+1. On the **AZ-220-MAPS** page, on the left side navigation menu under **Settings**, click **Authentication**.
+
+1. On the **Authentication** page, copy the value of the **Primary Key** and then paste it into the Truck-connections.txt text file that you created earlier.
 
     > **Note**: If you want to verify that your Primary Key (for Azure Maps) is correct/working, save the following HTML code as an .html file, replace the `<your Azure Maps subscription key>` placeholder with the value of the primary key you copied from the Azure portal, and then load the file into a web browser. If your settings are correct, you should see a map of the world displayed on the browser page.
 
@@ -554,7 +564,7 @@ The next step is to create the device app.
 
 In this task, you are going to create a programming project to simulate a sensor device in a refrigerated truck. This simulation enables you to test the code long before requiring a physical device.
 
-IoT Central treats this simulation as "real" because the communication code between the device app and the IoT Central app is the same as it would be for a physical device/truck. In other words, if you do run a refrigerated truck company, you would start with simulated code similar to the code in this task. After you verify that the code works to your satisfaction, the simulation-specific code would be replaced with code that receives sensor data. This limited update makes writing the following code a valuable experience.
+IoT Central treats this simulated device as "real" because the communication code between the device app and the IoT Central app is the same as it would be for a physical device/truck. In other words, if you do run a refrigerated truck company, you could start with simulated code similar to the code in this task. After you verify that the code works to your satisfaction, the simulation-specific code would be replaced with code that receives sensor data. This limited update makes writing the following code a valuable experience.
 
 #### Task 1: Create the device app
 
@@ -566,7 +576,7 @@ Using Visual Studio Code, build the device sensor app.
 
 1. At the top of the **Open Folder** dialog box, click **New folder**, type **RefrigeratedTruck** and then press **Enter**.
 
-    You can create the RefrigeratedTruck folder under the Lab 20 folder for this course, or another location of your choice.
+    You can create the RefrigeratedTruck folder at a location of your choice.
 
 1. Click **RefrigeratedTruck**, and then click **Select Folder**.
 
@@ -612,24 +622,6 @@ In this task, you will build the simulated device app for your Refrigerated Truc
 
 To make this process as simple as possible, each additional section of code should be appended to the end of the file, in the order listed here.
 
-> **Note**:
->  If you would like to skip this task, and load all of the code into your app, then download and copy all of the contents of Program.cs into the Program.cs file of your project. If you copy this code (and update the connection and subscription strings) then go straight to the next task, and start testing! In Lab 3 of this course, "Setup the Development Environment", you cloned the GitHub repository containing lab resources by downloading a ZIP file and extracting the contents locally. The extracted folder structure includes the following folder path:
-
-    * Allfiles
-      * Labs
-          * 20-Build with IoT Central
-            * Final
-
-Once you replaced the content of the Program.cs file, update the following section by replacing the placeholders with the values you copied to the Truck-connections.txt file:
-
-```cs
-// User IDs.
-static string ScopeID = "<your Scope ID>";
-static string DeviceID = "<your Device ID>";
-static string PrimaryKey = "<your device Primary Key>";
-static string AzureMapsKey = "<your Azure Maps Subscription Key>";
-```
-
 1. In the Code Editor pane, to add the required `using` statements, enter the following code:
 
    ```cs
@@ -650,7 +642,7 @@ static string AzureMapsKey = "<your Azure Maps Subscription Key>";
 
 1. In the Code Editor pane, to add the namespace, class, and global variables, enter the following code:
 
-   ```cs
+    ```cs
     namespace refrigerated_truck
     {
         class Program
@@ -776,123 +768,123 @@ static string AzureMapsKey = "<your Azure Maps Subscription Key>";
 
 1. In the Code Editor pane, to add the methods that will be used to get a route via Azure Maps, enter the following code:
 
-   ```cs
-            static double Degrees2Radians(double deg)
+    ```cs
+    static double Degrees2Radians(double deg)
+    {
+        return deg * Math.PI / 180;
+    }
+
+    // Returns the distance in meters between two locations on Earth.
+    static double DistanceInMeters(double lat1, double lon1, double lat2, double lon2)
+    {
+        var dlon = Degrees2Radians(lon2 - lon1);
+        var dlat = Degrees2Radians(lat2 - lat1);
+
+        var a = (Math.Sin(dlat / 2) * Math.Sin(dlat / 2)) + Math.Cos(Degrees2Radians(lat1)) * Math.Cos(Degrees2Radians(lat2)) * (Math.Sin(dlon / 2) * Math.Sin(dlon / 2));
+        var angle = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
+        var meters = angle * 6371000;
+        return meters;
+    }
+
+    static bool Arrived()
+    {
+        // If the truck is within 10 meters of the destination, call it good.
+        if (DistanceInMeters(currentLat, currentLon, destinationLat, destinationLon) < 10)
+            return true;
+        return false;
+    }
+
+    static void UpdatePosition()
+    {
+        while ((truckSectionsCompletedTime + timeOnPath[truckOnSection] < timeOnCurrentTask) && (truckOnSection < timeOnPath.Length - 1))
+        {
+            // Truck has moved onto the next section.
+            truckSectionsCompletedTime += timeOnPath[truckOnSection];
+            ++truckOnSection;
+        }
+
+        // Ensure remainder is 0 to 1, as interval may take count over what is needed.
+        var remainderFraction = Math.Min(1, (timeOnCurrentTask - truckSectionsCompletedTime) / timeOnPath[truckOnSection]);
+
+        // The path should be one entry longer than the timeOnPath array.
+        // Find how far along the section the truck has moved.
+        currentLat = path[truckOnSection, 0] + remainderFraction * (path[truckOnSection + 1, 0] - path[truckOnSection, 0]);
+        currentLon = path[truckOnSection, 1] + remainderFraction * (path[truckOnSection + 1, 1] - path[truckOnSection, 1]);
+    }
+
+    static void GetRoute(StateEnum newState)
+    {
+        // Set the state to ready, until the new route arrives.
+        state = StateEnum.ready;
+
+        var req = new RouteRequestDirections
+        {
+            Query = FormattableString.Invariant($"{currentLat},{currentLon}:{destinationLat},{destinationLon}")
+        };
+        var directions = azureMapsServices.GetRouteDirections(req).Result;
+
+        if (directions.Error != null || directions.Result == null)
+        {
+            // Handle any error.
+            redMessage("Failed to find map route");
+        }
+        else
+        {
+            int nPoints = directions.Result.Routes[0].Legs[0].Points.Length;
+            greenMessage($"Route found. Number of points = {nPoints}");
+
+            // Clear the path. Add two points for the start point and destination.
+            path = new double[nPoints + 2, 2];
+            int c = 0;
+
+            // Start with the current location.
+            path[c, 0] = currentLat;
+            path[c, 1] = currentLon;
+            ++c;
+
+            // Retrieve the route and push the points onto the array.
+            for (var n = 0; n < nPoints; n++)
             {
-                return deg * Math.PI / 180;
+                var x = directions.Result.Routes[0].Legs[0].Points[n].Latitude;
+                var y = directions.Result.Routes[0].Legs[0].Points[n].Longitude;
+                path[c, 0] = x;
+                path[c, 1] = y;
+                ++c;
             }
 
-            // Returns the distance in meters between two locations on Earth.
-            static double DistanceInMeters(double lat1, double lon1, double lat2, double lon2)
+            // Finish with the destination.
+            path[c, 0] = destinationLat;
+            path[c, 1] = destinationLon;
+
+            // Store the path length and time taken, to calculate the average speed.
+            var meters = directions.Result.Routes[0].Summary.LengthInMeters;
+            var seconds = directions.Result.Routes[0].Summary.TravelTimeInSeconds;
+            var pathSpeed = meters / seconds;
+
+            double distanceApartInMeters;
+            double timeForOneSection;
+
+            // Clear the time on path array. The path array is 1 less than the points array.
+            timeOnPath = new double[nPoints + 1];
+
+            // Calculate how much time is required for each section of the path.
+            for (var t = 0; t < nPoints + 1; t++)
             {
-                var dlon = Degrees2Radians(lon2 - lon1);
-                var dlat = Degrees2Radians(lat2 - lat1);
+                // Calculate distance between the two path points, in meters.
+                distanceApartInMeters = DistanceInMeters(path[t, 0], path[t, 1], path[t + 1, 0], path[t + 1, 1]);
 
-                var a = (Math.Sin(dlat / 2) * Math.Sin(dlat / 2)) + Math.Cos(Degrees2Radians(lat1)) * Math.Cos(Degrees2Radians(lat2)) * (Math.Sin(dlon / 2) * Math.Sin(dlon / 2));
-                var angle = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
-                var meters = angle * 6371000;
-                return meters;
+                // Calculate the time for each section of the path.
+                timeForOneSection = distanceApartInMeters / pathSpeed;
+                timeOnPath[t] = timeForOneSection;
             }
+            truckOnSection = 0;
+            truckSectionsCompletedTime = 0;
+            timeOnCurrentTask = 0;
 
-            static bool Arrived()
-            {
-                // If the truck is within 10 meters of the destination, call it good.
-                if (DistanceInMeters(currentLat, currentLon, destinationLat, destinationLon) < 10)
-                    return true;
-                return false;
-            }
-
-            static void UpdatePosition()
-            {
-                while ((truckSectionsCompletedTime + timeOnPath[truckOnSection] < timeOnCurrentTask) && (truckOnSection < timeOnPath.Length - 1))
-                {
-                    // Truck has moved onto the next section.
-                    truckSectionsCompletedTime += timeOnPath[truckOnSection];
-                    ++truckOnSection;
-                }
-
-                // Ensure remainder is 0 to 1, as interval may take count over what is needed.
-                var remainderFraction = Math.Min(1, (timeOnCurrentTask - truckSectionsCompletedTime) / timeOnPath[truckOnSection]);
-
-                // The path should be one entry longer than the timeOnPath array.
-                // Find how far along the section the truck has moved.
-                currentLat = path[truckOnSection, 0] + remainderFraction * (path[truckOnSection + 1, 0] - path[truckOnSection, 0]);
-                currentLon = path[truckOnSection, 1] + remainderFraction * (path[truckOnSection + 1, 1] - path[truckOnSection, 1]);
-            }
-
-            static void GetRoute(StateEnum newState)
-            {
-                // Set the state to ready, until the new route arrives.
-                state = StateEnum.ready;
-
-                var req = new RouteRequestDirections
-                {
-                    Query = FormattableString.Invariant($"{currentLat},{currentLon}:{destinationLat},{destinationLon}")
-                };
-                var directions = azureMapsServices.GetRouteDirections(req).Result;
-
-                if (directions.Error != null || directions.Result == null)
-                {
-                    // Handle any error.
-                    redMessage("Failed to find map route");
-                }
-                else
-                {
-                    int nPoints = directions.Result.Routes[0].Legs[0].Points.Length;
-                    greenMessage($"Route found. Number of points = {nPoints}");
-
-                    // Clear the path. Add two points for the start point and destination.
-                    path = new double[nPoints + 2, 2];
-                    int c = 0;
-
-                    // Start with the current location.
-                    path[c, 0] = currentLat;
-                    path[c, 1] = currentLon;
-                    ++c;
-
-                    // Retrieve the route and push the points onto the array.
-                    for (var n = 0; n < nPoints; n++)
-                    {
-                        var x = directions.Result.Routes[0].Legs[0].Points[n].Latitude;
-                        var y = directions.Result.Routes[0].Legs[0].Points[n].Longitude;
-                        path[c, 0] = x;
-                        path[c, 1] = y;
-                        ++c;
-                    }
-
-                    // Finish with the destination.
-                    path[c, 0] = destinationLat;
-                    path[c, 1] = destinationLon;
-
-                    // Store the path length and time taken, to calculate the average speed.
-                    var meters = directions.Result.Routes[0].Summary.LengthInMeters;
-                    var seconds = directions.Result.Routes[0].Summary.TravelTimeInSeconds;
-                    var pathSpeed = meters / seconds;
-
-                    double distanceApartInMeters;
-                    double timeForOneSection;
-
-                    // Clear the time on path array. The path array is 1 less than the points array.
-                    timeOnPath = new double[nPoints + 1];
-
-                    // Calculate how much time is required for each section of the path.
-                    for (var t = 0; t < nPoints + 1; t++)
-                    {
-                        // Calculate distance between the two path points, in meters.
-                        distanceApartInMeters = DistanceInMeters(path[t, 0], path[t, 1], path[t + 1, 0], path[t + 1, 1]);
-
-                        // Calculate the time for each section of the path.
-                        timeForOneSection = distanceApartInMeters / pathSpeed;
-                        timeOnPath[t] = timeForOneSection;
-                    }
-                    truckOnSection = 0;
-                    truckSectionsCompletedTime = 0;
-                    timeOnCurrentTask = 0;
-
-                    // Update the state now the route has arrived. One of: enroute or returning.
-                    state = newState;
-                }
-            }
+            // Update the state now the route has arrived. One of: enroute or returning.
+            state = newState;
+        }
+    }
     ```
 
     > **Note**:
@@ -900,278 +892,278 @@ static string AzureMapsKey = "<your Azure Maps Subscription Key>";
 
 1. In the Code Editor pane, to add the direct method to deliver to a customer, enter the following code:
 
-   ```cs
-        static Task<MethodResponse> CmdGoToCustomer(MethodRequest methodRequest, object userContext)
+    ```cs
+    static Task<MethodResponse> CmdGoToCustomer(MethodRequest methodRequest, object userContext)
+    {
+        try
         {
-            try
-            {
-                // Pick up variables from the request payload, with the name specified in IoT Central.
-                var payloadString = Encoding.UTF8.GetString(methodRequest.Data);
-                int customerNumber = Int32.Parse(payloadString);
+            // Pick up variables from the request payload, with the name specified in IoT Central.
+            var payloadString = Encoding.UTF8.GetString(methodRequest.Data);
+            int customerNumber = Int32.Parse(payloadString);
 
-                // Check for a valid key and customer ID.
-                if (customerNumber >= 0 && customerNumber < customer.Length)
+            // Check for a valid key and customer ID.
+            if (customerNumber >= 0 && customerNumber < customer.Length)
+            {
+                switch (state)
                 {
-                    switch (state)
-                    {
-                        case StateEnum.dumping:
-                        case StateEnum.loading:
-                        case StateEnum.delivering:
-                            eventText = "Unable to act - " + state;
-                            break;
+                    case StateEnum.dumping:
+                    case StateEnum.loading:
+                    case StateEnum.delivering:
+                        eventText = "Unable to act - " + state;
+                        break;
 
-                        case StateEnum.ready:
-                        case StateEnum.enroute:
-                        case StateEnum.returning:
-                            if (contents == ContentsEnum.empty)
-                            {
-                                eventText = "Unable to act - empty";
-                            }
-                            else
-                            {
-                                // Set event only when all is good.
-                                eventText = "New customer: " + customerNumber.ToString();
+                    case StateEnum.ready:
+                    case StateEnum.enroute:
+                    case StateEnum.returning:
+                        if (contents == ContentsEnum.empty)
+                        {
+                            eventText = "Unable to act - empty";
+                        }
+                        else
+                        {
+                            // Set event only when all is good.
+                            eventText = "New customer: " + customerNumber.ToString();
 
-                                destinationLat = customer[customerNumber, 0];
-                                destinationLon = customer[customerNumber, 1];
+                            destinationLat = customer[customerNumber, 0];
+                            destinationLon = customer[customerNumber, 1];
 
-                                // Find route from current position to destination, storing route.
-                                GetRoute(StateEnum.enroute);
-                            }
-                            break;
-                    }
-
-                    // Acknowledge the direct method call with a 200 success message.
-                    string result = "{\"result\":\"Executed direct method: " + methodRequest.Name + "\"}";
-                    return Task.FromResult(new MethodResponse(Encoding.UTF8.GetBytes(result), 200));
+                            // Find route from current position to destination, storing route.
+                            GetRoute(StateEnum.enroute);
+                        }
+                        break;
                 }
-                else
-                {
-                    eventText = $"Invalid customer: {customerNumber}";
 
-                    // Acknowledge the direct method call with a 400 error message.
-                    string result = "{\"result\":\"Invalid customer\"}";
-                    return Task.FromResult(new MethodResponse(Encoding.UTF8.GetBytes(result), 400));
-                }
-            }
-            catch
-            {
-                // Acknowledge the direct method call with a 400 error message.
-                string result = "{\"result\":\"Invalid call\"}";
-                return Task.FromResult(new MethodResponse(Encoding.UTF8.GetBytes(result), 400));
-            }
-        }
-    ```
-
-    > **Note**:
-    > The device responds with a conflict, if the device isn't in the correct state. The command itself is acknowledged at the end of the method. The recall command that follows in the next step handles things similarly.
-
-1. In the Code Editor pane, to add the recall direct method, enter the following code:
-
-   ```cs
-        static void ReturnToBase()
-        {
-            destinationLat = baseLat;
-            destinationLon = baseLon;
-
-            // Find route from current position to base, storing route.
-            GetRoute(StateEnum.returning);
-        }
-        static Task<MethodResponse> CmdRecall(MethodRequest methodRequest, object userContext)
-        {
-            switch (state)
-            {
-                case StateEnum.ready:
-                case StateEnum.loading:
-                case StateEnum.dumping:
-                    eventText = "Already at base";
-                    break;
-
-                case StateEnum.returning:
-                    eventText = "Already returning";
-                    break;
-
-                case StateEnum.delivering:
-                    eventText = "Unable to recall - " + state;
-                    break;
-
-                case StateEnum.enroute:
-                    ReturnToBase();
-                    break;
-            }
-
-            // Acknowledge the command.
-            if (eventText == noEvent)
-            {
                 // Acknowledge the direct method call with a 200 success message.
                 string result = "{\"result\":\"Executed direct method: " + methodRequest.Name + "\"}";
                 return Task.FromResult(new MethodResponse(Encoding.UTF8.GetBytes(result), 200));
             }
             else
             {
+                eventText = $"Invalid customer: {customerNumber}";
+
                 // Acknowledge the direct method call with a 400 error message.
-                string result = "{\"result\":\"Invalid call\"}";
+                string result = "{\"result\":\"Invalid customer\"}";
                 return Task.FromResult(new MethodResponse(Encoding.UTF8.GetBytes(result), 400));
             }
         }
+        catch
+        {
+            // Acknowledge the direct method call with a 400 error message.
+            string result = "{\"result\":\"Invalid call\"}";
+            return Task.FromResult(new MethodResponse(Encoding.UTF8.GetBytes(result), 400));
+        }
+    }
+    ```
+
+    > **Note**:
+    > The device will respond with a conflict if the device isn't in the correct state. The command itself is acknowledged at the end of the method. The recall command that follows in the next step handles things similarly.
+
+1. In the Code Editor pane, to add the recall direct method, enter the following code:
+
+    ```cs
+    static void ReturnToBase()
+    {
+        destinationLat = baseLat;
+        destinationLon = baseLon;
+
+        // Find route from current position to base, storing route.
+        GetRoute(StateEnum.returning);
+    }
+    static Task<MethodResponse> CmdRecall(MethodRequest methodRequest, object userContext)
+    {
+        switch (state)
+        {
+            case StateEnum.ready:
+            case StateEnum.loading:
+            case StateEnum.dumping:
+                eventText = "Already at base";
+                break;
+
+            case StateEnum.returning:
+                eventText = "Already returning";
+                break;
+
+            case StateEnum.delivering:
+                eventText = "Unable to recall - " + state;
+                break;
+
+            case StateEnum.enroute:
+                ReturnToBase();
+                break;
+        }
+
+        // Acknowledge the command.
+        if (eventText == noEvent)
+        {
+            // Acknowledge the direct method call with a 200 success message.
+            string result = "{\"result\":\"Executed direct method: " + methodRequest.Name + "\"}";
+            return Task.FromResult(new MethodResponse(Encoding.UTF8.GetBytes(result), 200));
+        }
+        else
+        {
+            // Acknowledge the direct method call with a 400 error message.
+            string result = "{\"result\":\"Invalid call\"}";
+            return Task.FromResult(new MethodResponse(Encoding.UTF8.GetBytes(result), 400));
+        }
+    }
     ```
 
 1. In the Code Editor pane, to add the method that updates the truck simulation at each time interval, enter the following code:
 
-   ```cs
-        static double DieRoll(double max)
-        {
-            return rand.NextDouble() * max;
-        }
+    ```cs
+    static double DieRoll(double max)
+    {
+        return rand.NextDouble() * max;
+    }
 
-        static void UpdateTruck()
+    static void UpdateTruck()
+    {
+        if (contents == ContentsEnum.empty)
         {
-            if (contents == ContentsEnum.empty)
+            // Turn the cooling system off, if possible, when the contents are empty.
+            if (fan == FanEnum.on)
             {
-                // Turn the cooling system off, if possible, when the contents are empty.
-                if (fan == FanEnum.on)
+                fan = FanEnum.off;
+            }
+            tempContents += -2.9 + DieRoll(6);
+        }
+        else
+        {
+            // Contents are full or melting.
+            if (fan != FanEnum.failed)
+            {
+                if (tempContents < optimalTemperature - 5)
                 {
+                    // Turn the cooling system off, as contents are getting too cold.
                     fan = FanEnum.off;
                 }
-                tempContents += -2.9 + DieRoll(6);
+                else
+                {
+                    if (tempContents > optimalTemperature)
+                    {
+                        // Temp getting higher, turn cooling system back on.
+                        fan = FanEnum.on;
+                    }
+                }
+
+                // Randomly fail the cooling system.
+                if (DieRoll(100) < 1)
+                {
+                    fan = FanEnum.failed;
+                }
+            }
+
+            // Set the contents temperature. Maintaining a cooler temperature if the cooling system is on.
+            if (fan == FanEnum.on)
+            {
+                tempContents += -3 + DieRoll(5);
             }
             else
             {
-                // Contents are full or melting.
-                if (fan != FanEnum.failed)
-                {
-                    if (tempContents < optimalTemperature - 5)
-                    {
-                        // Turn the cooling system off, as contents are getting too cold.
-                        fan = FanEnum.off;
-                    }
-                    else
-                    {
-                        if (tempContents > optimalTemperature)
-                        {
-                            // Temp getting higher, turn cooling system back on.
-                            fan = FanEnum.on;
-                        }
-                    }
-
-                    // Randomly fail the cooling system.
-                    if (DieRoll(100) < 1)
-                    {
-                        fan = FanEnum.failed;
-                    }
-                }
-
-                // Set the contents temperature. Maintaining a cooler temperature if the cooling system is on.
-                if (fan == FanEnum.on)
-                {
-                    tempContents += -3 + DieRoll(5);
-                }
-                else
-                {
-                    tempContents += -2.9 + DieRoll(6);
-                }
-
-                // If the temperature is above a threshold, count the seconds this is occurring, and melt the contents if it goes on too long.
-                if (tempContents >= tooWarmThreshold)
-                {
-                    // Contents are warming.
-                    tooWarmPeriod += interval;
-
-                    if (tooWarmPeriod >= tooWarmtooLong)
-                    {
-                        // Contents are melting.
-                        contents = ContentsEnum.melting;
-                    }
-                }
-                else
-                {
-                    // Contents are cooling.
-                    tooWarmPeriod = Math.Max(0, tooWarmPeriod - interval);
-                }
+                tempContents += -2.9 + DieRoll(6);
             }
 
-            timeOnCurrentTask += interval;
-
-            switch (state)
+            // If the temperature is above a threshold, count the seconds this is occurring, and melt the contents if it goes on too long.
+            if (tempContents >= tooWarmThreshold)
             {
-                case StateEnum.loading:
-                    if (timeOnCurrentTask >= loadingTime)
-                    {
-                        // Finished loading.
-                        state = StateEnum.ready;
-                        contents = ContentsEnum.full;
-                        timeOnCurrentTask = 0;
+                // Contents are warming.
+                tooWarmPeriod += interval;
 
-                        // Turn on the cooling fan.
-                        // If the fan is in a failed state, assume it has been fixed, as it is at the base.
-                        fan = FanEnum.on;
-                        tempContents = -2;
-                    }
-                    break;
-
-                case StateEnum.ready:
-                    timeOnCurrentTask = 0;
-                    break;
-
-                case StateEnum.delivering:
-                    if (timeOnCurrentTask >= deliverTime)
-                    {
-                        // Finished delivering.
-                        contents = ContentsEnum.empty;
-                        ReturnToBase();
-                    }
-                    break;
-
-                case StateEnum.returning:
-
-                    // Update the truck position.
-                    UpdatePosition();
-
-                    // Check to see if the truck has arrived back at base.
-                    if (Arrived())
-                    {
-                        switch (contents)
-                        {
-                            case ContentsEnum.empty:
-                                state = StateEnum.loading;
-                                break;
-
-                            case ContentsEnum.full:
-                                state = StateEnum.ready;
-                                break;
-
-                            case ContentsEnum.melting:
-                                state = StateEnum.dumping;
-                                break;
-                        }
-                        timeOnCurrentTask = 0;
-                    }
-                    break;
-
-                case StateEnum.enroute:
-
-                    // Move the truck.
-                    UpdatePosition();
-
-                    // Check to see if the truck has arrived at the customer.
-                    if (Arrived())
-                    {
-                        state = StateEnum.delivering;
-                        timeOnCurrentTask = 0;
-                    }
-                    break;
-
-                case StateEnum.dumping:
-                    if (timeOnCurrentTask >= dumpingTime)
-                    {
-                        // Finished dumping.
-                        state = StateEnum.loading;
-                        contents = ContentsEnum.empty;
-                        timeOnCurrentTask = 0;
-                    }
-                    break;
+                if (tooWarmPeriod >= tooWarmtooLong)
+                {
+                    // Contents are melting.
+                    contents = ContentsEnum.melting;
+                }
+            }
+            else
+            {
+                // Contents are cooling.
+                tooWarmPeriod = Math.Max(0, tooWarmPeriod - interval);
             }
         }
+
+        timeOnCurrentTask += interval;
+
+        switch (state)
+        {
+            case StateEnum.loading:
+                if (timeOnCurrentTask >= loadingTime)
+                {
+                    // Finished loading.
+                    state = StateEnum.ready;
+                    contents = ContentsEnum.full;
+                    timeOnCurrentTask = 0;
+
+                    // Turn on the cooling fan.
+                    // If the fan is in a failed state, assume it has been fixed, as it is at the base.
+                    fan = FanEnum.on;
+                    tempContents = -2;
+                }
+                break;
+
+            case StateEnum.ready:
+                timeOnCurrentTask = 0;
+                break;
+
+            case StateEnum.delivering:
+                if (timeOnCurrentTask >= deliverTime)
+                {
+                    // Finished delivering.
+                    contents = ContentsEnum.empty;
+                    ReturnToBase();
+                }
+                break;
+
+            case StateEnum.returning:
+
+                // Update the truck position.
+                UpdatePosition();
+
+                // Check to see if the truck has arrived back at base.
+                if (Arrived())
+                {
+                    switch (contents)
+                    {
+                        case ContentsEnum.empty:
+                            state = StateEnum.loading;
+                            break;
+
+                        case ContentsEnum.full:
+                            state = StateEnum.ready;
+                            break;
+
+                        case ContentsEnum.melting:
+                            state = StateEnum.dumping;
+                            break;
+                    }
+                    timeOnCurrentTask = 0;
+                }
+                break;
+
+            case StateEnum.enroute:
+
+                // Move the truck.
+                UpdatePosition();
+
+                // Check to see if the truck has arrived at the customer.
+                if (Arrived())
+                {
+                    state = StateEnum.delivering;
+                    timeOnCurrentTask = 0;
+                }
+                break;
+
+            case StateEnum.dumping:
+                if (timeOnCurrentTask >= dumpingTime)
+                {
+                    // Finished dumping.
+                    state = StateEnum.loading;
+                    contents = ContentsEnum.empty;
+                    timeOnCurrentTask = 0;
+                }
+                break;
+        }
+    }
     ```
 
     > **Note**:
@@ -1179,57 +1171,57 @@ static string AzureMapsKey = "<your Azure Maps Subscription Key>";
 
 1. In the Code Editor pane, to add the methods that will send truck telemetry (and send events too, if any have occurred), enter the following code:
 
-   ```cs
-        static void colorMessage(string text, ConsoleColor clr)
-        {
-            Console.ForegroundColor = clr;
-            Console.WriteLine(text);
-            Console.ResetColor();
-        }
-        static void greenMessage(string text)
-        {
-            colorMessage(text, ConsoleColor.Green);
-        }
+    ```cs
+    static void colorMessage(string text, ConsoleColor clr)
+    {
+        Console.ForegroundColor = clr;
+        Console.WriteLine(text);
+        Console.ResetColor();
+    }
+    static void greenMessage(string text)
+    {
+        colorMessage(text, ConsoleColor.Green);
+    }
 
-        static void redMessage(string text)
-        {
-            colorMessage(text, ConsoleColor.Red);
-        }
+    static void redMessage(string text)
+    {
+        colorMessage(text, ConsoleColor.Red);
+    }
 
-        static async void SendTruckTelemetryAsync(Random rand, CancellationToken token)
+    static async void SendTruckTelemetryAsync(Random rand, CancellationToken token)
+    {
+        while (true)
         {
-            while (true)
+            UpdateTruck();
+
+            // Create the telemetry JSON message.
+            var telemetryDataPoint = new
             {
-                UpdateTruck();
+                ContentsTemperature = Math.Round(tempContents, 2),
+                TruckState = state.ToString(),
+                CoolingSystemState = fan.ToString(),
+                ContentsState = contents.ToString(),
+                Location = new { lon = currentLon, lat = currentLat },
+                Event = eventText,
+            };
+            var telemetryMessageString = JsonSerializer.Serialize(telemetryDataPoint);
+            var telemetryMessage = new Message(Encoding.ASCII.GetBytes(telemetryMessageString));
 
-                // Create the telemetry JSON message.
-                var telemetryDataPoint = new
-                {
-                    ContentsTemperature = Math.Round(tempContents, 2),
-                    TruckState = state.ToString(),
-                    CoolingSystemState = fan.ToString(),
-                    ContentsState = contents.ToString(),
-                    Location = new { lon = currentLon, lat = currentLat },
-                    Event = eventText,
-                };
-                var telemetryMessageString = JsonSerializer.Serialize(telemetryDataPoint);
-                var telemetryMessage = new Message(Encoding.ASCII.GetBytes(telemetryMessageString));
+            // Clear the events, as the message has been sent.
+            eventText = noEvent;
 
-                // Clear the events, as the message has been sent.
-                eventText = noEvent;
+            Console.WriteLine($"\nTelemetry data: {telemetryMessageString}");
 
-                Console.WriteLine($"\nTelemetry data: {telemetryMessageString}");
+            // Bail if requested.
+            token.ThrowIfCancellationRequested();
 
-                // Bail if requested.
-                token.ThrowIfCancellationRequested();
+            // Send the telemetry message.
+            await s_deviceClient.SendEventAsync(telemetryMessage);
+            greenMessage($"Telemetry sent {DateTime.Now.ToShortTimeString()}");
 
-                // Send the telemetry message.
-                await s_deviceClient.SendEventAsync(telemetryMessage);
-                greenMessage($"Telemetry sent {DateTime.Now.ToShortTimeString()}");
-
-                await Task.Delay(intervalInMilliseconds);
-            }
+            await Task.Delay(intervalInMilliseconds);
         }
+    }
     ```
 
     > **Note**:
@@ -1237,35 +1229,35 @@ static string AzureMapsKey = "<your Azure Maps Subscription Key>";
 
 1. In the Code Editor pane, to add the code that will handle settings and properties, enter the following code:
 
-   ```cs
-        static async Task SendDevicePropertiesAsync()
+    ```cs
+    static async Task SendDevicePropertiesAsync()
+    {
+        reportedProperties["TruckID"] = truckIdentification;
+        await s_deviceClient.UpdateReportedPropertiesAsync(reportedProperties);
+        greenMessage($"Sent device properties: {JsonSerializer.Serialize(reportedProperties)}");
+    }
+    static async Task HandleSettingChanged(TwinCollection desiredProperties, object userContext)
+    {
+        string setting = "OptimalTemperature";
+        if (desiredProperties.Contains(setting))
         {
-            reportedProperties["TruckID"] = truckIdentification;
-            await s_deviceClient.UpdateReportedPropertiesAsync(reportedProperties);
-            greenMessage($"Sent device properties: {JsonSerializer.Serialize(reportedProperties)}");
+            BuildAcknowledgement(desiredProperties, setting);
+            optimalTemperature = (int) desiredProperties[setting];
+            greenMessage($"Optimal temperature updated: {optimalTemperature}");
         }
-        static async Task HandleSettingChanged(TwinCollection desiredProperties, object userContext)
-        {
-            string setting = "OptimalTemperature";
-            if (desiredProperties.Contains(setting))
-            {
-                BuildAcknowledgement(desiredProperties, setting);
-                optimalTemperature = (int) desiredProperties[setting];
-                greenMessage($"Optimal temperature updated: {optimalTemperature}");
-            }
-            await s_deviceClient.UpdateReportedPropertiesAsync(reportedProperties);
-        }
+        await s_deviceClient.UpdateReportedPropertiesAsync(reportedProperties);
+    }
 
-        static void BuildAcknowledgement(TwinCollection desiredProperties, string setting)
+    static void BuildAcknowledgement(TwinCollection desiredProperties, string setting)
+    {
+        reportedProperties[setting] = new
         {
-            reportedProperties[setting] = new
-            {
-                value = desiredProperties[setting],
-                status = "completed",
-                desiredVersion = desiredProperties["$version"],
-                message = "Processed"
-            };
-        }
+            value = desiredProperties[setting],
+            status = "completed",
+            desiredVersion = desiredProperties["$version"],
+            message = "Processed"
+        };
+    }
     ```
 
     You only have one setting and one property added to your app. If more are required, they are easily added.
@@ -1275,7 +1267,7 @@ static string AzureMapsKey = "<your Azure Maps Subscription Key>";
 
 1. In the Code Editor pane, to add the `Main` function, enter the following code:
 
-   ```cs
+    ```cs
             static void Main(string[] args)
             {
 
@@ -1384,7 +1376,7 @@ In addition to this list, there are edge-cases you could also investigate. One s
 
 1. Ensure that your Azure IoT Central app is open in a browser.
 
-    Before you begin testing the connection between IoT Central and your device, ensure that your Azure IoT Central app is open in a browser. You left the app open to the Commands tab of your RefrigeratedTruck - 1 dashboard. If needed, you can reopen [Azure IoT Central](https://apps.azureiotcentral.com/?azure-portal=true) in a browser.
+    Before you begin testing the connection between IoT Central and your device, ensure that your Azure IoT Central app is open in a browser. You left the app open to the Commands tab of your RefrigeratedTruck - 1 view. If needed, you can reopen [Azure IoT Central](https://apps.azureiotcentral.com/?azure-portal=true) in a browser.
 
 1. In Visual Studio Code, from the Terminal command prompt, run the following command to execute the program:
 
@@ -1424,13 +1416,13 @@ In addition to this list, there are edge-cases you could also investigate. One s
 
 1. Switch to the browser window containing your Azure IoT Central app.
 
-1. On your **RefrigeratedTruck - 1** dashboard, click **Truck view**.
+1. On your **RefrigeratedTruck - 1** view, click **Truck view**.
 
     If your RefrigeratedTruck device is not selected in IoT Central, perform the following:
 
     * On the left side navigation menu, click **Devices**.
-    * In the list of devices, double-click **RefrigeratedTruck - 1**.
-    * On your dashboard, ensure that **Truck view** is selected.
+    * In the list of devices, click **RefrigeratedTruck - 1**.
+    * On your view, ensure that **Truck view** is selected.
 
 1. Verify that data is being displayed on your **RefrigeratedTruck - 1** dashboard.
 
@@ -1448,7 +1440,7 @@ In addition to this list, there are edge-cases you could also investigate. One s
 
 1. Check the **Location** map view for the device.
 
-    A dark circle near Seattle, USA shows our truck ready to go. You may have to zoom out a bit.
+    A dark circle/ring (near Seattle, USA) shows your truck at the base location. You may have to zoom out a bit and it may take some time for the map information to load and display correctly.
 
     The truck should be located at its base, in the correct state, and waiting for a command.
 
@@ -1505,11 +1497,11 @@ To test a conflict event, you can send a command that you know doesn't make sens
 
     Testing a writable property is more complex, The **OptimalTemperature** property is a writable property, so that will be the next test.
 
-1. On the left side navigation menu, click **Jobs**.
+1. On the left side navigation menu under **Manage**, click **Jobs**.
 
-1. Under **Jobs**, click **+ New**.
+1. in the top-left corner of the **Jobs** page, click **+ New**.
 
-1. On the **Configure your job page**, in the **Name** text box, enter **Set optimal temperature to -10**
+1. On the **Configure your job** page, in the **Name** text box, enter **Set optimal temperature to -10**
 
 1. In the **Device group** drop-down list, click **RefrigeratedTruck - All devices**.
 
@@ -1521,7 +1513,11 @@ To test a conflict event, you can send a command that you know doesn't make sens
 
     When you run this job it should set the optimal temperature for all trucks in the device group, just one in our case.
 
-1. At the top of the window, click **Next** twice, accept the default settings on **Delivery Options** and **Schedule** pages, and, on the **Review** page, select **Run**.
+1. At the botton of the window, click **Next** and then click **Next** again.
+
+1. To accept the default settings for **Delivery Options** and **Schedule**, click **Next** and then click **Next** again.
+
+1. On the **Review** page, select **Run**.
 
 1. Notice that after a short time, the **Status** of the job to change from **Pending** to **Completed**.
 
@@ -1545,11 +1541,11 @@ In this exercise, you will complete the steps required to add multiple trucks to
 
 1. On the left side navigation menu, click **Devices**.
 
-1. Under **Devices**, click **RefrigeratedTruck**.
+1. Under **Devices** (not Device name), click **RefrigeratedTruck**.
 
     This ensures the devices you create will use this device template. The device template you select will be shown in bold text.
 
-1. Under **RefrigeratedTruck**, click **+ New**.
+1. On the **RefrigeratedTruck** page, click **+ New**.
 
     Verify that the default device name includes the **RefrigeratedTruck** text. If it doesn't, you've not selected the right device template.
 
@@ -1563,7 +1559,7 @@ In this exercise, you will complete the steps required to add multiple trucks to
 
 #### Task 2: Provision the new devices
 
-1. Under **Device name**, double-click **RefrigeratedTruck - 2**.
+1. Under **Device name**, click **RefrigeratedTruck - 2**.
 
 1. At the top left of the page, click **Connect**.
 
@@ -1581,9 +1577,11 @@ In this exercise, you will complete the steps required to add multiple trucks to
 
 #### Task 3: Create new apps for each new device
 
-Each truck will be simulated by a separately running instance of your simulated device app. So, you need multiple versions of your app running at the same time.
+Each truck will be simulated by a running a separate instance of your simulated device app. So, you need multiple versions of your app running at the same time.
 
-1. To create the new simulated device apps, repeat the task **Create a programming project for a real device** for each of the new trucks you created in your IoT Central app.
+1. To create the new simulated device apps, open a seperate instance of Visual Studio Code for each of the new trucks you created in your IoT Central app.
+
+1. Copy and paste the device code used for truck 1 into the code editor for each of the other truck instances.
 
 1. Verify that you have populated the **Device ID** and **Primary key** settings with the values for each new truck.
 
@@ -1605,4 +1603,6 @@ Each truck will be simulated by a separately running instance of your simulated 
 
     Congratulations on completing the lab!
 
-1. Clean up your resources.
+1. Delete the resource group used for the Azure MAPS Account.
+
+    To minimize charges, it is always important to delete your Azure resources once you done with them.
