@@ -85,10 +85,10 @@ To ensure these resources are available, complete the following steps.
 
     Make a note of the outputs for use later:
 
-    * connectionString
-    * deviceIDs
+    * connectionString (IoT Hub connection string) 
+    * deviceIDs (device connection strings)
 
-    > **Important**: The deviceIDs output contains a JSON array with the connection strings for each device. Use the text editor of your choice to extract the connection strings:
+    > **Important**: The deviceIDs output contains a JSON array with the connection strings for each device. Use the text editor of your choice to extract the connection strings for the truck, airplane, and container devices:
 
     ```json
     [
@@ -115,9 +115,9 @@ Azure Time Series Insights (TSI) is an end-to-end platform-as-a-service offering
 
 In this exercise, you will setup Time Series Insights integration with Azure IoT Hub.
 
-1. Login to [portal.azure.com](https://portal.azure.com) using your Azure account credentials.
+1. Use the Azure portal menu to navigate to your Dashboard.
 
-    If you have more than one Azure account, be sure that you are logged in with the account that is tied to the subscription that you will be using for this course.
+    If necessary, log in to [portal.azure.com](https://portal.azure.com) using your Azure account credentials. If you have more than one Azure account, be sure that you are logged in with the account that is tied to the subscription that you will be using for this course.
 
 1. On the Azure portal menu, click **+ Create a resource**.
 
@@ -127,23 +127,21 @@ In this exercise, you will setup Time Series Insights integration with Azure IoT
 
 1. On the **Time Series Insights** blade, click **Create**.
 
+    When the Create Time Series Insights Environment page opens, you may notice the warning that Time Series Insights will not be supported after March 2025. Other options should be explored for production scenarios.
+
 1. In the **Subscription** dropdown, select the subscription that you are using for this course.
 
 1. In the **Resource group** dropdown, click **rg-az220**.
 
-1. On the **Create Time Series Insights environment** blade, in the **Environment name** field, enter **tsi-az220-training**
+1. In the **Environment name** field, enter **tsi-az220-training-{your-id}**.
 
 1. In the **Location** dropdown, select the Azure region used by your resource group.
 
 1. In the **Tier** field, ensure that the **Gen1 (S1)** pricing tier is selected and that **Capacity** is set to **1**.
 
-1. In the **Environment name** field, enter **tsi-az220-training-{your-id}**.
-
 1. At the bottom of the blade, click **Next: Event Source**.
 
-1. Under the **EVENT SOURCE DETAILS** section, ensure that **Create an event source?** is set to **Yes**.
-
-1. In the **Source type** dropdown, ensure that **IoT Hub** is selected.
+1. On the **Event Source** tab, ensure that **Create an event source?** is set to **Yes** and that **Source type** is set to **IoT Hub**.
 
 1. In the **Name** field, enter **iot-az220-training-{your-id}** to specify a unique name for this Event Source.
 
@@ -155,31 +153,33 @@ In this exercise, you will setup Time Series Insights integration with Azure IoT
 
     In a production environment, it's best practice to create a new _Access Policy_ within Azure IoT Hub to use for configuring Time Series Insights (TSI) access. This will enable the security of TSI to be managed independently of any other services connected to the same Azure IoT Hub.  You are not doing that here for convenience reasons.
 
-1. Under the **CONSUMER GROUP** section, next to the **IoT Hub consumer group** dropdown, click **New**.
+1. To the right of the **IoT Hub consumer group** dropdown, click **New**.
+
+    This will enable you to add a new consumer group using the name that you will supply.
 
 1. In the **IoT Hub consumer group** box, enter **tsievents** and then click **Add**.
 
     This will add a new _Consumer Group_ to use for this Event Source. The Consumer Group needs to be used exclusively for this Event Source, as there can only be a single active reader from a given Consumer Group at a time.
 
-1. Under the **Start options** section, in the **STart time** dropdown, select **Beginning now (default)**.
+1. Under the **Start options** section, in the **Start time** dropdown, select **Beginning now (default)**.
 
-1. Under the **TIMESTAMP** section, leave the **Property Name** blank.
+1. Under the **Timestamp** section, leave the **Property name** at the default (blank) value.
 
 1. At the bottom of the blade, click **Review + create**.
 
     > **Note**: If you are returned immediately to the *Event Source* pane, double check that you clicked **Add** to the right of the **IoT Hub consumer group** field - you cannot create the TSI resource until you have created the consumer group.
 
-1. At the bottom of the blade, click **Create**.
+1. At the bottom of the blade, click **Review + Create**.
 
-    > **Note**:  Deployment of Time Series Insights (TSI) will take a couple minutes to complete.
+1. If the Summary tab is displayed, click **Review + Create** and then click **OK**.
 
 1. Once your Time Series Insights deployment is complete, navigate back to your dashboard.
 
-1. Refresh your resource group tile, and then click **tsi-az220-training**.
+1. Refresh your resource group tile, and then click **tsi-az220-training-{your-id}**.
 
     You may need to resize your dashboard to see all of your resources.
 
-    > **Note**: You gave the **Time Series Insights environment** resource the name **tsi-az220-training**. You should also see the *Time Series Insights event source* that you created, but for now you want to have the TSI environment opened.
+    > **Note**: You gave the **Time Series Insights environment** resource the name **tsi-az220-training-{your-id}**. You should also see the *Time Series Insights event source* that you created, but for now you want to have the TSI environment opened.
 
 1. On the **Time Series Insights environment** blade, on the left-side menu under **Settings**, click **Event Sources**.
 
@@ -187,7 +187,7 @@ In this exercise, you will setup Time Series Insights integration with Azure IoT
 
     This is the event source that you configured when the TSI resource was created.
 
-1. To view the event source details, click **iot-az220-training-{your-id}**.
+1. To verify the event source details, click **iot-az220-training-{your-id}**.
 
     Notice that the configuration of the event source matches what was set when the Time Series Insights resource was created.
 
@@ -275,11 +275,27 @@ In this exercise, you will be introduced to working with time series data using 
 
     If you have more than one Azure account, be sure that you are logged in with the account that is tied to the subscription that you will be using for this course.
 
-1. On your Resource group tile, click **tsi-az220-training**.
+1. On your Resource group tile, click **tsi-az220-training-{your-id}**.
 
 1. On the **Time Series Insights environment** blade, at the top of the **Overview** pane, click **Go to TSI Explorer**.
 
     This will open the **Time Series Insights Explorer** in a new browser tab.
+
+    > **Note**: If you receive a message stating "Selected user account does not exist in tenant 'Microsoft Services' and cannot access the application", it may be that the user principal name for your Azure subscription account is not being reconciled by Microsoft Graph (Active Directory Graph) when attempting to open the app. To work around this issue, you can use the following process:  
+
+    - Add a new user to the AAD tenant associated with your subscription account.
+
+        For example, from the Azure portal, open Cloud Shell and enter the following command:
+        az ad user create --display-name tsi --password pass123! --user-principal-name tsi@personalaccount.onmicrosoft.com
+
+        You can view the tenant portion of the user principal name for your subscription account using the following command: 
+        az ad signed-in-user show --query "userPrincipalName" -o tsv
+
+    - From the Azure portal (signed-in with your subscription account), open Access control (IAM), and + Add a role assignment for the new user as an Owner.
+
+    - From your Azure dashboard, open your TSI resource, open Data Access Policies, and then use Select principal to add the new user account as a Contributor.
+
+    - When you open TSI Explorer (**Go to TSI Explorer**), enter the username (service principal name) and password for the user you created above.
 
 1. On the left-side menu, ensure that **Analyze** is selected.
 
